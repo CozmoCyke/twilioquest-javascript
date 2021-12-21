@@ -3,25 +3,25 @@
 // Responses
 mixin thanks
   response#thanks.
-    Thanks - it was a bit of a run-around, but I'm glad I could help.
+    Merci - c'était un peu un tour de passe-passe, mais je suis heureux d'avoir pu aider.
 
 conversation(display_name="TwilioQuest Engineer")
   if lastResponse === "thanks"
     statement.
-      Bonus points for a loop pun, on top of it all! I'll head out to the experiment room after I finish up in here.
+      Des points bonus pour un jeu de mots en boucle, en plus de tout ça ! Je vais me rendre à la salle d'expérimentation après avoir terminé ici.
 
   else if worldState.eastWing.hadSavedConversation
     statement.
-      It looks like you already have #[span.highlight my access code for Beam 3] in the main experiment room. I'll join you there eventually, but I should probably ensure that our supplies weren't damaged in the explosion. Awesome work once again, I owe you big time.
+      Il semble que vous ayez déjà #[span.highlight mon code d'accès pour le rayon 3] dans la salle d'expérience principale. Je vous rejoindrai là-bas éventuellement, mais je devrais probablement m'assurer que nos fournitures n'ont pas été endommagées dans l'explosion. Un travail impressionnant une fois de plus, je vous dois beaucoup.
     responses
       +thanks
 
   else
     - worldState.eastWing.hadSavedConversation = true;
     statement.
-      How did you get in here? I mean, I'm glad you made it, but I thought it would be days before a rescue team figured out the Infinite Loop's security system!<br/><br/>
-      ...You need my code to reset the laser in the experiment room? By all means - 
-      here's #[span.highlight the hardware token you'll need to activate Beam 3]. You must be something else, even for an Operator.
+      Comment êtes-vous entré ici ? Je veux dire, je suis content que vous ayez réussi, mais je pensais qu'il faudrait des jours avant qu'une équipe de secours ne comprenne le système de sécurité de l'Infinite Loop !<br/><br/>
+      ...Vous avez besoin de mon code pour réinitialiser le laser dans la salle d'expérience ? Bien sûr - 
+      voici #[span.highlight le dispositif informatique dont vous aurez besoin pour activer le Rayon 3]. Vous devez être quelque chose d'autre, même pour un Agent.
     responses
       +thanks
 

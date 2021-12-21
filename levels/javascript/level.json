@@ -1,8 +1,8 @@
 {
-  "title": "JavaScript Test Lab",
-  "description": "The TwilioQuest Program maintains this high-tech research facility studying the latest advancements in JavaScript technology. They have an asked an Operator to visit the station and review their security posture.",
-  "questTitle": "JavaScript Test Lab",
-  "questDescription": "Investigate the station and help the research team!",
+  "title": "Le Labo d'essais JavaScript",
+  "description": "Le programme TwilioQuest maintient cette installation de recherche de haute technologie qui étudie les dernières avancées de la technologie JavaScript. Ils ont demandé à un agent de visiter la station et de contrôler son niveau de sécurité.",
+  "questTitle": "Le Labo d'essais JavaScript",
+  "questDescription": "Enquêtez sur la station et aidez l'équipe de recherche !",
   "navMap": {
     "x": 25,
     "y": 25,
@@ -16,15 +16,15 @@
     "options": { "baseSpeed": 0.03, "direction": "rightToLeft" }
   },
   "flavorTextOverrides": {
-    "bookshelf": "Hmmm... A lot of classics in here. \"You Don't Know JS\", \"JavaScript: The Good Parts\", and a bunch more.",
-    "ducktypium": "Whoa, this is pure Ducktypium. Powerful, but highly unstable. If the JavaScript in this lab is powered by this stuff, no wonder there’s the occasional insurance claim.",
-    "passwordDeskNote": "Written on a sticky note on her desk: \"Stasis Beam Password: <span class=\"highlight\">PEW PEW PEW!</span>\"",
-    "officeTerminal": "This screen is monitoring the temperature in the Ducktypium room. Its a balmy 21°C.",
-    "officeBookshelf": "There are lots of different past experiment notebooks in here. Mutations, tranformations, prototypes, and more stuff.",
-    "opensMar2020": "The adventure continues this way in <span class=\"highlight\">early May 2020</span> - check back later this month, <a href=\"https://twitter.com/TwilioQuest\">follow Cedric on Twitter</a>, and <a href=\"https://www.twilio.com/quest#email\">sign up for our newsletter</a> to be the first to know when this area opens up!",
-    "playerPlantedTree": "Your very own tree! It represents an actual tree that will be planted in Australia to help recover from the recent wildfires there.",
-    "loopLockInfo": "This strange room displays a number, just like the numbers outside the secure cargo holds on the ship. I wonder if they're connected? I should <span class=\"highlight\">take a walk around this room</span> to see what happens...",
-    "infiniteLoopNotReady": "The science vessel the \"Infinite Loop\" should've been docked right here! I must need to <span class=\"highlight\">wait for a new game update</span> to finish saving this scientist."
+    "bookshelf" : "Hmmm... Il y a beaucoup de classiques ici. \"You Don't Know JS\", \"JavaScript : The Good Parts\", et un tas d'autres.",
+    "ducktypium" : " Waouh, c'est du pur Ducktypium. Puissant, mais hautement instable. Si le JavaScript de ce labo est alimenté par ce truc, pas étonnant qu'il y ait de temps en temps des réclamations d'assurance.",
+    "passwordDeskNote" : "Écrit sur un post-it sur son bureau. \"Mot de passe du rayon de stase : <span class=\"highlight\">PEW PEW PEW!</span>\"",
+    "officeTerminal" : "Cet écran surveille la température de la pièce Ducktypium. Il fait une température agréable de 21°C.",
+    "officeBookshelf" : "Il y a beaucoup de cahiers d'expériences différentes ici. Mutations, transformations, prototypes, et d'autres choses encore.",
+    "opensMar2020" : "L'aventure se poursuit ainsi en <span class=\"highlight\">début mai 2020</span> - revenez plus tard dans le mois, <a href=\"https://twitter.com/TwilioQuest\">suivez Cédric sur Twitter</a>, et <a href=\"https://www.twilio.com/quest#email\">inscrivez-vous à notre newsletter</a> pour être les premiers informés de l'ouverture de cette zone !",
+    "playerPlantedTree" : "Votre propre arbre ! Il s'agit d'un arbre réel qui sera planté en Australie pour aider le pays à se remettre des récents incendies qui y ont sévi.",
+    "loopLockInfo" : "Cette étrange pièce affiche un numéro, tout comme les numéros à l'extérieur des soutes sécurisées du vaisseau. Je me demande s'ils sont connectés ? Je devrais <span class=\"highlight\">faire un tour dans cette pièce</span> pour voir ce qui se passe...",
+    "infiniteLoopNotReady" : "Le vaisseau scientifique le \"Infinite Loop\" aurait dû être amarré ici ! Je dois <span class=\"highlight\">attendre une nouvelle mise à jour du jeu</span> pour finir de sauver ce scientifique."
   },
   "objectives": [
     "js_node_env_setup",

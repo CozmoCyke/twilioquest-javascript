@@ -2,41 +2,41 @@
 case lastResponse
   when "oh_no"
     statement.
-      Oh, it's nothing really - it's just... we need to #[span.highlight activate all four of the molecular stasis beams] in the center of the room to stabilize the #[span.highlight ducktypium]. The process is fully automated, but it does require a password. Which I, ah, don't currently remember.
+      Oh, ce n'est rien vraiment - c'est juste... nous devons #[span.highlight activer les quatre rayons de stase moléculaire] au centre de la pièce pour stabiliser le #[span.highlight ducktypium]. Le processus est entièrement automatisé, mais il nécessite un mot de passe. Dont je ... ne me souviens pas actuellement.
     responses
       response#reset_password.
-        Oof. Is there any way to reset the password?
+        Aïe. Y a-t-il un moyen de réinitialiser le mot de passe ?
 
   when "reset_password"
     statement.
-      There is, but I'll never hear the end of it around the lab if word gets out that I forgot the stasis beam password again! I actually #[span.highlight wrote it down on a piece of paper] in my office down the passage behind me...
+      Il y en a un, mais je n'en entendrai jamais la fin dans le laboratoire si la rumeur se répand que j'ai encore oublié le mot de passe du rayon de stase ! En fait, je l'ai #[span.highlight écrit sur un morceau de papier] dans mon bureau au bout du passage derrière moi...
     responses
       response#also_forgot.
-        But you're still standing out here, so might I assume...
+        Mais vous êtes toujours debout ici, donc je peux supposer...
   
   when "also_forgot"
     statement.
-      Okay, so, I maybe ALSO managed to trigger all the #[span.highlight security barriers] leading to my office when I went in to retrieve the password. Don't judge me - I'm a very busy scientist! You're not judging me, are you?
+      Bon, alors, j'ai peut-être AUSSI réussi à déclencher toutes les #[span.highlight barrières de sécurité] menant à mon bureau lorsque je suis entré pour récupérer le mot de passe. Ne me jugez pas - je suis un scientifique très occupé ! Vous ne me jugez pas, n'est-ce pas ?
     responses
       response#its_okay.
-        No, of course not - we all make mistakes.
+        Non, bien sûr que non - nous faisons tous des erreurs.
 
   when "its_okay"
     statement.
-      Thank you - you know, I've heard Operators are pretty good at solving problems like this - do you think you could #[span.highlight get into my office and retrieve the password]? I'd owe you big time.
+      Merci - vous savez, j'ai entendu dire que les agents sont plutôt bons pour résoudre ce genre de problèmes - pensez-vous que vous pourriez #[span.highlight entrer dans mon bureau et récupérer le mot de passe] ? Je vous en serais très reconnaissant.
     responses
       response#you_bet.
-        You bet - I'll see what I can do.
+        Bien sûr - je vais voir ce que je peux faire.
 
   when "you_bet"
     statement.
-      You're a life saver! Once you get past the security barriers behind me, the password for the stasis beam #[span.highlight is written on a piece of paper on my desk].
+      Vous me sauvez la vie ! Une fois que vous aurez passé les barrières de sécurité derrière moi, le mot de passe pour le rayon de stase #[span.highlight est écrit sur un morceau de papier sur mon bureau].
     // Flag that the scientist initial conversation has been finished
     - worldState.room1.scientistInitalConvo = true;
 
   default
     statement.
-      Oh, hi there - you must be the Operator sent to observe our research. You've come at an exciting time! We're moments away from stabilizing a single molecule of #[span.highlight ducktypium] for the first time in history! <br/><br/>Though there is currently a #[span.highlight small, almost insignificant, snag] in the testing process...
+      Oh, bonjour - vous devez être l'agent envoyé pour observer nos recherches. Vous arrivez à un moment passionnant ! Nous sommes à quelques instants de stabiliser une seule molécule de #[span.highlight ducktypium] pour la première fois dans l'histoire ! <br/><br/>Bien qu'il y ait actuellement un #[span.highlight petit, presque insignifiant, accroc] dans le processus de test...
     responses
       response#oh_no.
-        Uh oh - what happened?
+        Hein ? Que s'est-il passé ?

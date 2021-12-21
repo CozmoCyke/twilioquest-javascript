@@ -3,11 +3,11 @@
 // Responses
 mixin what_research
   response#what_research.
-    What sort of research is conducted here?
+    Quel type de recherche est mené ici ?
 
 mixin what_can_i_learn
   response#what_can_i_learn.
-    What can I learn about JavaScript at the lab?
+    Que puis-je apprendre sur JavaScript au labo ?
 
 conversation(display_name="Cedric")
   - const savedDay = worldState && Object.values(worldState.room1_split.lasers).every(isOn => isOn);
@@ -37,64 +37,62 @@ conversation(display_name="Cedric")
   statements
     statement#saved_day
       text.
-        It would appear the dimensional rift caused by the lab explosion has
-        been eliminated. Well done! I knew you were up to the task.
+        Il semblerait que la faille dimensionnelle causée par l'explosion du laboratoire ait
+        été éliminée. Bien joué ! Je savais que vous étiez à la hauteur de la tâche.
       speech
         prosody(rate="110%").
-          It would appear the dimensional rift caused by the lab explosion has
-          been eliminated. Well done! I knew you were up to the task.
+          Il semblerait que la faille dimensionnelle causée par l'explosion du laboratoire ait
+          été éliminée. Bien joué ! Je savais que vous étiez à la hauteur de la tâche.
 
     statement#please_hurry
       text.
-        Operator - our intelligence indicates that the
-        #[span.red dimensional rift] caused by the explosion in the lab is
-        still expanding.<br/><br/>Please #[span.highlight coordinate with the lead scientist] 
-        in the room to the right. She is currently working on a
+        Agent - nos renseignements indiquent que la
+        #[span.red faille dimensionnelle] causée par l'explosion dans le laboratoire est
+        toujours en expansion.<br/><br/>S'il vous plaît, #[span.highlight coordonnez-vous 
+        avec le scientifique principal] dans la pièce à droite. Elle travaille actuellement sur une
         solution.
       speech
         prosody(rate="110%").
-          Operator. Our intelligence indicates that the
-          dimensional rift caused by the explosion in the lab is
-          still expanding. Please coordinate with the lead 
-          scientist in the room to the right. She is currently working on a
+          Agent. Nos renseignements indiquent que la
+          faille dimensionnelle causée par l'explosion dans le laboratoire est
+          toujours en expansion. Veuillez vous coordonner avec le principal 
+          scientifique dans la pièce à droite. Elle travaille actuellement sur une
           solution.
 
     statement#what_can_i_learn
       text.
-        Navigating the laboratory will require that you become familiar with
-        the JavaScript programming language. In doing so, you will also install
-        the #[a(href="https://www.nodejs.org") Node.js] JavaScript runtime on
-        your computer, enabling you to write and execute JavaScript code.
+        La navigation dans le laboratoire nécessitera que vous vous familiarisiez avec
+        le langage de programmation JavaScript. Pour ce faire, vous installerez également
+        le moteur d'exécution JavaScript #[a(href="https://www.nodejs.org") Node.js] sur
+        votre ordinateur, ce qui vous permettra d'écrire et d'exécuter du code JavaScript.
       speech
         prosody(rate="110%").
-          Navigating the laboratory will require that you become familiar with
-          the JavaScript programming language. In doing so, you will also install
-          the node jay S JavaScript runtime on
-          your computer, enabling you to write and execute JavaScript code.
+          La navigation dans le laboratoire nécessitera que vous vous familiarisiez avec
+          le langage de programmation JavaScript. Pour ce faire, vous installerez également
+          le moteur d'exécution JavaScript node jay S sur
+          votre ordinateur, ce qui vous permettra d'écrire et d'exécuter du code JavaScript.
 
     statement#what_research
       text.
-        Presently, our research team is studying the energy-producing 
-        properties of #[span.highlight ducktypium], a newly discovered element
-        that we believe is the source of JavaScript's power. Proceed through the
-        security barriers on the right to examine our research data yourself.
+        Actuellement, notre équipe de recherche étudie les propriétés productrices d'énergie 
+        propriétés de #[span.highlight ducktypium], un élément récemment découvert
+        qui, selon nous, est la source de la puissance de JavaScript. Passez par les
+        barrières de sécurité sur la droite pour examiner vous-même les données de nos recherches.
       speech
         prosody(rate="110%").
-          Presently, our research team is studying the energy-producing 
-          properties of ducktypeum. a newly discovered element
-          that we believe is the source of JavaScript's power. Proceed through 
-          the security barriers on the right to examine our research data 
-          yourself.
+          Actuellement, notre équipe de recherche étudie les propriétés productrices d'énergie 
+          propriétés du ducktypm, un élément récemment découvert
+          qui, selon nous, est la source de la puissance de JavaScript. Passez par 
+          les barrières de sécurité sur la droite pour examiner nos données de recherche 
+          vous-même.
 
     statement#default
       text.
-        Operator - I am pleased you have come to observe our work at the
-        #[span.highlight JavaScript Test Lab]. TwilioQuest scientists are making
-        significant progress unlocking the potential of the JavaScript
-        programming language.
+        Agent - Je suis heureux que vous soyez venu observer notre travail au
+        #[span.highlight Labo d'essais JavaScript]. Les scientifiques de TwilioQuest ont créé des
+        progrès significatifs en débloquant le potentiel du langage de programmation JavaScript.
       speech
         prosody(rate="110%").
-          Operator. I am pleased you have come to observe our work at the
-          JavaScript test lab. TwilioQuest scientists are making
-          significant progress unlocking the potential of the JavaScript
-          programming language.
+          Agent. Je suis heureux que vous soyez venu observer notre travail au
+          labo d'essais JavaScript. Les scientifiques de TwilioQuest ont créé des
+          progrès significatifs en débloquant le potentiel du langage de programmation JavaScript.

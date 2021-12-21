@@ -16,13 +16,13 @@ module.exports = function (self, event, world) {
   const conversationAvatar = self.conversationAvatar;
 
   if (!conversationName) {
-    console.error(`"conversationName" property not set on interaction target.`);
+    console.error(`La propriété "conversationName" n'est pas définie sur la cible de l'interaction.`);
     return;
   }
 
   if (!conversationAvatar) {
     console.error(
-      `"conversationAvatar" property not set on interaction target.`
+      `La propriété "conversationAvatar" n'est pas définie sur la cible de l'interaction.`
     );
     return;
   }

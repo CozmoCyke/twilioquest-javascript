@@ -108,7 +108,7 @@ module.exports = function (event, world) {
         });
 
         world.showNotification(`
-          The science vessel the "Infinite Loop" should've been docked right here! I must need to <span class=\"highlight\">wait for a new game update</span> to finish saving this scientist.
+        Le vaisseau scientifique "Infinite Loop" aurait dû être amarré juste ici ! Je dois <span class="highlight\">attendre une nouvelle mise à jour du jeu</span> pour finir de sauver ce scientifique.
         `);
 
         await world.wait(3000);
@@ -146,8 +146,8 @@ module.exports = function (event, world) {
 
   updateQuestLogWhenComplete({
     notification:
-      'I\'ve completed everything in the <span class="highlight">JavaScript Test Lab</span> for now!',
-    log: "I've completed everything in the JavaScript Test Lab for now!",
+    'Vous avez terminé tout ce qui concerne le <span class="highlight">Labo d\'essais JavaScript</span> pour l\'instant !',
+    log: "J'ai terminé tout ce qui se trouve dans le Labo d'essai JavaScript pour le moment !",
     event,
     world,
     worldStateKey: WORLD_STATE_KEY,

@@ -6,11 +6,11 @@
 // Responses
 mixin security_tight
   response#security_tight.
-    Security seems pretty tight aboard the station - why's that?
+    La sécurité semble assez stricte à bord de la station - pourquoi ?
 
 mixin about
   response#about.
-    What kind of research are you doing aboard the station?
+    Quel genre de recherche faites-vous à bord de la station ?
 
 conversation(display_name="TwilioQuest Scientist")
   case lastResponse
@@ -37,34 +37,33 @@ conversation(display_name="TwilioQuest Scientist")
     
     statement#security_tight
       text.
-        While JavaScript is the single most used programming language in the
-        world, our work here on the station goes much deeper than toggling the 
-        visibility of DOM elements. We are doing cutting edge research on 
-        the foundational elements of the language, to understand how it is able 
-        to hold the virtual universe of The Cloud together.<br/><br/>
-        While vital and exciting, this research can also be dangerous. We need 
-        to ensure only trained staff are permitted to engage in this research.
+        Alors que JavaScript est le langage de programmation le plus utilisé dans le monde.
+        Notre travail, sur la station va beaucoup plus loin que de basculer la 
+        visibilité des éléments du DOM. Nous effectuons des recherches de pointe sur 
+        les éléments fondamentaux du langage, afin de comprendre comment il peut 
+        de maintenir le cohésion de l'univers virtuel du Cloud.<br/><br/>
+        Bien que vitale et passionnante, cette recherche peut également être dangereuse. Nous devons 
+        nous assurer que seul le personnel formé est autorisé à s'engager dans cette recherche.
 
     statement#about
       text.
-        There are numerous programs underway, but our most mature program is our 
-        research on Ducktypium, one of the critical constituent elements of
-        JavaScript. The team is on the verge of some truly explosive results.<br/><br/>
-        You should check out the project! Once you clear the green checkpoint,
-        proceed to the north research module. It will be the only lab module you 
-        can access with your current keycard.
+        De nombreux programmes sont en cours, mais notre programme le plus mature est notre 
+        recherche sur le Ducktypium, l'un des éléments constitutifs critiques de
+        JavaScript. L'équipe est sur le point d'obtenir des résultats vraiment explosifs.<br/><br/>
+        Vous devriez contrôler le projet ! Une fois que vous avez passé le poste de contrôle vert,
+        passez au module de recherche nord. Ce sera le seul module de laboratoire auquel vous 
+        pouvez accéder avec votre carte magnétique actuelle.
 
     statement#default_alt
       text.
-        Hi Operator! Thanks for your help inspecting our security systems!
+        Salut Agent ! Merci de votre aide pour inspecter nos systèmes de sécurité !
 
     statement#default
       text.
-        Hello, Operator! Welcome to the JavaScript Test Lab! We've been expecting 
-        you. I understand you'll be inspecting our security system?<br/><br/>
-        To get you started, I can provide you a #[span.highlight green keycard]. 
-        This should enable you to access the main concourse, and the Ducktypium 
-        research module.
+        Bonjour, opérateur ! Bienvenue au Labo d'essais JavaScript ! Nous vous attendions. 
+        Je crois savoir que vous allez inspecter notre système de sécurité ? <br/><br/>
+        Pour commencer, je peux vous procurer une #[span.highlight carte magnétique verte]. 
+        Cela devrait vous permettre d'accéder au hall principal, et au module de recherche du Ducktypium.
 
 -
   // After conversation happens once, Operator gets green card

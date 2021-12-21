@@ -2,30 +2,30 @@
 
 mixin welcome
   response#welcome.
-    I was happy to help.
+    J'étais heureux de vous aider.
 
 mixin follow_up
   response#follow_up.
-    Were you able to salvage the freight from the Infinite Loop?
+    Avez-vous pu récupérer le cargaison de l'Infinite Loop ?
 
-conversation(display_name="TwilioQuest Engineer")
+conversation(display_name="Ingénieur de TwilioQuest")
   if lastResponse === "welcome"
     statement.
-      Well, The Cloud needs more people like you. If there's ever anything we can do to help you out, don't hesitate to let us know.
+      Eh bien, The Cloud a besoin de plus de gens comme vous. Si nous pouvons faire quoi que ce soit pour vous aider, n'hésitez pas à nous le faire savoir.
 
     responses
       +follow_up
 
   else if lastResponse === "follow_up"
     statement.
-      Thankfully, the cargo bound for the lab managed to escape relatively unscathed. Now that our project has shifted into high gear, I'll have my work cut out for me building the tools the research team needs. But I'd rather be busy than trapped aboard that freighter - I owe you one.
+      Heureusement, la cargaison destinée au laboratoire a réussi à s'en sortir relativement indemne. Maintenant que notre projet est passé à la vitesse supérieure, je vais avoir du pain sur la planche pour construire les outils dont l'équipe de recherche a besoin. Mais je préfère être occupé que piégé à bord de ce cargo - je vous en dois une.
 
     responses
       +welcome
 
   else
     statement.
-      So - you stabilized the #[span.highlight ducktypium] molecule and saved the day. I'd expect nothing less from an Operator with your reputation!
+      Donc - vous avez stabilisé la molécule #[span.highlight ducktypium] et sauvé la situation. Je n'en attendais pas moins d'un agent ayant votre réputation !
 
     responses
       +welcome

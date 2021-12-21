@@ -40,7 +40,7 @@ module.exports = {
       if (!accessLevelState) {
         // Player does not have access level (or access level doesn't exist)
         world.showNotification(
-          `I don't have the requisite access level "${self.accessLevel}" to pass this checkpoint!`
+          `Je n'ai pas le niveau d'accès requis "${self.accessLevel}" pour franchir ce poste de contrôle !`
         );
         return;
       }

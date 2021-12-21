@@ -41,8 +41,8 @@ async function getCode(objectiveName) {
   const exists = await jetpack.existsAsync(savedCodePath);
   if (!exists) {
     throw new NiceError(`
-      We couldn't find your saved code - please open the editor and ensure
-      your code has been created there.
+    Nous n'avons pas pu trouver votre code sauvegardé - veuillez ouvrir 
+    l'éditeur et assurez vous que que votre code y a été créé.
     `);
   }
 
@@ -59,19 +59,19 @@ async function getAnalyzedCode(objectiveName) {
   } catch (e) {
     // This means there's an error parsing the code
     let message = `
-      It looks like there was an error in your code.
+    Il semble qu'il y ait une erreur dans votre code.
     `;
     if (e.lineNumber) {
       message += `
-        Check on
-        <strong style="color:yellow">line ${e.lineNumber}</strong>. The error
-        there was: <br/><br/>
-        ${e.description}
+      Vérifier sur la
+      <strong style="color:yellow">ligne ${e.lineNumber}</strong>. L'erreur
+      est la suivante : <br/><br/>
+      ${e.description}
       `;
     } else {
       message += `
-        Check your code in the editor for errors - do you see any in the 
-        console when you try and run your code?
+      Vérifiez l'absence d'erreurs dans votre code dans l'éditeur
+      - en voyez-vous dans la console lorsque vous essayez d'exécuter votre code ?
       `;
     }
     throw new NiceError(message);
@@ -91,7 +91,7 @@ async function executeCodeString(node, code, args = []) {
     process.on("error", (e) => {
       reject(
         new NiceError(`
-        There was a problem validating your JavaScript code. Please try again.
+        Il y a eu un problème de validation de votre code JavaScript. Veuillez réessayer.
       `)
       );
     });
@@ -118,10 +118,10 @@ async function executeCodeString(node, code, args = []) {
 
     setTimeout(() => {
       if (!finished) {
-        console.warn("Node.js validation code timed out.");
+        console.warn("Le code de validation de Node.js a expiré.");
         reject(
           new NiceError(`
-          There was a problem validating your Node.js code - please try again.
+          Il y a eu un problème de validation de votre code Node.js - veuillez réessayer.
         `)
         );
       }
@@ -140,7 +140,7 @@ function doesFunctionExist(functionName) {
   try {
     eval(functionName);
   } catch (err) {
-    throwAssertionError(`The function "${functionName}" does not exist!`);
+    throwAssertionError(`La fonction "${functionName}" n'existe pas !`);
   }
 }
 
@@ -162,7 +162,7 @@ function expectFunctionResultToBe(
 
   if (Array.isArray(expectedValue)) {
     if (!Array.isArray(actualValue)) {
-      const errorMessage = `"${functionName}" did not return an array as expected!`;
+      const errorMessage = `"${functionName}" n'a pas retourné un tableau comme prévu !`;
 
       throwAssertionError(errorMessage);
     }
@@ -178,7 +178,7 @@ function expectFunctionResultToBe(
   if (!comparisonFn(expectedValue, actualValue)) {
     const errorMessage =
       customErrorMessage ||
-      `"${functionName}" returned "${actualValue}" instead of expected value "${expectedValue}" when called with parameters: ${parameters}.`;
+      `"${functionName}" a renvoyé "${actualValue}" au lieu de la valeur attendue "${expectedValue}" lorsqu'il a été appelé avec les paramètres : ${parameters}.`;
 
     throwAssertionError(errorMessage);
   }
@@ -191,7 +191,7 @@ async function evaluteAssertions(helper, fileName, assertionsString) {
   const exists = await jetpack.existsAsync(programPath);
   if (!exists) {
     helper.fail(
-      `We couldn't find your "${fileName}" script in your JavaScript workspace. Does the file "${programPath}" exist?`
+      `Nous n'avons pas trouvé votre script "${fileName}" dans votre espace de travail JavaScript. Le fichier "${programPath}" existe-t-il ?`
     );
     return false;
   }
@@ -224,7 +224,7 @@ async function evaluteAssertions(helper, fileName, assertionsString) {
   if (stderr) {
     const [, errorMessage] = stderr.match(/Error: (.*)/);
     helper.fail(`
-      An unexpected error occured!
+    Une erreur inattendue s'est produite !
       
       "${errorMessage}"
     `);
@@ -233,7 +233,7 @@ async function evaluteAssertions(helper, fileName, assertionsString) {
 
   if (!stdout.includes(VALIDATION_UUID)) {
     helper.fail(`
-      Validation script could not succesfully terminate and emit Validation UUID: "${VALIDATION_UUID}".
+    Le script de validation n'a pas pu terminer avec succès et a émis l'UUID de validation : "${VALIDATION_UUID}".
     `);
     return false;
   }
@@ -246,9 +246,9 @@ async function writeFile(codePath, fileName, args, output) {
   const p = path.dirname(codePath);
   const t = path.join(p, fileName);
   const text =
-    `Executing script: ${codePath}\n` +
-    `Script arguments: ${args}\n` +
-    `Output:\n${output}\n`;
+    `Exécution du script: ${codePath}\n` +
+    `Arguments: ${args}\n` +
+    `Sortie:\n${output}\n`;
   await jetpack.writeAsync(t, text);
 }
 

@@ -2,19 +2,19 @@
 
 mixin how_get_job
   response#how_get_job.
-    I understand that this is an important project - how did you end up doing this kind of research?
+    Je comprends qu'il s'agit d'un projet important - comment en êtes-vous arrivé à faire ce type de recherche ?
 
-conversation(display_name="TwilioQuest Scientist")
+conversation(display_name="Scientique de TwilioQuest")
   if lastResponse === "how_get_job"
     statement.
-      It's definitely not what I imagined I'd be doing after a PhD in molecular biology. And I can tell you it's nowhere near as lucrative as the offers I received from pharmaceutical companies.<br/><br/>But I've never been able to resist the chance to solve a mystery. When the TwilioQuest program recruited me to study a previously unknown substance, how could I refuse?
+      Ce n'est certainement pas ce que j'imaginais faire après un doctorat en biologie moléculaire. Et je peux vous dire que c'est loin d'être aussi lucratif que les offres que j'ai reçues des entreprises pharmaceutiques.<br/><br/>Mais je n'ai jamais pu résister à la chance de résoudre un mystère. Lorsque le programme TwilioQuest m'a recruté pour étudier une substance inconnue jusqu'alors, comment pouvais-je refuser ?
     responses
       response#lucky_to_have.
-        Well, they're lucky to have you.
+        Eh bien, ils ont de la chance de vous avoir.
 
   else if lastResponse === "lucky_to_have"
     statement.
-      You're not wrong there ;)<br/><br/>And I don't mind saying, we're lucky to have your help as well. Let's get back to it, shall we?
+      Vous n'avez pas tort ;)<br/><br/>Et je ne vous cache pas que nous avons de la chance d'avoir votre aide également. Reprenons le travail, d'accord ?
 
   else if lastResponse === "what_happened"
     include scientist1_disaster.pug
@@ -24,27 +24,27 @@ conversation(display_name="TwilioQuest Scientist")
       include scientist1_disaster.pug
     else if worldState.scientistDisasterConvo
       statement.
-        The #[span.red dimensional rift created by the explosion] is getting worse. I think I can reverse it, but we need to #[span.highlight get the beams in this room back online].<br/><br/>#[span.highlight Find my colleagues] stranded around the lab - they will have the activation codes we need to get the beams running again. We can still fix this if we act quickly.
+        La #[span.red faille dimensionnelle créée par l'explosion] s'aggrave. Je pense pouvoir l'inverser, mais nous devons #[span.highlight remettre les rayons de cette salle en marche].<br/><br/>#[span.highlight Trouver mes collègues] échoués autour du labo - ils auront les codes d'activation dont nous avons besoin pour remettre les rayons en marche. Nous pouvons encore résoudre ce problème si nous agissons rapidement.
       responses
         response#what_happened.
-          Can you go over what happened one more time? Specifically the part where half the lab is missing and everything is on fire?
+          Pouvez-vous revoir ce qui s'est passé une fois de plus ? Plus précisément la partie où la moitié du laboratoire a disparu et où tout est en feu ?
     else
       statement.
-        This is bad. Really quite bad.
+        C'est mauvais. Vraiment très mauvais.
       responses
         response#what_happened.
-          Uh, yeah - half the lab is missing and everything is on fire! What happened?
+          Euh, oui - la moitié du laboratoire a disparu et tout est en feu ! Que s'est-il passé ?
 
   else
     if worldState.room1.passwordFound
       statement.
-        You found the #[span.highlight stasis beam password]! You're the best! <br/><br/> It seems only fitting that you do the honors and re-start our big experiment. #[span.highlight Head over to the beam controls in the center of the room] and use the password there. I am so excited - I just know we're going to uncover the "big bang" moment of JavaScript!
+        Vous avez trouvé le mot de passe #[span.highlight stasis beam] ! Vous êtes le meilleur ! <br/><br/>Il semble tout à fait approprié que vous fassiez les honneurs et redémarriez notre grande expérience. #[span.highlight Dirige-toi vers les commandes du rayon au centre de la pièce] et utilise le mot de passe là-bas. Je suis tellement excité - je sais juste que nous allons découvrir le moment du "big bang" de JavaScript !
       responses
         +how_get_job
 
     else if worldState.room1.scientistInitalConvo
       statement.
-        Thanks again for your help #[span.highlight retreiving the password] for the stasis beam in the center of this room. When you find it, we can #[span.highlight continue our ducktypium research]! <br/><br/>Once you get past the security barriers behind me, the password for the stasis beam #[span.highlight is written on a piece of paper on my desk].
+        Merci encore pour votre aide #[span.highlight récupérer le mot de passe] pour le rayon de stase au centre de cette salle. Quand vous l'aurez trouvé, nous pourrons #[span.highlight continuer nos recherches sur le ducktypium] ! <br/><br/>Une fois que vous aurez passé les barrières de sécurité derrière moi, le mot de passe pour le faisceau de stase #[span.highlight est écrit sur un morceau de papier sur mon bureau].
       responses
         +how_get_job
 

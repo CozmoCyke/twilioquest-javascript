@@ -2,34 +2,34 @@
 case lastResponse
   when "other_scientists"
     statement.
-      They were as of a few minutes after the accident. Right now, I can't be sure - we've lost all communications in the lab. We should assume my colleagues are #[span.highlight stranded in other areas of the facility].
+      Ils l'étaient quelques minutes après l'accident. Pour l'instant, je ne peux pas être sûr - nous avons perdu toutes les communications dans le laboratoire. Nous devons supposer que mes collègues sont #[span.highlight bloqués dans d'autres zones de l'installation.]
     responses
       response#get_to_safety.
-        We need to find them and get all of you to safety.
+        Nous devons les trouver et les mettre tous en sécurité.
 
   when "get_to_safety"
     statement.
-      So here's the thing about "safety"... From what I can tell, that explosion created a dimensional rift that is expanding by the minute. Unless we can #[span.highlight reverse the experiment and mend the rift], nowhere in The Cloud will be safe.
+      Alors voilà le truc à propos de la "sécurité"... D'après ce que je peux dire, cette explosion a créé une faille dimensionnelle qui s'agrandit de minute en minute. À moins que nous ne puissions #[span.highlight inverser l'expérience et réparer la faille], personne dans le Cloud ne sera en sécurité.
     responses
       response#fix_it.
-        So reverse the experiment, or all of existence is doomed. Got it. How do we go about doing that?
+        Alors inversez l'expérience, ou toute l'existence est condamnée. Compris. Comment on s'y prend pour faire ça ?
 
   when "fix_it"
     statement.
-      I think I know how to adjust the stabilizer beams to reverse the reaction, but in order to do that, we'll need to #[span.highlight reactivate all four beams]. And I won't be able to do that myself - my colleagues have the activation codes for the other lasers.
+      Je pense savoir comment ajuster les rayons stabilisateurs pour inverser la réaction, mais pour ce faire, nous devrons #[span.highlight réactiver les quatre rayons]. Et je ne pourrai pas le faire moi-même - mes collègues ont les codes d'activation des autres lasers.
     responses
       response#on_it.
-        I'm on it! I'll find your colleagues and get their activation codes.
+        Je m'en occupe ! Je vais trouver vos collègues et obtenir leurs codes d'activation.
 
   when "on_it"
     statement.
-      I still need some time to calibrate the equipment for the reversal attempt. Let me know when you have #[span.highlight found my colleagues and collected their activation codes]. We can still fix this if we move quickly.
+      J'ai encore besoin d'un peu de temps pour calibrer l'équipement pour la tentative d'inversion. Faites-moi savoir quand vous aurez #[span.highlight trouvé mes collègues et recueilli leurs codes d'activation]. Nous pouvons encore résoudre ce problème si nous agissons rapidement.
     // Flag that the scientist post-disaster conversation has been finished
     - worldState.scientistDisasterConvo = true;
 
   default
     statement.
-      The #[span.highlight ducktypium crystal destablized] after we turned on the fourth beam - but that shouldn't have been possible! Our... MY... calculations were perfect, I know it!<br/><br/>And technically, parts of the lab aren't missing, they've just transitioned to a previously undiscovered fifth phase of matter outside our spacetime continuum.<br/><br/>As for the fires... yeah, that part is still pretty bad.
+      Le #[span.highlight cristal de ducktypium a été destabilisé] après que nous ayons allumé le quatrième faisceau - mais cela n'aurait pas dû être possible ! Nos... MES... calculs étaient parfaits, je le sais !<br/><br/>Et techniquement, des parties du laboratoire ne sont pas manquantes, elles ont juste fait la transition vers une cinquième phase de matière non encore découverte en dehors de notre continuum espace-temps.<br/><br/>Pour ce qui est des incendies... ouais, cette partie est encore assez mauvaise.
     responses
       response#other_scientists.
-        What happened to the other scientists that were inside the test chamber? Are they safe?
+        Qu'est-il arrivé aux autres scientifiques qui étaient dans la chambre d'essai ? Sont-ils en sécurité ?

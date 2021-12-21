@@ -3,66 +3,66 @@
 // Responses
 mixin need_code
   response#need_code.
-    The lead scientist is working to reverse the experiment, but we need your access code.
+    Le scientifique principal s'efforce d'inverser l'expérience, mais nous avons besoin de votre code d'accès.
 
 mixin how_do_i_do_it
   response#how_do_i_do_it.
-    I'll help you if I can - how do I make it over to you?
+    Je vous aiderai si je le peux - comment puis-je vous le faire créer ?
 
 mixin second_thought
   response#second_thought.
-    You know, on second thought, I might just leave you there and let spacetime crumble to pieces - at least then I'd be free of your attitude.
+    Vous savez, à bien y réfléchir, je pourrais vous laisser là et laisser l'espace-temps s'effondrer en morceaux - au moins, je serais libéré de votre attitude.
 
 mixin can_you_just_tell
   response#can_you_just_tell.
-    Listen, we're a bit pressed for time - reality unraveling and all that - can't you just tell me your access code?
+    Écoutez, nous sommes un peu pressés par le temps - la réalité s'effiloche et tout ça - vous ne pouvez pas simplement me donner votre code d'accès ?
 
-conversation(display_name="TwilioQuest Botanist")
+conversation(display_name="Le botaniste de TwilioQuest")
   if lastResponse === "how_do_i_do_it"
-    statement.
-      How?! Well, isn't it obvious! You'll need to #[span.highlight extend the energy bridges] connecting the different sections of the lab. There should be a control panel by each bridge section you can use to do it.<br/><br/>It will probably require that you be clever enough to write #[span.highlight JavaScript code that uses conditional logic] - so I won't hold my breath.
+    déclaration.
+      Comment ? Eh bien, n'est-ce pas évident ! Vous devrez #[span.highlight prolonger les ponts énergétiques] reliant les différentes sections du laboratoire. Il devrait y avoir un panneau de contrôle près de chaque section de pont que vous pouvez utiliser pour le faire.<br/><br/>Cela nécessitera probablement que vous soyez assez intelligent pour écrire du #[span.highlight Code JavaScript qui utilise la logique conditionnelle] - donc je ne retiendrai pas mon souffle.
     responses
       +can_you_just_tell
       +second_thought
 
   else if lastResponse === "can_you_just_tell"
     statement.
-      The only reality you need concern yourself with is that I, an irreplaceable engine of scientific discovery, have been trapped here due to the inferiority of my colleagues!<br/><br/>Aside from that, my access code is encrypted on a hardware token - #[span.highlight you'll need to retrieve it from me] if you insist on carrying out this fool's errand. Though I suppose that's the only errand you're capable of.
+      La seule réalité dont vous devez vous préoccuper est que moi, un moteur irremplaçable de la découverte scientifique, j'ai été piégé ici à cause de l'infériorité de mes collègues !<br/><br/>En dehors de cela, mon code d'accès est crypté sur un dispositif matériel - #[span.highlight vous devrez le récupérer auprès de moi] si vous insistez pour effectuer cette course de dupes. Bien que je suppose que c'est la seule course dont vous êtes capable.
     responses
       +how_do_i_do_it
       +second_thought
 
   else if lastResponse === "second_thought"
     statement.
-      You can't. You wouldn't! I'm... This is... Please don't.
+      Vous ne pouvez pas. Tu ne le ferais pas ! Je suis... C'est... S'il vous plaît, ne le faites pas.
     responses
       +how_do_i_do_it
 
   else if lastResponse === "what_was_that"
     statement.
-      Do you imagine that your humour is endearing? Let me assure you that it is not, and that your juvenile prattle will earn you a #[span.red stern reprimand] from your superiors!
+      Vous imaginez que votre humour est attachant ? Laissez-moi vous assurer qu'il n'en est rien, et que votre bavardage juvénile vous vaudra un #[span.red blâme sévère] de la part de vos supérieurs !
     responses
       +need_code
       +how_do_i_do_it
 
   else if lastResponse === "need_code"
     statement.
-      Hah. Working on a solution, is she? If I had been placed in charge of this project, you can be sure we'd never have ended up in this situation to begin with.<br/><br/>If you want to waste your time helping her, be my guest. I'll happily #[span.highlight give you my access code once you clear the path] for my escape.
+      Ah. Elle travaille sur une solution, n'est-ce pas ? Si j'avais été placé à la tête de ce projet, vous pouvez être sûr que nous ne nous serions jamais retrouvés dans cette situation pour commencer.<br/><br/>Si vous voulez perdre votre temps à l'aider, faites-vous plaisir. Je serai heureux de #[span.highlight vous donner mon code d'accès une fois que vous aurez dégagé le chemin] pour ma fuite.
     responses
       +can_you_just_tell
       +how_do_i_do_it
 
   else if worldState.southWing.hadIntroConversation
     statement.
-      This is an outrage! 20 years as a tenured professor of botany, dozens of published works, and left to rot in a burning husk of a lab...<br/><br/>You there! You haven't forgotten about me, have you? Rescue me at once or I'll... You'll...
+      C'est un scandale ! 20 ans comme professeur titulaire de botanique, des dizaines d'ouvrages publiés, et laissé à pourrir dans une enveloppe brûlante d'un labo... <br/><br/>Vous là ! Vous ne m'avez pas oublié, n'est-ce pas ? Sauvez-moi tout de suite ou je... Vous allez...
     responses
       response#what_was_that.
-        Did I hear something? Darn it, must be that selective hearing loss triggered by self-important whining.
+        Est-ce que j'ai entendu quelque chose ? Mince, ça doit être cette perte d'audition sélective déclenchée par les pleurnicheries égocentriques.
 
   else
     - worldState.southWing.hadIntroConversation = true;
     statement.
-      I say - you! You over there!<br/><br/>As the most senior and accomplished scientist in this facility, I demand that you assist me this instant!
+      Je dis - vous ! Vous là-bas !<br/><br/>En tant que scientifique le plus ancien et le plus accompli de cette installation, j'exige que vous m'assistiez à l'instant !
     responses
       +need_code
       +how_do_i_do_it

@@ -1,11 +1,11 @@
 // Responses
 mixin where_should_go
   response#where_should_go.
-    Do you know where I should go next?
+    Savez-vous où je devrais aller ensuite ?
 
 mixin about
   response#about.
-    What kind of research are you doing aboard the station?
+    Quel genre de recherche faites-vous à bord de la station ?
 
 conversation(display_name="Libation Bot")
   case lastResponse
@@ -29,20 +29,20 @@ conversation(display_name="Libation Bot")
     
     statement#where_should_go
       text.
-        Your current access card enables travel to the Ducktypium lab module.
-        You can enter this lab module by proceeding through the hallway behind 
-        this unit's recreational liquid storage cache.<br/><br/>
-        <i>[After staring quizzically at the robot for a moment, you determine he 
-        means you should walk through the doorway behind the bar.]</i>
+        Votre carte d'accès actuelle vous permet de vous rendre dans le module de laboratoire Ducktypium.
+        Vous pouvez entrer dans ce module de laboratoire en passant par le couloir derrière 
+        la cachette de stockage de liquide récréatif de cette unité.<br/><br/>
+        <i>[Après avoir fixé le robot d'un air perplexe pendant un moment, vous déterminez qu'il 
+        veut dire que vous devriez passer par la porte derrière le bar.]</i>
 
     statement#about
       text.
-        Error. This platform is authorized to dispense directional 
-        information and situationally appropriate thirst mitigation technology.
-        May I interest you in a MANGO DRAGONFRUIT LIQUID INFUSION? I can
-        administer this content for oral consumption, or intravenously.
+        Erreur. Cette plate-forme est autorisée à distribuer des informations directionnelles 
+        et des technologies d'atténuation de la soif appropriées à la situation.
+        Puis-je vous intéresser à une INFUSION LIQUIDE DU FRUIT DU DRAGON ET DE MANGUE ? Je peux
+        administrer ce contenu pour une consommation orale, ou par voie intraveineuse.
 
     statement#default
       text.
-        Greetings. I am Libation Bot. I am authorized to dispense directional 
-        information and situationally appropriate thirst mitigation technology.
+        Bonjour. Je suis le Bot de Libation. Je suis autorisé à distribuer des informations directionnelles 
+        et des technologies d'atténuation de la soif adaptées à la situation.

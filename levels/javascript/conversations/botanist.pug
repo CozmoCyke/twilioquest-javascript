@@ -3,23 +3,23 @@
 // Responses
 mixin funny_way
   response#funny_way.
-    You have a funny way of showing gratitude.
+    Vous avez une drôle de façon de montrer votre gratitude.
 
-conversation(display_name="TwilioQuest Botanist")
+conversation(display_name="Le botaniste de TwilioQuest")
   if lastResponse === "funny_way"
     statement.
-      What, do you want a medal for demonstrating you're not a complete simpleton? I have none to give, so my acknowledgment of your not-useless programming skills will have to suffice.
+      Quoi, vous voulez une médaille pour avoir démontré que vous n'êtes pas un simplet complet ? Je n'en ai aucune à donner, donc ma reconnaissance de vos compétences en programmation non inutiles devra suffire.
 
   else if worldState.southWing.hadSavedConversation
     statement.
-      You already have #[span.highlight my access code for Beam 2] in the main experiment room. Do you need something else, or do you intend to waste even more of my time while I try to collect my research materials?
+      Vous avez déjà #[span.highlight mon code d'accès pour le Rayon 2] dans la salle d'expérience principale. Avez-vous besoin d'autre chose, ou avez-vous l'intention de me faire perdre encore plus de temps pendant que j'essaie de rassembler mes équipements de recherche ?
     responses
       +funny_way
 
   else
     - worldState.southWing.hadSavedConversation = true;
     statement.
-      Well it's about time. Here - #[span.highlight take my access code for Beam 2] in the main experiment room, if you must. I will remain a moment longer to collect my research materials before I evacuate.<br/><br/>... I'll admit that you're not as hopeless as I originally suspected.
+      Eh bien, il était temps. #[span.highlight Prenez mon code d'accès pour le Rayon 2] dans la salle d'expérience principale, si vous le devez. Je resterai un moment de plus pour récupérer mon équipement de recherche avant d'évacuer.<br/><br/>... Je dois admettre que vous n'êtes pas aussi désespéré que je le soupçonnais au départ.
     responses
       +funny_way
 

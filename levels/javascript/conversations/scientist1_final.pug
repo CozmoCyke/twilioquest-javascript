@@ -2,30 +2,30 @@
 
 mixin welcome
   response#welcome.
-    All in a day's work!
+    Tout cela en un jour de travail !
 
 mixin sabotage
   response#sabotage.
-    When I was fixing the final laser, it appeared to have been sabotaged.
+    Lorsque j'ai réparé le laser final, il semblait avoir été saboté.
 
-conversation(display_name="TwilioQuest Lead Scientist")
+conversation(display_name="Le Chef Scientifique de TwilioQuest")
   if lastResponse === "welcome"
     statement.
-      I hope not! How many reality-threatening crises do you deal with in an average work week?
+      J'espère que non ! Combien de crises menaçant la réalité devez-vous gérer dans une semaine de travail moyenne ?
 
     responses
       +sabotage
 
   else if lastResponse === "sabotage"
     statement.
-      You're right - we went over the lab's security footage and discovered it was that cranky botanist who monkeyed with the laser! And now he's conveniently fled the station. We're still investigating the incident, but we suspect that the #[span.red Legacy Systems] helped him infiltrate the station to sabotage our research.<br/><br/> It's a good thing you showed up when you did - the #[span.red Legacy Systems] almost succeeded. I doubt they accounted for an Operator with your skills.
+      Vous avez raison - on a regardé les vidéos de sécurité du labo et on a découvert que c'est ce botaniste fou qui a trafiqué le laser ! Et maintenant il a commodément fui la station. Nous enquêtons toujours sur l'incident, mais nous soupçonnons que les #[span.red Anciens Systèmes] l'ont aidé à s'infiltrer dans la station pour saboter nos recherches.<br/><br/>C'est une bonne chose que vous vous soyez montrés quand vous l'avez fait - les #[span.red Anciens Systèmes] ont presque réussi. Je doute qu'ils aient compté sur un Agent avec vos compétences.
 
     responses
       +welcome
 
   else
     statement.
-      This is incredible - the #[span.highlight ducktypium] molecule is stable. You did it!<br/><br/>I know you must hear this all the time, but you're a real hero! Our team, and every resident of The Cloud owes you a debt we can never repay.
+      C'est incroyable - la molécule #[span.highlight ducktypium] est stable. Vous avez réussi !<br/><br/>Je sais que vous devez entendre ça tout le temps, mais vous êtes un vrai héros ! Notre équipe, et chaque résident du Cloud vous doit une dette que nous ne pourrons jamais rembourser.
 
     responses
       +welcome

@@ -2,30 +2,30 @@
 
 mixin welcome
   response#welcome.
-    It was my pleasure.
+    C'était un plaisir pour moi.
 
 mixin follow_up
   response#follow_up.
-    Are you feeling okay? You've been through more than your fair share of reality-bending lately.
+    Vous vous sentez bien ? Vous avez traversé plus que votre part de réalité ces derniers temps.
 
-conversation(display_name="TwilioQuest Physicist")
+conversation(display_name="Médecin de TwilioQuest")
   if lastResponse === "welcome"
     statement.
-      Hah, that seems unlikely. Unless manipulating spacetime like a hunk of Play Doh is your idea of a good time. Though to be fair, that is *my* idea of a good time.
+      Ah, ça semble peu probable. A moins que manipuler l'espace-temps comme un gros morceau de Play Doh soit votre idée d'un bon moment. Bien que pour être juste, c'est *mon* idée d'un bon moment.
 
     responses
       +follow_up
 
   else if lastResponse === "follow_up"
     statement.
-      I feel fine, though I am 99% sure my eyes were brown before all this started. I've asked my mom to text me some baby pictures for reference, but I kind of don't care. The applications of this technology could be amazing!<br/><br/> But despite the bumps and bruises, I'm here, in one piece, thanks to you.
+      Je me sens bien, même si je suis sûre à 99 % que mes yeux étaient bruns avant que tout cela ne commence. J'ai demandé à ma mère de m'envoyer par SMS des photos de bébé pour référence, mais je m'en fiche un peu. Les applications de cette technologie pourraient être incroyables !<br/><br/>Mais malgré les bosses et les bleus, je suis là, en un seul morceau, grâce à vous.
 
     responses
       +welcome
 
   else
     statement.
-      The #[span.highlight ducktypium] molecule is stable! Not only did you save The Cloud and all of us, we're that much closer to unlocking the mysteries of JavaScript. You, my friend, are a legend.
+      La molécule #[span.highlight ducktypium] est stable ! Non seulement vous avez sauvé le Cloud et nous tous, mais nous sommes encore plus près de percer les mystères de JavaScript. Vous, mon ami, êtes une légende.
 
     responses
       +welcome

@@ -87,7 +87,7 @@ async function handleDoorControls(event, world, worldState) {
           openDoors(world, "lowerDoor");
           break;
         default:
-          console.log("trigger area middle shouldn't have been last entered");
+          console.log("le milieu de la zone de déclenchement n'aurait pas dû être pénétré en dernier lieu");
           break;
       }
     }, 5000);
