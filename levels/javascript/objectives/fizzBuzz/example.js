@@ -1,11 +1,11 @@
-// This is what your variable declaration should look like in your
-// separate javaScriptDecryption.js file!
+// Voici à quoi devrait ressembler votre déclaration de variable dans votre fichier
+// séparé javaScriptDecryption.js !
 
 function decrypt(number) {}
 
-// This is debug code here to test your function!
-// You'll learn more about what this code does in
-// the east wing of the JavaScript lab!
+// Ceci est du code de débogage pour tester votre fonction !
+// Vous en apprendrez plus sur ce que fait ce code dans
+// l'aile est du labo JavaScript !
 for (let input = 1; input <= 30; input++) {
   console.log(decrypt(input));
 }

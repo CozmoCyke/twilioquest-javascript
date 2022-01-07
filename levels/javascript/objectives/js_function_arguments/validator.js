@@ -17,9 +17,9 @@ module.exports = async helper => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "politeLasers.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
+      Nous n'avons pas pu trouver votre script "politeLasers.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/><br/>
+      <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
     }
@@ -55,18 +55,17 @@ module.exports = async helper => {
       console.log(tq.error);
       if (tq.error.name === 'ReferenceError') {
         return helper.fail(`
-          It looks like a <span class="highlight">getLaserSetting</span> 
-          function was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the function 
-          "<span class="highlight">getLaserSetting</span>"? Maybe 
-          double-check your spelling?
-        `);
+        Il semble qu'une fonction <span class="highlight">getLaserSetting</span> 
+        n'a pas été définie dans votre
+        code. Du moins, nous ne l'avons pas vue dans la portée globale de votre script.
+        <br/><br/>
+        Avez-vous nommé la fonction 
+        "<span class="highlight">getLaserSetting</span>" ? Peut-être que vous pouvez revérifier votre orthographe ?
+      `);
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
-          <br/><br/>
+        Il y a eu un problème de validation de votre code. L'erreur trouvée est la suivante :
+        <br/><br/>
           ${tq.error}
         `);
       }
@@ -75,10 +74,9 @@ module.exports = async helper => {
     // Check type of the function
     if (!isFunction(tq.getLaserSetting)) {
       let message = `
-        We found a variable called 
-        <span class="highlight">getLaserSetting</span>, but it's not a
-        callable function. Check the Help section for more guidance on creating
-        a JavaScript function.
+      Nous avons trouvé une variable appelée 
+      <span class="highlight">getLaserSetting</span>, mais ce n'est pas une
+      fonction appelable. Consultez la section Aide pour obtenir plus de conseils sur la création d'une fonction JavaScript.
       `;
 
       return helper.fail(message);
@@ -92,69 +90,65 @@ module.exports = async helper => {
 
       if (result === undefined || result === null) {
         return helper.fail(`
-          It looks like your function is not yet returning a value. The final
-          line of code in your function before the "}" should use the
-          <span class="highlight">return</span> keyword to pass back a value of
-          some kind as a result of executing the function. See the example code
-          in the Help section.
+        Il semble que votre fonction ne renvoie pas encore de valeur. La dernière
+        ligne de code de votre fonction avant le "}" doit utiliser le mot-clé
+        <span class="highlight">return</span> pour renvoyer une valeur quelconque à la suite de l'exécution de la fonction. Voir l'exemple de code
+        dans la section d'Aide.
         `);
       }
 
       if (typeof result !== 'string') {
         return helper.fail(`
-          It looks like your function is not returning a string value. Your
-          function must return a string with the value
-          <span class="highlight">"OFF"</span>.
-        `);
-      }
-
-      if (result !== 'ON') {
-        return helper.fail(`
-          Your function returned a string, but not the value we were looking 
-          for. Your function returned the value 
-          <span class="highlight">"${result}"</span>. The correct value is
-          <span class="highlight">"ON"</span>.
-        `);
-      }
-
-      if (result2 !== 'ON') {
-        return helper.fail(`
-          Your function returned a string, but not the value we were looking 
-          for. Your function returned the value 
-          <span class="highlight">"${result}"</span>. The correct value is
-          <span class="highlight">"ON"</span>.
-        `);
-      }
-
-      if (result3 !== 'OFF') {
-        return helper.fail(`
-          When your function is passed the string "please", it should return
-          the string "OFF".
-        `);
-      }
-
-    } catch(ee) {
-      return helper.fail(`
-        There was an error executing your getLaserSetting function. Please 
-        ensure that you can exercise your function from the command line 
-        successfully and try again. Use the starter code in the Help section if
-        you are stuck. Here's the error we got from trying to call your 
-        function: <br/><br/>
-        <span class="highlight">${ee}</span>
-      `);
+        Il semble que votre fonction ne renvoie pas une chaîne de caractères. Votre fonction
+        fonction doit renvoyer une chaîne de caractères avec la valeur
+        <span class="highlight">"OFF"</span>.
+      `) ;
     }
 
-    helper.success(`
-      With a heavy sigh, you once again placate Glen and create a function that
-      drops the laser barrier when asked politely. You can now move further into
-      the lab.
-    `);
-  } catch (e) {
-    helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
-      <span class="highlight">${e}</span>
+    if (result !== 'ON') {
+      return helper.fail(`
+        Votre fonction a renvoyé une chaîne de caractères, mais pas la valeur que nous recherchions. Votre fonction renvoie la valeur 
+        <span class="highlight">"${result}"</span>. La valeur correcte est
+        <span class="highlight">"ON"</span>.
+      `) ;
+    }
+
+    if (result2 !== 'ON') {
+      return helper.fail(`
+        Votre fonction a renvoyé une chaîne de caractères, mais pas la valeur que nous recherchions recherchée. Votre fonction renvoie la valeur 
+        <span class="highlight">"${result}"</span>. La valeur correcte est
+        <span class="highlight">"ON"</span>.
+      `) ;
+    }
+
+    if (result3 !== 'OFF') {
+      return helper.fail(`
+        Lorsqu'on passe à votre fonction la chaîne "please", elle doit renvoyer la chaîne "OFF".
+        la chaîne "OFF".
+      `) ;
+    }
+
+  } catch(ee) {
+    return helper.fail(`
+      Une erreur s'est produite lors de l'exécution de votre fonction getLaserSetting. Veuillez assurez-vous que vous pouvez exécuter votre fonction à partir de la ligne de commande 
+      avec succès et réessayez. Utilisez le code de démarrage dans la section d'aide si
+      vous êtes bloqué. Voici l'erreur que nous avons trouvé en essayant d'appeler votre 
+      fonction : <br/><br/>
+      <span class="highlight">${ee}</span>
+    `) ;
+  }
+
+  helper.success(`
+    Avec un gros soupir, vous avez une fois de plus apaisé Glen et créé une fonction qui
+    fait tomber la barrière laser lorsqu'on le lui demande poliment. Vous pouvez maintenant aller plus loin dans
+    le labo.
+  `) ;
+} catch (e) {
+  helper.fail(`
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès à partir de la ligne de commande et réessayez. Voici l'erreur 
+    que nous avons trouvée : <br/><br/>
+    <span class="highlight">${e}</span>
     `);
   }
 };

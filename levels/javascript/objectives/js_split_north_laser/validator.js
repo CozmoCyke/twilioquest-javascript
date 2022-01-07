@@ -19,8 +19,8 @@ module.exports = async (helper) => {
   // The player needs to enable the other beams first
   if (!isObjectiveReady) {
     return helper.fail(`
-      You can't restart this laser until you receive the physicist's 
-      access code. See the objective tab for more information.
+    Vous ne pouvez pas redémarrer ce laser tant que vous n'avez pas reçu
+    le code d'accès du physicien. Voir l'onglet objectif pour plus d'informations.
     `);
   }
 
@@ -34,9 +34,9 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "targetingSolution.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
+      Nous n'avons pas pu trouver votre script "targetingSolution.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/><br/>
+      <span style="word-wrap:break-word" (mot caché)">${programPath}</span>
       `);
       return;
     }
@@ -56,33 +56,33 @@ module.exports = async (helper) => {
       }
     `;
 
-    // First, execute user code to ensure it runs unchanged
+    // Tout d'abord, exécutez le code utilisateur pour vous assurer qu'il s'exécute sans modification.
     let script = new vm.Script(userCode);
     script.runInNewContext(Object.assign({}, scriptContext));
 
-    // Assuming that it doesn't throw, we can try running it with our test
-    // code appended to it.
+    // En supposant qu'il ne se lance pas, nous pouvons essayer de l'exécuter avec notre test
+    // le code est  ajouté à celui-ci.
     script = new vm.Script(testCode);
     script.runInNewContext(scriptContext);
 
-    // Inspect the script context for the stuff we want
+    // Inspecter le contexte du script pour trouver ce que nous voulons.
     const tq = scriptContext.__TQ;
 
     if (tq.error) {
       console.log(tq.error);
       if (tq.error.name === "ReferenceError") {
         return helper.fail(`
-          It looks like a <span class="highlight">TargetingSolution</span> 
-          class was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the class 
-          "<span class="highlight">TargetingSolution</span>"? Maybe 
-          double-check your spelling?
+        Il semble qu'une <span class="highlight">TargetingSolution</span> 
+        n'a pas été définie dans votre
+        code. Du moins, nous ne l'avons pas vue dans la portée globale de votre script.
+        <br/><br/>
+        Avez-vous nommé la classe 
+        "<span class="highlight">TargetingSolution</span>" ? Peut-être que 
+        revérifier votre orthographe ?
         `);
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
+        Il y a eu un problème de validation de votre code. L'erreur réussie est la suivante :
           <br/><br/>
           ${tq.error}
         `);
@@ -111,7 +111,7 @@ module.exports = async (helper) => {
 
       if (!isFunction(result1.target)) {
         return helper.fail(`
-          Your TargetingSolution should have an "target" function.
+        Votre TargetingSolution doit avoir une fonction "cible".
         `);
       }
 
@@ -119,32 +119,32 @@ module.exports = async (helper) => {
 
       if (result1Target !== "(32.891, 120.012, 345.12)") {
         return helper.fail(`
-          The <span class="highlight">target</span> function of your
-          <span class="highlight">TargetingSolution</span> class did not return
-          a string in the specified format. It should be in the format
-          <span class="highlight">(x, y, z)</span>, including the parens and
-          commas.
+        La fonction <span class="highlight">target</span> de votre
+        <span class="highlight">TargetingSolution</span> n'a pas fait revenir
+        une chaîne de caractères dans le format spécifié. Elle devrait avoir le format suivant
+        <span class="highlight">(x, y, z)</span>, y compris les parenthèses et les
+        virgules.
         `);
       }
     } catch (ee) {
       return helper.fail(`
-        There was an error executing your TargetingSolution constructor or functions. Please ensure that you can exercise your function from the command line 
-        successfully and try again. Use the starter code in the Help section if
-        you are stuck. Here's the error we got from trying to call your 
-        function: <br/><br/>
+      Une erreur s'est produite lors de l'exécution de votre constructeur ou de vos fonctions TargetingSolution. Veuillez vous assurer que vous pouvez exécuter votre fonction à partir de la ligne de commande 
+      avec succès et réessayez. Utilisez le code de démarrage dans la section d'aide si
+      vous êtes bloqué. Voici l'erreur que nous avons reçue en essayant d'appeler votre 
+      fonction : <br/><br/>
         <span class="highlight">${ee}</span>
       `);
     }
 
     helper.success(`
-      The laser uses your targeting solution class and emits a beam aimed at
-      the center of the ducktypium crystal. Looks like this laser is back online!
+    Le laser utilise votre classe de solution de ciblage et émet un rayon dirigé vers
+    le centre du cristal de ducktypium. On dirait que ce laser est de nouveau en ligne !
     `);
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès à partir de la ligne de commande et réessayez. Voici l'erreur 
+    erreur que nous avons reçue : <br/><br/>
       <span class="highlight">${e}</span>
     `);
   }

@@ -1,40 +1,40 @@
-# Complex Conditions
+# Conditions complexes
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Create a file called <code>enhancedLifeDetector.js</code></li>
-  <li>Print out the appropriate tree life status depending on which command line argument your script receives (see table below)</li>
+  <li>Créer un fichier appelé <code>enhancedLifeDetector.js</code></li>.
+  <li>Affichez le statut approprié de vie de l'arbre en fonction de l'argument de ligne de commande que votre script reçoit (voir le tableau ci-dessous)</li>.
 </ul>
 </div>
 
-The final bridge separating you from the botanist is also disabled. Similar to the west bridge, this one has failed because the **Tree Life Detector** is under configured.
+Le dernier pont qui vous sépare du botaniste est également désactivé. Comme le pont ouest, celui-ci a échoué parce que le **Détecteur de vie des arbres** est sous configuré.
 
-This time, you'll need to create an enchanced version of the Tree Life Detector script to extend the bridge.
+Cette fois, vous devrez créer une version améliorée du script Tree Life Detector pour prolonger le pont.
 
-## An enhanced Tree Life Detector
+## Un Tree Life Detector amélioré
 
-Create a file called `enhancedLifeDetector.js` in your code folder. This program will take a single **command line argument** - a single-digit `Number` indicating the current life status of a tree. It then prints out a human-readable string of text indicating the current status of a tree.
+Créez un fichier appelé `enhancedLifeDetector.js` dans votre dossier de code. Ce programme prendra un seul **argument de ligne de commande** - un `Nombre` à un chiffre indiquant le statut de vie actuel d'un arbre. Il affiche ensuite une chaîne de texte lisible par l'homme indiquant l'état actuel d'un arbre.
 
-Nearby, you see a mapping of tree life status IDs to human-readable strings with more statuses than just `alive` and `other`:
+Ci-dessous, vous pouvez voir une correspondance entre les identifiants de l'état de vie de l'arbre et les chaînes de caractères lisibles par l'homme, avec plus de statuts que les seuls `vivant` et `autre` :
 
-| Tree Life Status ID | Tree Status |
+| ID du statut de vie de l'arbre | Statut de l'arbre |
 | ------------------- | ----------- |
-| 0 | "alive" |
-| 1 | "flowering" |
-| 2 | "shedding" |
-| 3+ | "other" |
+| 0 | "vivant" |
+| 1 | "floraison" |
+| 2 | "mue" |
+| 3+ | "autre" |
 
-When your script is executed, it should print out the proper human-readable string of text based on the ID number that is passed in.
+Lorsque votre script est exécuté, il doit afficher la chaîne de texte lisible en fonction du numéro d'identification qui est passé.
 
-If the script is executed like this:
+Si le script est exécuté comme ceci :
 
 ```bash
 node treeLifeDetector.js 2
 ```
 
-It should print the string `shedding`. If the number passed in is not 0, 1, or 2, your script should print `other`.
+Il devrait afficher la chaîne `mue`. Si le nombre passé n'est pas 0, 1 ou 2, votre script devrait afficher `autre`.
 
-To complete this challenge, you'll need to employ more complex boolean logic than you did previously. Check the **Help** section for more details.
+Pour relever ce défi, vous devrez utiliser une logique booléenne plus complexe que précédemment. Consultez la section **Aide** pour plus de détails.
 
-Once your `enhancedLifeDetector.js` script behaves in this way, click the *HACK* button to validate your work!
+Une fois que votre script `enhancedLifeDetector.js` se comporte de cette manière, cliquez sur le bouton *HACK* pour valider votre travail !

@@ -14,20 +14,20 @@ module.exports = async (helper) => {
       TQ_JAVASCRIPT_WORLD_STATE.eastWing &&
       TQ_JAVASCRIPT_WORLD_STATE.southWing.hadSavedConversation;
 
-    // The player needs to enable the other beams first
+    // Le joueur doit d'abord activer les autres rayons.
     if (!isObjectiveReady) {
       return helper.fail(`
-        You can't restart this laser until you receive the botanist's 
-        access code. See the objective tab for more information.
+      Vous ne pouvez pas redémarrer ce laser tant que vous n'avez pas
+      reçu le code d'accès du botaniste. Voir l'onglet objectif pour plus d'informations.
       `);
     }
 
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "sortOrder.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
+      Nous n'avons pas pu trouver votre script "sortOrder.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/><br/>
+      <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
     }
@@ -38,9 +38,9 @@ module.exports = async (helper) => {
 
     if (!result.stdout || result.stdout.trim() !== "-1") {
       helper.fail(`
-        Your script must print "-1" when the first argument passed to it
-        appears alphabetically sooner than the second argument.
-      `);
+      Votre script doit afficher "-1" lorsque le premier argument qui lui est passé
+      apparaît plus tôt dans l'ordre alphabétique que le second argument.
+    `);
       return;
     }
 
@@ -51,9 +51,9 @@ module.exports = async (helper) => {
 
     if (!result.stdout || result.stdout.trim() !== "1") {
       helper.fail(`
-        Your script must print "1" when the first argument passed to it
-        appears alphabetically later than the second argument.
-      `);
+      Votre script doit afficher "1" lorsque le premier argument qui lui est passé
+      apparaît alphabétiquement plus tard que le second argument.
+    `);
       return;
     }
 
@@ -64,22 +64,21 @@ module.exports = async (helper) => {
 
     if (!result.stdout || result.stdout.trim() !== "0") {
       helper.fail(`
-        Your script must print "0" when the first argument passed to it
-        is the same (ignoring letter case) as the second argument.
-      `);
+      Votre script doit afficher "0" lorsque le premier argument qui lui a été passé
+      est le même (en ignorant la casse) que le second argument.
+    `);
       return;
     }
 
     helper.success(`
-      Your comparison script appears to be working - Stasis Beam 2 flashes to
-      life!
+    Votre script de comparaison semble fonctionner - le rayon de stase 2 s'anime !
     `);
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it successfully and try again. Here's the error we got - sorry
-      if the formatting is ugly: <br/><br/>
-      ${e}
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès et réessayez. Voici l'erreur que nous avons trouvée - désolé
+    si le formatage est horrible : <br/><br/>
+    ${e}
     `);
   }
 };

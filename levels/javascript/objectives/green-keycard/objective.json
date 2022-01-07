@@ -1,12 +1,12 @@
 {
-  "title": "Green Keycard Checkpoint",
-  "description": "This checkpoint requires a green keycard to allow you through.",
-  "validation_fields": [
+  "title" : "Point de contrôle de la carte verte",
+  "description" : "Ce poste de contrôle nécessite une carte à puce verte pour vous permettre de passer.",
+  "validation_fields" : [
     {
-      "name": "keyCard",
-      "type": "prompt",
-      "label": "Green Keycard holders ONLY allowed through this point."
+      "name" : "keyCard",
+      "type" : "prompt",
+      "label" : "SEULS Les détenteurs de cartes à puce vertes sont autorisés à passer par ce point."
     }
   ],
-  "rewards": {}
+  "rewards" : {}
 }

@@ -25,16 +25,16 @@ module.exports = async helper => {
       if (code === 0) {
         helper.success(
           `
-          Awesome! Looks like you have this version installed: <br/>
+          Génial ! On dirait que vous avez installé cette version : <br/>
           <span class="highlight">${versionString}</span> <br/><br/>
-          Please proceed to the next security checkpoint.
+          Veuillez passer au prochain point de contrôle de sécurité.
         `,
           [{ name: 'NODE_EXE', value: nodePath }]
         );
       } else {
         helper.fail(`
-          Welp... something went wrong when we tried to validate this Node.js
-          path. Double check the path and try again.
+        Eh bien ... quelque chose s'est mal passé lorsque nous avons essayé 
+        de valider ce chemin Node.js. Vérifiez à nouveau le chemin et essayez à nouveau.
         `);
       }
     });
@@ -44,8 +44,8 @@ module.exports = async helper => {
       helper.fail(e.message);
     } else {
       helper.fail(`
-        Sorry! We couldn't validate your Node.js installation. Please try
-        again.
+      Désolé ! Nous n'avons pas pu valider votre installation Node.js. Veuillez réessayer
+      à nouveau.
       `);
     }
   }

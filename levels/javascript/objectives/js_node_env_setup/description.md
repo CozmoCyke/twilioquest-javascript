@@ -1,7 +1,7 @@
-# Install Node.js On Your Computer
+# Installer Node.js sur votre ordinateur
 
-Before entering the lab, you must undergo standard security screening. To bypass this test, you must prove that you have the necessary software installed to **execute JavaScript programs** from the terminal application on your computer.
+Avant d'entrer dans le labo, vous devez subir un contrôle de sécurité standard. Pour contourner ce test, vous devez prouver que vous avez installé le logiciel nécessaire pour **exécuter des programmes JavaScript** à partir de l'application terminal sur votre ordinateur.
 
-[Download and install](https://www.nodejs.org) the most recent release of Node.js on your computer. After doing so, your terminal application (PowerShell or Terminal, e.g.) should have access to a new command: `node`. 
+[Téléchargez et installez](https://www.nodejs.org) la version la plus récente de Node.js sur votre ordinateur. Après avoir fait cela, votre application terminal (PowerShell ou Terminal, par exemple) devrait avoir accès à une nouvelle commande : `node`. 
 
-Paste in the **full path** to where the `node` command was installed on your computer. See the Help section if you aren't sure where to find that information. Paste the path in to the text field on the right, then click the *HACK* button.
+Collez le **chemin complet** de l'endroit où la commande `node` a été installée sur votre ordinateur. Consultez la section Aide si vous ne savez pas où trouver cette information. Collez le chemin dans le champ de texte à droite, puis cliquez sur le bouton *HACK*.

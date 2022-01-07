@@ -1,57 +1,57 @@
-# Winning The Arguments
+# Gagner les arguments
 
-The goal of this objective is to familiarize you with the concept of [command line arguments](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/). This is data that is passed in to your JavaScript code when it is executed, to give it some context when it runs.
+Le but de cet objectif est de vous familiariser avec le concept des [arguments en ligne de commande] (https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/). Il s'agit de données qui sont passées à votre code JavaScript lorsqu'il est exécuté, afin de lui donner un certain contexte lors de son exécution.
 
-So far, you have been running your test scripts with a command that looks like this.
-
-```bash
-node someProgram.js
-```
-
-Then, your code runs, executing the instructions that you have written.
-
-However, it is frequently useful to pass some initial data into a program that you have written. We call this initial data **arguments**. To execute a script with arguments, you can type in additional text after the name of your code file, separated by spaces. Here is an example of executing a script with three arguments:
+Jusqu'à présent, vous avez exécuté vos scripts de test avec une commande qui ressemble à ceci.
 
 ```bash
-node someProgram.js "argument one" "another argument" allOneWordNoQuotes
+node unProgramme.js
 ```
 
-You can access these arguments in your code using a special list named [process.argv](https://nodejs.org/docs/latest/api/process.html#process_process_argv).
+Votre code s'exécute alors, en exécutant les instructions que vous avez écrites.
 
-In this objective, you've been asked to write a program that works with a command line argument. This is a bit tricky at first, so here's the code you'll need as a starting point:
+Cependant, il est souvent utile de passer des données initiales dans un programme que vous avez écrit. Nous appelons ces données initiales **arguments**. Pour exécuter un script avec des arguments, vous pouvez saisir du texte supplémentaire après le nom de votre fichier de code, séparé par des espaces. Voici un exemple d'exécution d'un script avec trois arguments :
+
+``bash
+node someProgram.js "argument un" "autre argument" allOneWordNoQuotes
+```
+
+Vous pouvez accéder à ces arguments dans votre code en utilisant une liste spéciale nommée [process.argv](https://nodejs.org/docs/latest/api/process.html#process_process_argv).
+
+Dans cet objectif, on vous a demandé d'écrire un programme qui fonctionne avec un argument en ligne de commande. C'est un peu difficile au début, donc voici le code dont vous aurez besoin comme point de départ :
 
 ```js
-// The line of code below reads in the value of the argument passed in after
-// the name of your script
-const argumentValue = process.argv[2];
+// La ligne de code ci-dessous lit la valeur de l'argument passé à la suite de
+// le nom de votre script
+const argumentValue = process.argv[2] ;
 
-// This line of code converts the argument to a numeric value
-const numberValue = Number(argumentValue);
+// Cette ligne de code convertit l'argument en une valeur numérique
+const numberValue = Number(argumentValue) ;
 
-// This line of code divides the input number by two, and stores the result in
-// a variable named "result"
-const result = numberValue / 2;
+// Cette ligne de code divise le nombre entré par deux, et stocke le résultat dans une variable nommée "result".
+// une variable nommée "result".
+const result = numberValue / 2 ;
 
-// You need to finish the line of code below! How would you print out the
-// result to the terminal window without hard coding the number 42?
-console.log(42);
+// Vous devez terminer la ligne de code ci-dessous ! 
+// Comment afficher le résultat dans la fenêtre du terminal sans coder en dur le nombre 42 ?
+console.log(42) ;
 ```
 
-Add the code above to a file called `divideByTwo.js` in your code directory. For reference, your code folder can be found here:
+Ajoutez le code ci-dessus à un fichier appelé `divideByTwo.js` dans votre répertoire de code. Pour référence, votre répertoire de code peut être trouvé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-Once you have done this, you'll need to change the last line of the program to actually print out the result of dividing the input number by two. To test out your code, execute it from a terminal like this.
+Une fois que vous avez fait cela, vous devrez modifier la dernière ligne du programme pour afficher le résultat de la division du nombre d'entrée par deux. Pour tester votre code, exécutez-le depuis un terminal comme ceci.
 
-```bash
+bash
 node divideByTwo.js 400
 ```
 
-If your code is correct, it would print out the number `200` after executing. Remember, you'll need to edit the starter code above to make this work!
+Si votre code est correct, il affichera le nombre `200` après son exécution. N'oubliez pas que vous devrez modifier le code de démarrage ci-dessus pour que cela fonctionne !
 
-Once your script is working correctly, click the *HACK* button.
+Une fois que votre script fonctionne correctement, cliquez sur le bouton *HACK*.
 
-## Helpful Resources
+## Ressources utiles
 
-* [Node.js Command Line Arguments](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/)
-* [Reference docs for process.argv](https://nodejs.org/docs/latest/api/process.html#process_process_argv)
+* [Node.js Arguments en ligne de commande] (https://nodejs.org/fr/knowledge/command-line/how-to-parse-command-line-arguments/)
+* [Documents de référence pour process.argv](https://nodejs.org/docs/latest/api/process.html#process_process_argv)

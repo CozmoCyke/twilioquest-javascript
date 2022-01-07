@@ -1,29 +1,29 @@
-# Literally an Object
+# Littéralement un objet
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Create a file called <code>construction.js</code>.</li>
-  <li>Create a function called <code>construct</code> that takes a single string argument.</li>
-  <li>Your function must return an object as described below.</li>
+  <li>Créer un fichier appelé <code>construction.js</code>.</li>
+  <li>Créer une fonction appelée <code>construct</code> qui prend un seul argument de type chaîne de caractères.</li>
+  <li>Votre fonction doit renvoyer un objet comme décrit ci-dessous.</li>
 </ul>
 </div>
 
-The north wing of the lab contains a strange device in the center of the room, the purpose of which was not immediately obvious when you entered. Inspecting the console in front of you, you deduce that this is a control panel for a **matter instantiator**. That must be the large chamber in the center of the room!
+L'aile nord du labo contient un étrange dispositif au centre de la pièce, dont le but n'était pas immédiatement évident lorsque vous êtes entré. En inspectant la console située devant vous, vous en déduisez qu'il s'agit du panneau de commande d'un **instanciateur de matière**. Ce doit être la grande chambre au centre de la pièce !
 
-The console, however, is filled with error logs indicating that it was damaged during the lab explosion. If you can get this console (and another just like it) back online, the chamber in the middle of the lab should be functional again.
+La console, cependant, est remplie de journaux d'erreurs indiquant qu'elle a été endommagée lors de l'explosion du labo. Si vous pouvez réussir à remettre cette console (et une autre comme elle) en ligne, la chambre au milieu du labo devrait être de nouveau fonctionnelle.
 
-## Create an Object Literal
+## Créer un objet littéral
 
-The matter instantiator is capable of creating new objects from thin air! The JavaScript function you'll need to fix in this objective is responsible for manufacturing objects also, using [object literal notation](https://javascript.info/object#literals-and-properties).
+L'instanciateur de matière est capable de créer de nouveaux objets à partir de rien ! La fonction JavaScript que vous devrez corriger dans cet objectif est également responsable de la fabrication d'objets, en utilisant la [notation littérale des objets](https://fr.javascript.info/object#litteraux-et-proprietes).
 
-Create a file called `construction.js` in your code folder. Inside that file, create a function called `construct` that returns an [object literal](https://javascript.info/object#literals-and-properties) with the following properties:
+Créez un fichier appelé `construction.js` dans votre dossier de code. Dans ce fichier, créez une fonction appelée `construct` qui renvoie un [objet littéral](https://fr.javascript.info/object#litteraux-et-proprietes) avec les propriétés suivantes :
 
-| Property | Type    | Value   | Notes                                                                 |
+| Propriété | Type | Valeur | Remarques
 | -------- | ------- | ------- | --------------------------------------------------------------------- |
-| name     | string  | See Notes    | This will be the first argument passed to your `construct` function |
-| material | string  | 'human' |                                                                       |
-| assemble | boolean | true    |                                                                       |
-| duration | number  | 1000    |                                                                       |
+| name | string | See Notes | Ce sera le premier argument passé à votre fonction `construct` |
+| material | string | 'human' | |
+| assemble | boolean | true | |
+| duration | number | 1000 | |
 
-When you have written a function that can perform the task described above, click the *HACK* button!
+Lorsque vous avez écrit une fonction qui peut effectuer la tâche décrite ci-dessus, cliquez sur le bouton *HACK* !

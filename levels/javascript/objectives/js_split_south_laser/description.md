@@ -4,7 +4,7 @@ const isObjectiveReady = worldState.southWing &&
 worldState.southWing.hadSavedConversation;
 %>
 
-# Enable Beam 2
+# Activation du rayon 2
 
 <style>
 table.lasers {
@@ -26,10 +26,10 @@ table.lasers td span.off {
 
 <table class="lasers">
   <tr>
-    <th>BEAM 1</th>
-    <th>BEAM 2</th>
-    <th>BEAM 3</th>
-    <th>BEAM 4</th>
+    <th>RAYON 1</th>
+    <th>RAYON 2</th>
+    <th>RAYON 3</th>
+    <th>RAYON 4</th>
   </tr>
   <tr>
     <td>
@@ -64,53 +64,53 @@ table.lasers td span.off {
 </table>
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <% 
 if (isObjectiveReady) {
 %>
 <ul>
-  <li>Create a file called <code>sortOrder.js</code></li>
-  <li>It must take two command line arguments, which you must compare</li>
-  <li>Your script should print <code>-1</code>, <code>0</code>, or <code>1</code> as described below, based on alphabetical order</li>
+  <li>Créer un fichier appelé <code>sortOrder.js</code></li>.
+  <li>Il doit prendre deux arguments en ligne de commande, que vous devez comparer</li>.
+  <li>Votre script doit afficher <code>-1</code>, <code>0</code>, ou <code>1</code> comme décrit ci-dessous, en fonction de l'ordre alphabétique</li>.
 </ul>
 <% } else { %>
 <ul>
-  <li>Find and speak to the botanist in the south wing of the lab</li>
-  <li>Return here to enable beam 2</li>
+  <li>Trouver et parler au botaniste dans l'aile sud du labo</li>.
+  <li>Retournez ici pour activer le rayon 2</li>.
 </ul>
 <% } %>
 </div>
 
 <% if (isObjectiveReady) { %>
 
-Using the botanist's activation code, you access the controls for this stasis beam. After running a quick diagnostic routine, you see that the laser is missing a key piece of functionality - a script that **sorts strings in alphabetical order**.
+En utilisant le code d'activation du botaniste, vous accédez aux commandes de ce rayon de stase. Après avoir exécuté une routine de diagnostic rapide, vous voyez qu'il manque au laser une pièce essentielle de la fonctionnalité - un script qui **trie les chaînes de caractères par ordre alphabétique**.
 
-You'll need to rewrite this sorting script in order to restart the laser.
+Vous devrez réécrire ce script de tri afin de redémarrer le laser.
 
-## Getting things sorted
+## Réussir à trier les choses
 
-In your code folder, create a script called `sortOrder.js`. This script will take **two command line arguments** - a pair of strings that should be compared to see which one comes first alphabetically (letter casing is not important).
+Dans votre dossier de code, créez un script appelé `sortOrder.js`. Ce script prendra **deux arguments en ligne de commande** - une paire de chaînes de caractères qui doivent être comparées pour voir laquelle arrive en premier dans l'ordre alphabétique (la casse des lettres n'est pas importante).
 
-To test your script, you would execute it like this:
+Pour tester votre script, vous devez l'exécuter comme suit :
 
 ```bash
 node sortOrder.js cats dogs
 ```
 
-Your script should determine if the first string is before, after, or in the same position (equal) to the second string, alphabetically. For each case, you should print out a number with `console.log` as described below.
+Votre script doit déterminer si la première chaîne est avant, après ou dans la même position (égale) que la deuxième chaîne, par ordre alphabétique. Pour chaque cas, vous devez afficher un nombre avec `console.log` comme décrit ci-dessous.
 
-- When the first argument is **earlier** in the alphabet than the second, your script should print `-1`.
-- When the first argument is the **same** as the second, your script should print `0`.
-- When the first argument is **later** in the alphabet than the second, your function should print `1`.
+- Lorsque le premier argument est **plus haut** dans l'alphabet que le second, votre script doit afficher `-1`.
+- Lorsque le premier argument est **le même** que le second, votre script doit afficher `0`.
+- Lorsque le premier argument est **plus bas** dans l'alphabet que le second, votre fonction doit afficher `1`.
 
-When your script implements this comparison functionality, click the _HACK_ button to restart this laser!
+Lorsque votre script implémente cette fonctionnalité de comparaison, cliquez sur le bouton _HACK_ pour relancer ce laser !
 
 <% } else { %>
 
-You examine the controls of this stasis beam, but they're currently locked down. You'll need **the botanist's access code** in order to enable this laser.
+Vous examinez les contrôles de ce rayon de stase, mais ils sont actuellement verrouillés. Vous aurez besoin du **code d'accès du botaniste** afin d'activer ce laser.
 
-The botanist is most likely in the lab's **south wing**, where they had previously been studying the effect of ducktypium on plant life.
+Le botaniste est probablement dans l'aile sud du labo, où il a étudié les effets du ducktypium sur la vie végétale.
 
-**Speak to the botanist** to receive the access code for this beam.
+**Parler au botaniste** pour recevoir le code d'accès à ce rayon.
 
 <% } %>

@@ -13,9 +13,9 @@ module.exports = async helper => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "laserConfiguration.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
+      Nous n'avons pas pu trouver votre script "laserConfiguration.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/><br/>
+      <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
     }
@@ -47,44 +47,43 @@ module.exports = async helper => {
       console.log(tq.error);
       if (tq.error.name === 'ReferenceError') {
         return helper.fail(`
-          It looks like a <span class="highlight">laserStatus</span> 
-          variable was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the variable 
-          "<span class="highlight">laserStatus</span>"? Maybe double-check your
-          spelling?
-        `);
-      } else {
-        return helper.fail(`
-          There was a problem validating your code. The error we got was:
-          <br/><br/>
-          ${tq.error}
-        `);
-      }
+        Il semble qu'une <span class="highlight">laserStatus</span> 
+        n'a pas été définie dans votre
+        code. Du moins, nous ne l'avons pas vue dans la portée globale de votre script.
+        <br/><br/>
+        Avez-vous nommé la variable 
+        "<span class="highlight">laserStatus</span>" ? Peut-être que vous devriez revérifier votre
+        orthographe ?
+      `) ;
+    } else {
+      return helper.fail(`
+        Il y a eu un problème de validation de votre code. L'erreur trouvée est la suivante :
+        <br/><br/>
+        ${tq.error}
+      `) ;
     }
+  }
 
     // Check for the correct value of the string
     if (tq.laserStatus !== 'OFF') {
       return helper.fail(`
-        You declared the <span class="highlight">laserStatus</span> variable,
-        but it was not set to the string value of "OFF". Check the Help section
-        to see how you can declare string variables. The value you set it to
-        was: <strong>"${tq.laserStatus}"</strong>.
-      `);
-    }
+      Vous avez déclaré la variable <span class="highlight">laserStatus</span>,
+      mais elle n'a pas été définie à la valeur de chaîne de caractères "OFF". Consultez la section Aide
+      pour savoir comment vous pouvez déclarer des variables de type chaîne. La valeur que vous avez définie était : <strong>"${tq.laserStatus}"</strong>.
+    `) ;
+  }
 
-    helper.success(`
-      That did it! You override the laser configuration with your own 
-      JavaScript code, and in moments the lasers fade away. <br/><br/>
-      You can now proceed onward to the office.
-    `);
-  } catch (e) {
-    helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
-      <span class="highlight">${e}</span>
+  helper.success(`)
+    Vous avez réussi ! Vous surchargez la configuration du laser avec votre propre code JavaScript. 
+    et en quelques instants les lasers s'éteignent. <br/><br/>
+    Vous pouvez maintenant poursuivre votre route vers le bureau.
+  `) ;
+} catch (e) {
+  helper.fail(`
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès à partir de la ligne de commande et réessayez. 
+    Voici l'erreur que nous avons trouvée : <br/><br/>
+    <span class="highlight">${e}</span>
     `);
   }
 };

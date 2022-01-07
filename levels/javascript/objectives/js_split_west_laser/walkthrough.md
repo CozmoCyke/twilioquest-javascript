@@ -5,59 +5,59 @@ worldState.beamThreeOnline &&
 worldState.beamFourOnline;
 %>
 
-# Objective Help
+# Aide aux objectifs
 
 <%
 if (isObjectiveReady) {
 %>
 
-This task will require everything you have learned about JavaScript so far! Classes, array methods, and boolean logic will all be required.
+Cette tâche nécessitera tout ce que vous avez appris sur JavaScript jusqu'à présent ! Les classes, les méthodes de tableau et la logique booléenne seront toutes nécessaires.
 
-Create a file called `ducktypium.js` in your code folder. Your code folder is located here:
+Créez un fichier appelé `ducktypium.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-In this file, you must create a class called `Ducktypium`. Here is some code you can use as a starting point - it already has the class defined, but doesn't yet work as described in the objective:
+Dans ce fichier, vous devez créer une classe appelée `Ducktypium`. Voici un code que vous pouvez utiliser comme point de départ - il a déjà la classe définie, mais ne fonctionne pas encore comme décrit dans l'objectif :
 
 ```js
 class Ducktypium {
   constructor(color) {
-    // your code here
+    //votre code est ici
   }
 
-  // your code here
+  // votre code est ici
 }
 
-// The following lines of code are not required for the solution, but can be
-// used by you to test your solution.
+// Les lignes de code suivantes ne sont pas nécessaires pour la solution, mais peuvent être
+// utilisées par vous pour tester votre solution.
 const dt = new Ducktypium("red");
 
-console.log(dt.color); // prints 'red'
+console.log(dt.color); // affiche 'red'
 
-console.log(dt.refract("blue")); // prints 'purple'
-console.log(dt.refract("red")); // prints 'red'
+console.log(dt.refract("blue")); // affiche 'purple'
+console.log(dt.refract("red")); // affiche 'red'
 
 dt.calibrate([3, 5, 1]);
 
-console.log(dt.calibrationSequence); // prints [3, 9, 15]
+console.log(dt.calibrationSequence); // affiche [3, 9, 15]
 ```
 
-Remember that you can revisit the other wings of the lab to practice any of the skills you learned before.
+N'oubliez pas que vous pouvez revenir dans les autres ailes du labo pour mettre en pratique toutes les compétences que vous avez acquises auparavant.
 
-Once you have implemented the `Ducktypium` class as described in the objective, click _HACK_ and reverse the experiment! You've got this!
+Une fois que vous avez implémenté la classe `Ducktypium` comme décrit dans l'objectif, cliquez sur _HACK_ et inversez l'expérience ! Vous avez réussi !
 
-## Helpful Links
+## Liens utiles
 
-- [JavaScript.info - Full Reference](https://javascript.info/)
-- [MDN JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction)
+- [JavaScript.info - Référence complète](https://fr.javascript.info/)
+- [Référence JavaScript MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Introduction)
 
 <% } else { %>
-You won't be able to complete this objective until you:
+Vous ne pourrez pas terminer cet objectif tant que vous n'aurez pas :
 
-1. Find the three lost scientists
-1. Use their activation codes to enable the three other beams in this room
+1. Trouver les trois scientifiques perdus
+1. Utiliser leurs codes d'activation pour activer les trois autres rayons de cette salle.
 
-Explore the rest of the lab - one scientist each can be found in the areas to the south, east, and west of the main experiment room (the one you are in right now).
+Explorez le reste du labo - vous pouvez trouver un scientifique dans chacune des zones situées au sud, à l'est et à l'ouest de la salle d'expérience principale (celle où vous vous trouvez en ce moment).
 
-Once the other three beams are back online, **return here to enable the final beam**.
+Une fois que les trois autres rayons sont de nouveau en ligne, **Revenez ici pour activer le dernier rayon**.
 <% } %>

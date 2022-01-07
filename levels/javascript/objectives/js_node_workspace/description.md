@@ -1,5 +1,5 @@
-# Create a Workspace
+# Créer un espace de travail
 
-Several activities inside the lab will require that you create JavaScript code files on your computer. The next screening checkpoint is set up to confirm that you have a folder on your computer's file system where you can keep all of these files. 
+Plusieurs activités du labo nécessiteront que vous créiez des fichiers de code JavaScript sur votre ordinateur. Le prochain point de contrôle est défini pour confirmer que vous avez un dossier sur le système de fichiers de votre ordinateur où vous pouvez conserver tous ces fichiers. 
 
-**Create a folder** on your computer to keep your JavaScript code. Once you have done so, enter the **full path** to your folder in the text field on the right and click the *HACK* button.
+**Créez un dossier** sur votre ordinateur pour conserver votre code JavaScript. Une fois que vous l'avez fait, entrez le **chemin d'accès complet** à votre dossier dans le champ de texte à droite et cliquez sur le bouton *HACK*.

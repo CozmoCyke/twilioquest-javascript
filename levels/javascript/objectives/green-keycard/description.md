@@ -1,3 +1,3 @@
-# Green Keycard Checkpoint
+# Contrôle de la carte verte
 
-Only Green Keycard holders are allowed past this checkpoint!
+Seuls les détenteurs de la carte verte sont autorisés à passer ce poste de contrôle !

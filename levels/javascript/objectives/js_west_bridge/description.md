@@ -11,35 +11,35 @@
 
 While searching for the means to extend the west bridge in the lab, you discover this control panel. Apparently, the west bridge is disabled because the lab's **Tree Life Detector** system has been damaged.
 
-**You'll need to repair the Tree Life Detector** before you can continue onward toward the botanist.
+**YVous devrez réparer le détecteur de vie des arbres** avant de pouvoir continuer vers le botaniste.
 
-## Fixing the Tree Life Detector
+## Réparer le détecteur de vie des arbres
 
-Create a file called `treeLifeDetector.js` in your code folder. This program will take a single **command line argument** - a single-digit `Number` indicating the current life status of a tree. You see a current mapping of tree life status IDs to human-readable strings posted next to the control panel:
+Créez un fichier appelé `treeLifeDetector.js` dans votre dossier de code. Ce programme prendra un seul **argument en ligne de commande** - un `Nombre` à un chiffre indiquant le statut de vie actuel d'un arbre. Vous voyez une cartographie actuelle des identifiants de l'état de vie des arbres en chaînes de caractères lisibles par l'homme affichée à côté du panneau de commande :
 
-| Tree Life Status ID | Tree Status |
+| Identification du niveau de vie des arbres | Niveau de vie de l'arbre |
 | ------------------- | ----------- |
 | 0 | "alive" |
 | 1 | "other" |
 | 2 | "other" |
 | 3+ | "other" |
 
-When your script is executed, it should print out the proper human-readable string of text based on the ID number that is passed in.
+Lorsque votre script est exécuté, il doit imprimer la chaîne de texte lisible par l'homme en fonction du numéro d'identification qui lui a été transmis.
 
-If the script is executed like this:
+Si le script est exécuté comme ceci :
 
 ```bash
 node treeLifeDetector.js 0
 ```
 
-It should print the string `alive`.
+Il devrait afficher la chaîne `alive`.
 
-If the script is executed with any other number, like this:
+Si le script est exécuté avec un autre nombre, comme ceci :
 
-```bash
+``bash
 node treeLifeDetector.js 2
 ```
 
-It should print the string `other`.
+Il devrait afficher la chaîne `other`.
 
-Once your `treeLifeDetector.js` script behaves in this way, click the *HACK* button to validate your repair!
+Une fois que votre script `treeLifeDetector.js` se comporte de cette manière, cliquez sur le bouton *HACK* pour valider votre réparation !

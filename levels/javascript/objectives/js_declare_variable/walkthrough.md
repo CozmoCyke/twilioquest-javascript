@@ -1,23 +1,23 @@
-# Creating variables in JavaScript
+# Création de variables en JavaScript
 
-The goal of this exercise is to practice [creating variables](https://javascript.info/variables) in your JavaScript code. Variables contain different types of data that your program can work with, like numbers, text, and more complex data. You can then refer to your data by name in your code using the variable names you created.
+Le but de cet exercice est de s'entraîner à [créer des variables](https://fr.javascript.info/variables) dans votre code JavaScript. Les variables contiennent différents types de données avec lesquelles votre programme peut travailler, comme des chiffres, du texte et des données plus complexes. Vous pouvez ensuite faire référence à vos données par leur nom dans votre code en utilisant les noms de variables que vous avez créés.
 
-To complete this objective, you will need to create a file called `laserConfiguration.js` in your code folder. Your code folder is located here:
+Pour réaliser cet objectif, vous devez créer un fichier appelé `laserConfiguration.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-In this file, declare a variable with the name and value described in the objective. Here is an example of creating a variable of a different name and value - you can use this as a starting point, but it will fail validation if you just copy/paste:
+Dans ce fichier, déclarez une variable avec le nom et la valeur décrits dans l'objectif. Voici un exemple de création d'une variable avec un nom et une valeur différents - vous pouvez l'utiliser comme point de départ, mais il échouera à la validation si vous vous contentez de copier/coller :
 
 ```js
-const favoriteRobot = 'Cedric';
-console.log('My favorite robot is ' + favoriteRobot);
+const favoriteRobot = 'Cedric' ;
+console.log('Mon robot préféré est ' + favoriteRobot) ;
 ```
 
-Once you have declared a variable as directed in the objective tab, click the *HACK* button.
+Une fois que vous avez déclaré une variable comme indiqué dans l'onglet objectif, cliquez sur le bouton *HACK*.
 
-## Useful links
+## Liens utiles
 
-* [Wikipedia: What is a variable?](https://en.wikipedia.org/wiki/Variable_(computer_science))
-* [JavaScript.info - Variables](https://javascript.info/variables)
-* [MDN: Declaring variables in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
-* [Eloquent JavaScript: Values, Types, and Operators](https://eloquentjavascript.net/01_values.html)
+* [Wikipedia : Qu'est-ce qu'une variable ?](https://fr.wikipedia.org/wiki/Variable_(informatique))
+* [JavaScript.info - Variables](https://fr.javascript.info/variables)
+* [MDN : Déclarer des variables en JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Grammar_and_types#d%C3%A9clarations)
+* [Eloquent JavaScript : Valeurs, types et opérateurs](https://eloquentjavascript.net/01_values.html)

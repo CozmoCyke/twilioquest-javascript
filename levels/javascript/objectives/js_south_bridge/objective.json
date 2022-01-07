@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: Water If Needed",
-  "description": "Learn to use <strong>more complex conditions</strong> in your if statements.",
+  "title": "Labo JavaScript : De l'eau si nécessaire",
+  "description": "Apprenez à utiliser des <strong>conditions plus complexes</strong> dans vos instructions if.",
   "validation_fields": [
     {
       "name": "prompt",
       "type": "prompt",
       "placeholder": "",
-      "label": "Write a program as directed in the Objective tab, then click <span class='highlight'>HACK</span>."
+      "label": "Ecrivez un programme comme indiqué dans l'onglet Objectif, puis cliquez sur <span class='highlight'>HACK</span>."
     }
   ],
   "rewards": {

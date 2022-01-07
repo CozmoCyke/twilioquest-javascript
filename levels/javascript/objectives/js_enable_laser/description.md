@@ -2,18 +2,18 @@
 const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
 %>
 
-# An Incendiary Revelation
+# Une révélation incendiaire
 
-The TwilioQuest research team is about to attempt a groundbreaking experiment. Using four prototype molecular stabilization beams, they will be the first scientists to observe **ducktypium**, the mysterious source of JavaScript's power, in a solid form! For the experiment to continue, however, **the malfunctioning fourth laser beam must be rebooted**.
+L'équipe de recherche TwilioQuest est sur le point de tenter une expérience révolutionnaire. En utilisant quatre prototypes de rayons de stabilisation moléculaire, ils seront les premiers scientifiques à observer le **ducktypium**, la mystérieuse source du pouvoir de JavaScript, sous une forme solide ! Mais pour que l'expérience puisse se poursuivre, **le quatrième rayon laser, qui fonctionne mal, doit être redémarré**.
 
 <% if (worldState.room1.passwordFound) { %>
 
-## Reboot the malfunctioning stasis beam
+## Redémarrer le rayon de stase qui fonctionne mal.
 
-After a series of trials, you discovered that the laser password is `PEW PEW PEW!` - enter the password in the text field on the right and click _HACK_. For science!
+Après une série d'essais, vous avez découvert que le mot de passe du laser est `PEW PEW PEW!` - entrez le mot de passe dans le champ de texte à droite et cliquez sur _HACK_. Pour la science !
 
 <% } else { %>
 
-It looks like you need a password to reboot the laser. **Talk to the lead scientist** (you passed by her as you entered the room) to get the password!
+Il semble que vous ayez besoin d'un mot de passe pour redémarrer le laser. **Parlez à la scientifique en chef** (vous êtes passé devant elle en entrant dans la pièce) pour réussir à obtenir le mot de passe !
 
 <% } %>

@@ -1,52 +1,52 @@
-# A Common Trick
+# Une astuce courante
 
-This problem is a variaton on [the commonly used interview algorithm known as "Fizz Buzz"](https://learnjswith.me/javascript-fizzbuzz/). Its not a particularly useful algorithm, but it is a good way to cement your knowledge of conditionals and learn about a new type of operator!
+Ce problème est une variante de [l'algorithme d'entretien couramment utilisé connu sous le nom de "Fizz Buzz"] (https://learnjswith.me/javascript-fizzbuzz/). Ce n'est pas un algorithme particulièrement utile, mais c'est un bon moyen de consolider votre connaissance des conditionnels et d'apprendre un nouveau type d'agent !
 
-## Is a number divisible? Use the remainder (modulus) operator
+## Un nombre est-il divisible ? Utilisez un opérateur de reste (modulo).
 
-Your script must detect if a number is divisible by another number. There is an operator in JavaScript (and most other languages) that will let you detect this called the `Remainder Operator`. This operator is represented by `%` and returns the remainder left over when dividing two numbers.
+Votre script doit détecter si un nombre est divisible par un autre nombre. Il existe un opérateur en JavaScript (et dans la plupart des autres langages) qui vous permettra de détecter cela : l'opérateur reste. Cet opérateur est représenté par `%` et revient au reste de la division de deux nombres.
 
-For example:
+Par exemple :
 
 ```js
-12 % 5 === 2;
-4 % 2 === 0;
-12 % 3 === 0;
+12 % 5 === 2 ;
+4 % 2 === 0 ;
+12 % 3 === 0 ;
 ```
 
-If one number is evenly divisible by another number, the result of the `%` operator will be `0`.
+Si un nombre est divisible de manière égale par un autre nombre, le résultat de cette opération `%` sera `0`.
 
-## Starter code
+## Code de démarrage
 
-Create a new JavaScript file at this location:
+Créez un nouveau fichier JavaScript à cet emplacement :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>/fizzBuzz.js`.
 
-You can use the following as starter code:
+Vous pouvez utiliser ce qui suit comme code de démarrage :
 
 ```js
-const numberInput = Number(process.argv[2]);
-let output = '';
+const numberInput = Number(process.argv[2]) ;
+let output = '' ;
 
 if (false) {
-  output += 'Java';
+  output += 'Java' ;
 }
 
 if (false) {
-  output += 'Script';
+  output += 'Script' ;
 }
 
 if (false) {
-  output = String(numberInput);
+  output = String(numberInput) ;
 }
 
-console.log(output);
+console.log(output) ;
 ```
 
-Test your code against different inputs with:
+Testez votre code contre différentes entrées avec :
 
 ```bash
 node fizzBuzz.js 15
 ```
 
-Once you feel your code is buzzing along correctly, click the *HACK* button!
+Une fois que vous sentez que votre code bourdonne correctement, cliquez sur le bouton *HACK* !

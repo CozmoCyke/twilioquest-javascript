@@ -1,33 +1,33 @@
-# More practice with variables
+# Plus de pratique avec les variables
 
-Time for some extra practice [creating variables](https://javascript.info/variables)!
+Il est temps de s'entraîner davantage à [créer des variables](https://fr.javascript.info/variables) !
 
-This time, you will need to **declare three variables** using some common [JavaScript data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures). You'll learn more about these data types as you progress further into the lab.
+Cette fois, vous devrez **déclarer trois variables** en utilisant certains [types de données JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Data_structures). Vous en apprendrez davantage sur ces types de données à mesure que vous avancerez dans le labo.
 
-To complete this objective, you will need to create a file called `chestConfiguration.js` in your code folder. Your code folder is located here:
+Pour compléter cet objectif, vous devrez créer un fichier appelé `chestConfiguration.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-In this file, declare three variables with the names and values described in the objective. Here is an example you could use as a starting point, but you will need to change the variable names and values:
+Dans ce fichier, déclarez trois variables avec les noms et valeurs décrits dans l'objectif. Voici un exemple que vous pourriez utiliser comme point de départ, mais vous devrez modifier les noms et les valeurs des variables :
 
 ```js
-const mulletLooksGood = false;
-const meaningOfLife = 42;
-const bestCharacter = 'Baby Yoda';
+const mulletLooksGood = false ;
+const meaningOfLife = 42 ;
+const bestCharacter = 'Baby Yoda' ;
 
-console.log('Mullets look good? ' + mulletLooksGood);
-console.log('The meaning of life is: ' + meaningOfLife);
-console.log('My favorite character in Star Wars is: ' + bestCharacter);
+console.log('Les mulets sont beaux ? ' + mulletLooksGood) ;
+console.log('Le sens de la vie est : ' + meaningOfLife) ;
+console.log('Mon personnage préféré dans Star Wars est : ' + bestCharacter) ;
 ```
 
-Once you have declared the variables as directed in the objective tab, click the *HACK* button.
+Une fois que vous avez déclaré les variables comme indiqué dans l'onglet objectif, cliquez sur le bouton *HACK*.
 
-## Useful links
+## Liens utiles
 
-* [Wikipedia: What is a variable?](https://en.wikipedia.org/wiki/Variable_(computer_science))
-* [JavaScript.info - Variables](https://javascript.info/variables)
-* [MDN: Declaring variables in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
-* [Eloquent JavaScript: Values, Types, and Operators](https://eloquentjavascript.net/01_values.html)
-* [MDN String reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-* [MDN Boolean reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-* [MDN Number reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+* [Wikipedia : Qu'est-ce qu'une variable ?](https://fr.wikipedia.org/wiki/Variable_(informatique))
+* [JavaScript.info - Variables](https://fr.javascript.info/variables)
+* [MDN : Déclarer des variables en JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Grammar_and_types#d%C3%A9clarations)
+* [Eloquent JavaScript : Valeurs, Types, and Opérateurs](https://eloquentjavascript.net/01_values.html)
+* [Référence MDN aux chaînes de caractères](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String)
+* [Référence MDN pour les booléens](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+* [Référence MDN pour les nombres](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)

@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: If Tree Then Bridge",
-  "description": "Learn to branch conditional logic <strong>in multiple directions</strong> as you extend the bridge toward the botanist.",
+  "title": "Labo JavaScript : If Tree Then Bridge",
+  "description": "Apprenez à brancher la logique conditionnelle <strong>dans de multiples directions</strong> en prolongeant le pont vers le botaniste.",
   "validation_fields": [
     {
       "name": "prompt",
       "type": "prompt",
       "placeholder": "",
-      "label": "Write a program as directed in the Objective tab, then click <span class='highlight'>HACK</span>."
+      "label": "Ecrivez un programme comme indiqué dans l'onglet Objectif, puis cliquez sur <span class='highlight'>HACK</span>."
     }
   ],
   "rewards": {

@@ -1,25 +1,25 @@
-# For the Sake of Arguments
+# Pour l'amour des arguments
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Create a file called <code>divideByTwo.js</code></li>
-  <li>Get a string of text passed as a command line argument and convert it to a number</li>
-  <li>Divide that number by two</li>
-  <li>Print the result using <code>console.log</code></li>
+  <li>Créer un fichier appelé <code>divideByTwo.js</code></li>.
+  <li>Réussir une chaîne de texte passée comme argument en ligne de commande et la convertir en un nombre</li>.
+  <li>Diviser ce nombre par deux</li>.
+  <li>Affichez le résultat en utilisant <code>console.log</code></li>.
 </ul>
 </div>
 
-Beyond this barrier, you can see a stack of papers on the lead scientist's desk that must contain the password you are searching for. You're close to the key piece of information you need to help the scientists continue their ducktypium experiments!
+Au-delà de cette barrière, vous pouvez voir une pile de papiers sur le bureau du scientifique principal qui doit contenir le mot de passe que vous recherchez. Vous êtes proche de l'information clé dont vous avez besoin pour aider les scientifiques à poursuivre leurs expériences sur le ducktypium !
 
-You quickly find the malfunction that has caused this barrier to remain closed - a **script is missing** that performs a key mathematical calculation.
+Vous trouvez rapidement le dysfonctionnement qui a fait que cette barrière reste fermée - il manque **il manque un script** qui effectue un calcul mathématique essentiel.
 
-Create a file called `divideByTwo.js` in your code folder. Unlike other scripts you've written, this one must take a **command line argument** when you execute it, like this:
+Créez un fichier appelé `divideByTwo.js` dans votre dossier de code. Contrairement aux autres scripts que vous avez écrits, celui-ci doit accepter un **argument en ligne de commande** lorsque vous l'exécutez, comme ceci :
 
 ```bash
 node divideByTwo.js 48
 ```
 
-The script should take the number passed in, divide it by two, then print the result using `console.log`. This is a bit harder, so **we have some example code you can use as a starting point** in the Help section if you need it.
+Le script doit prendre le nombre passé, le diviser par deux, puis afficher le résultat en utilisant `console.log`. C'est un peu plus difficile, donc **nous avons quelques exemples de code que vous pouvez utiliser comme point de départ** dans la section *Aide* si vous en avez besoin.
 
-Once your code is ready, click the *HACK* button to override the laser command function.
+Une fois que votre code est prêt, cliquez sur le bouton *HACK* pour remplacer la fonction de commande du laser.

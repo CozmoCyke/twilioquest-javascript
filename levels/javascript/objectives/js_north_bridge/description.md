@@ -1,26 +1,26 @@
-# On One Condition
+# A une condition
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Create a file called <code>northBridgeControl.js</code></li>
-  <li>Get a string of text passed as a command line argument</li>
-  <li>If the argument string is <code>EXTEND</code>, print <code>Extending bridge!</code></li>
+  <li>Créer un fichier appelé <code>northBridgeControl.js</code></li>.
+  <li>Récupérer une chaîne de texte passée en argument de ligne de commande</li>.
+  <li>Si la chaîne en argument est <code>EXTEND</code>, affichez <code>Extending bridge!</code></li>.
 </ul>
 </div>
 
-The botany lab is separated into several climate-controlled zones to study the effect of ducktypium on plant life. Each zone is connected by an energy bridge which prevents cross-contamination of habitats.
+Le laboratoire de botanique est séparé en plusieurs zones à climat contrôlé pour étudier l'effet du ducktypium sur la vie végétale. Chaque zone est reliée par un pont énergétique qui empêche la contamination croisée des habitats.
 
-In order to reach the botanist, you'll need to reactivate the bridges, starting with this one.
+Afin d'atteindre le botaniste, vous devrez réactiver les ponts, en commençant par celui-ci.
 
-## Extending the bridge
+## Prolonger le pont
 
-You examine the bridge controls and see that the activation routine is broken. You'll need to replace it in order to extend the bridge.
+Vous examinez les commandes du pont et constatez que la routine d'activation est défectueuse. Vous devez la remplacer afin d'étendre le pont.
 
-In your code folder, create a file called `northBridgeControl.js`. This program must take a single command line argument. If the argument is `EXTEND`, use `console.log` to print the text `Extending bridge!`. Your script shouldn't print anything at all unless the `EXTEND` argument is passed in. An example of how you would run this script is as follows:
+Dans votre dossier de code, créez un fichier appelé `northBridgeControl.js`. Ce programme doit prendre un seul argument en ligne de commande. Si l'argument est `EXTEND`, utilisez `console.log` pour afficher le texte `Extending bridge!`. Votre script ne devrait rien afficher du tout à moins que l'argument `EXTEND` ne soit passé. Voici un exemple d'exécution de ce script :
 
-```bash
+``bash
 node northBridgeControl.js EXTEND
 ```
 
-See the **Help Tab** for more guidance on how to write a script that does this. Once your code behaves as described above, click the *HACK* button!
+Consultez l'onglet **Aide** pour plus d'informations sur la façon d'écrire un script qui fait cela. Une fois que votre code se comporte comme décrit ci-dessus, cliquez sur le bouton *HACK* !

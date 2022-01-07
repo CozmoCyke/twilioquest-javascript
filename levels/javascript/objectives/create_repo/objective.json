@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: Track Your Work",
-  "description": "Back up your work in a <strong>local git repository</strong>.",
+  "title": "Labo JavaScript : Suivez votre travail",
+  "description": "Sauvegardez votre travail dans un <strong>répertoire git local</strong>.",
   "validation_fields": [
     {
       "name": "prompt",
       "type": "prompt",
       "placeholder": "",
-      "label": "Click HACK once you've initialized a git repository in your JavaScript workspace and made your initial commit!"
+      "label": "Cliquez sur HACK une fois que vous avez initialisé un dépôt git dans votre espace de travail JavaScript et que vous avez créé votre premier commit !"
     }
   ],
   "show_ide": false,

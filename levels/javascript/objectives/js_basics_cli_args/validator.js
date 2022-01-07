@@ -15,10 +15,10 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "divideByTwo.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
-      `);
+      Nous n'avons pas pu trouver votre script "divideByTwo.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/>
+      <span style="word-wrap:break-word">${programPath}</span>
+    `);
       return;
     }
 
@@ -28,27 +28,25 @@ module.exports = async (helper) => {
 
     if (!stdout.includes("64")) {
       helper.fail(`
-        When we executed your script, it didn't print out the result of dividing
-        the input number by two.
-        <br/><br/>
-        
-        Make sure to <em>change the final line of code</em> in the example
-        given in the Help tab.
-      `);
+      Quand on a exécuté votre script, il n'a pas affiché le résultat de la division du nombre saisi par deux.
+      <br/><br/>
+      
+      Assurez-vous d'avoir <em>modifié la dernière ligne de code</em> dans l'exemple donné dans l'onglet Aide.
+    `);
       return;
     }
 
     helper.success(`
-      You replace the missing division script, and the lasers fade away.
-      <br/><br/>
-      <strong>Go grab the laser password</strong> from the scientist's desk!
-    `);
+    Vous remplacez le script de division manquant, et les lasers s'éteignent.
+    <br/><br/>
+    <strong>Allez chercher le mot de passe du laser</strong> sur le bureau du scientifique !
+  `);
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it successfully and try again. Here's the error we got - sorry
-      if the formatting is ugly: <br/><br/>
-      ${e}
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès et réessayez. Voici l'erreur que nous avons trouvé - désolé
+    si le formatage est horrible : <br/><br/>
+    ${e}
     `);
   }
 };

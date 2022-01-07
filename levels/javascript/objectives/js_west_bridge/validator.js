@@ -15,9 +15,9 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "treeLifeDetector.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
+      Nous n'avons pas pu trouver votre script "treeLifeDetector.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/><br/>
+      <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
     }
@@ -28,9 +28,9 @@ module.exports = async (helper) => {
 
     if (result.stdout && result.stdout.trim() !== "other") {
       helper.fail(`
-        When your script is passed anything other than 0, it should print 
-        "other". Instead, we got:<br/><br/>
-        <strong>${result.stdout}</strong>
+      Quand on passe à votre script quelque chose d'autre que 0, il devrait imprimer 
+      "other". A la place, nous avons :<br/><br/>
+      <strong>${result.stdout}</strong>
         <br/>
       `);
       return;
@@ -40,9 +40,9 @@ module.exports = async (helper) => {
 
     if (!result.stdout || result.stdout.trim() !== "alive") {
       helper.fail(`
-        When your script is passed 0, it should print 
-        "alive". Instead, we got:<br/><br/>
-        <strong>${result.stdout}</strong>
+      Quand on passe 0 à votre script, il devrait imprimer 
+      "alive". Au lieu de cela, nous avons :<br/><br/>
+      <strong>${result.stdout}</strong>
         <br/>
       `);
       return;
@@ -56,10 +56,10 @@ module.exports = async (helper) => {
     `);
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it successfully and try again. Here's the error we got - sorry
-      if the formatting is ugly: <br/><br/>
-      ${e}
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès et réessayez. Voici l'erreur que nous avons reçue - désolé
+    si le formatage est horrible : <br/><br/>
+    ${e}
     `);
   }
 };

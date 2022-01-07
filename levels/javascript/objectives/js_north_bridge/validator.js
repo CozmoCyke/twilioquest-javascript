@@ -15,9 +15,9 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "northBridgeControl.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
+      Nous n'avons pas pu trouver votre script "northBridgeControl.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/><br/>
+      <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
     }
@@ -30,8 +30,8 @@ module.exports = async (helper) => {
 
     if (result.stdout && result.stdout.trim() !== "") {
       helper.fail(`
-        When your script runs without the special <strong>EXTEND</strong>
-        argument, it should print nothing at all. Instead, we got:<br/><br/>
+      Lorsque votre script s'exécute sans l'argument spécial <strong>EXTEND</strong>
+      il ne devrait rien afficher du tout. Au lieu de cela, nous avons obtenu :<br/><br/>
         ${result.stdout}
       `);
       return;
@@ -44,23 +44,22 @@ module.exports = async (helper) => {
       !result.stdout.toLowerCase().includes("extending bridge")
     ) {
       helper.fail(`
-        When your script receives "EXTEND" as an argument, it should print
-        "Extending bridge!". Check the example code in the 
-        <strong>Help tab</strong>.
+      Quand votre script reçoit "EXTEND" comme argument, il doit afficher
+      "Extension du pont !". Consultez l'exemple de code dans l'onglet 
+      <strong>Aide</strong>.
       `);
       return;
     }
 
     helper.success(`
-      You replace the bridge activation routine, and a bridge made of pure
-      energy extends ahead of you. <strong>Continue onward</strong> to find the
-      botanist!
+    Vous remplacez la routine d'activation du pont, et un pont créé d'énergie
+    pure s'étend devant vous. <strong>Poursuivez votre route</strong> pour trouver le botaniste !
     `);
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it successfully and try again. Here's the error we got - sorry
-      if the formatting is ugly: <br/><br/>
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès et réessayez. Voici l'erreur que nous avons trouvé - désolé
+    si le formatage est moche : <br/><br/>
       ${e}
     `);
   }

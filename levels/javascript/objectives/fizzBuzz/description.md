@@ -1,40 +1,40 @@
-# A Faint Buzzing Sound
+# Un Faible bourdonnement sonore
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Create a file called <code>fizzBuzz.js</code></li>
-  <li>Get a number as a command line argument</li>
-  <li>Print <code>Java</code>, <code>Script</code>, <code>JavaScript</code>, or the number its self as described in the table below.</li>
+  <li>Créer un fichier appelé <code>fizzBuzz.js</code></li>.
+  <li>Réussir un nombre en tant qu'argument en ligne de commande</li>.
+  <li>Affichez le <code>Java</code>, <code>Script</code>,  <code>JavaScript</code>, ou le nombre lui-même comme décrit dans le tableau ci-dessous.</li>
 </ul>
 </div>
 
-In a largely empty section of the botany lab, you find a dusty old chest. It has clearly not been opened for some time, and you can't help but wonder what might be inside.
+Dans une section largement vide du labo de botanique, vous trouvez un vieux coffre poussiéreux. Il n'a visiblement pas été ouvert depuis un certain temps, et vous ne pouvez vous empêcher de vous demander ce qu'il peut bien contenir.
 
-A quick inspection of the lock mechanism suggests that its internal heuristics may be corrupted. Replacing them with a working program may help to open the lock.
+Une inspection rapide du mécanisme de verrouillage suggère que son heuristique interne est peut-être corrompue. En les remplaçant par un programme fonctionnel, vous pourrez peut-être ouvrir la serrure.
 
-## Fixing the chest's lock mechanism
+## Réparer le mécanisme de verrouillage du coffre
 
-Create a file called `fizzBuzz.js` in your code folder. Your program must take a single command line argument, which is an integer number. An example invocation might look like this:
+Créez un fichier appelé `fizzBuzz.js` dans votre dossier de code. Votre programme doit prendre un seul argument en ligne de commande, qui est un nombre entier. Un exemple d'invocation pourrait ressembler à ceci :
 
 ```bash
 node fizzBuzz.js 15
 ```
 
-Your program must print one of four things, depending on the number passed in. Here is what your program should print, and under what circumstances:
+Votre programme doit afficher l'une des quatre choses suivantes, en fonction du nombre passé. Voici ce que votre programme doit afficher, et dans quelles circonstances :
 
-| Input Number | Printed Value |
+| Numéro d'entrée | Valeur affichée |
 | ------------ | ------------- |
-| Divisible by 3          | "Java"          |
-| Divisible by 5          | "Script"        |
-| Divisible by 3 AND 5    | "JavaScript"    |
-| NOT divisible by 3 OR 5 | Input Number |
+| Divisible par 3 | "Java" | 
+| Divisible par 5 | Script |
+| Divisible par 3 ET 5 | JavaScript |
+| NON divisible par 3 OU 5 | Nombre d'entrées |
 
-For example:
+Par exemple :
 
-* If the argument is `3`, your program should print `Java`
-* If the argument is `5`, your program should print `Script`
-* If the argument is `15`, your program should print `JavaScript`
-* If the argument is `7`, your program should print `7`
+* Si l'argument est `3`, votre programme doit afficher `Java`.
+* Si l'argument est "5", votre programme doit afficher `JavaScript`
+* Si l'argument est `15`, votre programme doit afficher `JavaScript`.
+* Si l'argument est `7`, votre programme doit afficher `7`.
 
-Once your program works as described above, click the *HACK* button!
+Une fois que votre programme fonctionne comme décrit ci-dessus, cliquez sur le bouton *HACK* !

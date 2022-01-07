@@ -1,29 +1,29 @@
-# First Class
+# Première Classe
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Create a file called <code>classes.js</code>.</li>
-  <li>Create a class called <code>Materializer</code> that takes a single string argument.</li>
-  <li>Your function must return an object as described below.</li>
+  <li>Créer un fichier appelé <code>classes.js</code>.</li>
+  <li>Créer une classe appelée <code>Materializer</code> qui prend un seul argument de type chaîne de caractères.</li>
+  <li>Votre fonction doit renvoyer un objet comme décrit ci-dessous.</li>
 </ul>
 </div>
 
-The north wing of the lab contains a strange device in the center of the room, the purpose of which was not immediately obvious when you entered. Inspecting the console in front of you, you deduce that this is a control panel for a **matter instantiator**. That must be the large chamber in the center of the room!
+L'aile nord du labo contient un étrange dispositif au centre de la pièce, dont le but n'était pas immédiatement évident lorsque vous êtes entré. En inspectant la console située devant vous, vous en déduisez qu'il s'agit du panneau de commande d'un **instanciateur de matière**. Ce doit être la grande chambre au centre de la pièce !
 
-The console, however, is filled with error logs indicating that it was damaged during the lab explosion. If you can get this console (and another just like it) back online, the chamber in the middle of the lab should be functional again.
+La console, cependant, est remplie de journaux d'erreurs indiquant qu'elle a été endommagée lors de l'explosion du labo. Si vous pouvez réussir à remettre cette console (et une autre comme elle) en ligne, la chambre au milieu du labo devrait être de nouveau fonctionnelle.
 
-## Fixing the console with class
+### Réparer la console avec la classe
 
-In order to fix this component of the matter instantiator, you must override as piece of JavaScript code that provides a configuration object used in the transformation process.
+Afin de réparer ce composant de l'instanciateur de matière, vous devez remplacer un morceau de code JavaScript qui fournit un objet de configuration utilisé dans le processus de transformation.
 
-Create a file called `classes.js` in your code folder. Inside that file, [create a class](https://javascript.info/class) called `Materializer`.
+Créez un fichier appelé `classes.js` dans votre dossier de code. Dans ce fichier, [créez une classe](https://javascript.info/class) appelée `Materializer`.
 
-It should have:
+Elle doit avoir :
 
-- a property called `target` that is set equal to the first argument of the constructor
-- an `activated` property that defaults to `false`
-- an instance function called `activate` that sets `activated` to true
-- an instance function called `materialize` that returns the value of an instance's `target` property if the `activated` property is set to true. Otherwise, it returns `undefined` (nothing is returned).
+- une propriété appelée `target` qui est définie comme étant égale au premier argument du constructeur
+- une propriété `activated` dont la valeur par défaut est `false`.
+- une fonction d'instance appelée `activate` qui définit la valeur true de `activated`.
+- une fonction d'instance appelée `materialize` qui revient à la valeur de la propriété `target` d'une instance si la propriété `activated` est définie à true. Sinon, elle retourne `undefined` (rien n'est retourné).
 
-When you have created a `Materializer` class which meets the criteria above, click *HACK* to validate your work!
+Lorsque vous avez créé une classe `Materializer` qui répond aux critères ci-dessus, cliquez sur *HACK* pour valider votre travail !

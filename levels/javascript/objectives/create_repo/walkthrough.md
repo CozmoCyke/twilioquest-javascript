@@ -1,10 +1,10 @@
-# Create a Git Repository
+# Créer un répertoire Git
 
-The official git website has a tutorial on [how to create a repository in an existing directory on your computer](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#_initializing_a_repository_in_an_existing_directory).
+Le site officiel de git propose un tutoriel sur [comment créer un répertoire dans un répertoire existant sur votre ordinateur](https://git-scm.com/book/fr/v2/Les-bases-de-Git-D%C3%A9marrer-un-d%C3%A9p%C3%B4t-Git).
 
-Instead of their sample project name, you'll want to create your git repository inside your JavaScript workspace directory at: `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`.
+Au lieu de leur exemple de nom de projet, vous voudrez créer votre répertoire git à l'intérieur du répertoire de votre espace de travail JavaScript à : `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`.
 
-## Your commands:
+## Vos commandes :
 
 1. `cd "<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>"`
 2. `git init`

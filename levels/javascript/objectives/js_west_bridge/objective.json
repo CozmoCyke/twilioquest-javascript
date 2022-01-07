@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: If Alive Then Bridge",
-  "description": "Extend the east bridge by learning to use an <strong>else statement</strong> in your conditional logic.",
-  "validation_fields": [
+  " title " : "Labo JavaScript : If Vivant Then Pont",
+  "description" : "Prolongez le pont Est en apprenant à utiliser une <strong>instruction else</strong> dans votre logique conditionnelle.",
+  "validation_fields" : [
     {
-      "name": "prompt",
-      "type": "prompt",
-      "placeholder": "",
-      "label": "Write a program as directed in the Objective tab, then click <span class='highlight'>HACK</span>."
+      "name" : "prompt",
+      "type" : "prompt",
+      "placeholder" : "",
+      "label" : "Écrivez un programme comme indiqué dans l'onglet Objectif, puis cliquez sur <span class='highlight'>HACK</span>."
     }
   ],
   "rewards": {

@@ -8,13 +8,13 @@ worldState.eastWing.hadSavedConversation;
 
 <% if (isObjectiveReady) { %>
 
-To complete this objective, you'll have to combine several techniques you learned while saving the electrical engineer from the **Infinite Loop**.
+Pour réaliser cet objectif, vous devrez combiner plusieurs techniques que vous avez apprises en sauvant l'ingénieur électricien de la **boucle infinie**.
 
-Create a file called `laserPower.js` in your code folder. Your code folder is located here:
+Créez un fichier appelé `laserPower.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-In this file, you must create a function called `calculatePower`. Here is some code you can use as a starting point - it already has the function defined, but doesn't yet work as described in the objective:
+Dans ce fichier, vous devez créer une fonction appelée `calculatePower`. Voici un code que vous pouvez utiliser comme point de départ - il a déjà la fonction définie, mais ne fonctionne pas encore comme décrit dans l'objectif :
 
 ```js
 function calculatePower(powerSettings) {
@@ -23,30 +23,30 @@ function calculatePower(powerSettings) {
   return totalPower;
 }
 
-// The following lines of code are not required for the solution, but can be
-// used by you to test your solution.
+// Les lignes de code suivantes ne sont pas nécessaires pour la solution, mais peuvent être
+// utilisées par vous pour tester votre solution.
 const laserPower = calculatePower([1, 3, 8]);
-console.log("Required laser power is " + laserPower); // should be 24
+console.log("La puissance laser requise est " + laserPower); // devrait être 24
 ```
 
-All the skills you need to overcome this challenge were required to get you to this point. You can do this!
+Toutes les compétences dont vous avez besoin pour surmonter ce défi ont été nécessaires pour parvenir à ce stade. Vous pouvez le faire !
 
-Once your `calculatePower` function works as described in the Objective, click the _HACK_ button.
+Une fois que votre fonction `calculatePower` fonctionne comme décrit dans l'objectif, cliquez sur le bouton _HACK_.
 
-## Useful links
+## Liens utiles
 
-- [JavaScript.info - Array reduce function](https://javascript.info/array-methods#reduce-reduceright)
-- [JavaScript.info - Array map function](https://javascript.info/array-methods#map)
-- [JavaScript.info - if statements](https://javascript.info/ifelse)
-- [JavaScript.info - Returning values from functions](https://javascript.info/function-basics#returning-a-value)
-- [MDN - Function Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+- [JavaScript.info - Fonction reduce](https://fr.javascript.info/array-methods#reduce-reduceright)
+- [JavaScript.info - Fonction Array map](https://fr.javascript.info/array-methods#map)
+- [JavaScript.info - Instructions if](https://fr.javascript.info/ifelse)
+- [JavaScript.info - Renvoyer des valeurs à partir de fonctions](https://fr.javascript.info/function-basics#renvoyer-une-valeur)
+- [MDN - Guide des fonctions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 
 <% } else { %>
 
-You examine the controls of this stasis beam, but they're currently locked down. You'll need **the electrical engineer's access code** in order to enable this laser.
+Vous examinez les contrôles de ce rayon de stase, mais ils sont actuellement verrouillés. Vous aurez besoin du **code d'accès de l'ingénieur électricien** afin d'activer ce laser.
 
-The electrical engineer is most likely aboard the supply freighter docked in the lab's **east wing**. They had been processing a new shipment of supplies when the explosion hit.
+L'ingénieur électricien est probablement à bord du cargo d'approvisionnement amarré dans l'aile Est du labo. Ils étaient en train de traiter une nouvelle cargaison de fournitures lorsque l'explosion a eu lieu.
 
-**Speak to the electrical engineer** to receive the access code for this beam.
+**Parlez à l'ingénieur électricien** pour recevoir le code d'accès pour ce rayon.
 
 <% } %>

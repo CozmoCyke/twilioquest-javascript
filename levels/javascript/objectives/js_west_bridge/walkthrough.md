@@ -1,58 +1,58 @@
-# Branch Your Code, Or Else!
+# Branchez votre code, ou sinon !
 
-The goal of this exercise is to learn to use an [else statement](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals). Previously, you used an [if statement](https://javascript.info/ifelse#the-if-statement) to specify a block of code that would execute if a certain condition was met. An `else` statement allows you to specify code that runs in any other case.
+Le but de cet exercice est d'apprendre à utiliser une instruction [else](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/conditionals). Auparavant, vous avez utilisé une instruction [if](https://fr.javascript.info/ifelse#l-instruction-if) pour spécifier un bloc de code qui s'exécuterait si une certaine condition était remplie. L'instruction `else` vous permet de spécifier un code qui s'exécute dans tous les autres cas.
 
-[Learn more about how an if/else statement works on MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals).
+[Pour en savoir plus sur le fonctionnement d'une instruction if/else, consultez MDN](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/conditionals).
 
-Here's a quick example of an if statement that has an `else` clause:
+Voici un exemple rapide d'une instruction if comportant une clause `else` :
 
 ```js
-const luckyNumber = 7;
+const luckyNumber = 7 ;
 
 if (luckyNumber === 7) {
-  console.log('Yup, 7 is a lucky number.');
+  console.log('Oui, 7 est un chiffre porte-bonheur.') ;
 } else {
-  console.log('I think only 7 is a lucky number, right?');
+  console.log('Je pense que seul 7 est un chiffre porte-bonheur, non ?') ;
 }
 ```
 
-In this example, the second string is printed if `luckyNumber` is set to any other number besides `7`.
+Dans cet exemple, la deuxième chaîne de caractères est imprimée si `luckyNumber` est défini sur un autre nombre que `7`.
 
-## Fixing the Tree Life Detector
+## Correction du détecteur de vie d'arbre
 
-To extend the bridge, you need to create a file called `treeLifeDetector.js` in your code folder. Your code folder is located here:
+Pour étendre le pont, vous devez créer un fichier appelé `treeLifeDetector.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-You will need to work with a [command line argument](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/) - a single-digit number that specifies whether a tree is alive, or in some other status.
+Vous aurez besoin de travailler avec un [argument de ligne de commande](https://nodejs.org/fr/knowledge/command-line/how-to-parse-command-line-arguments/) - un nombre à un chiffre qui spécifie si un arbre est vivant, ou dans un autre état.
 
-Here is some code you can use as a starting point, which gets the value of the first argument passed in to your script.
+Voici un code que vous pouvez utiliser comme point de départ, qui obtient la valeur du premier argument passé à votre script.
 
 ```js
-// These lines of code take in the argument from the command line
-const argumentValue = process.argv[2];
-const treeLifeStatus = Number(argumentValue);
+// Ces lignes de code récupèrent l'argument de la ligne de commande
+const argumentValue = process.argv[2] ;
+const treeLifeStatus = Number(argumentValue) ;
 
-// Write your if statement below here!
+// Écrivez ici votre instruction if ci-dessous !
 
 ```
 
-You can test the code above by running it like this - the following should print the string `alive`:
+Vous pouvez tester le code ci-dessus en l'exécutant comme ceci - ce qui suit devrait imprimer la chaîne `alive` :
 
 ```bash
 node treeLifeDetector.js 0
 ```
 
-This should print the text `other`:
+Ceci devrait imprimer le texte `autre` :
 
 ```bash
 node treeLifeDetector.js 3
 ```
 
-Once your script is working as described in the objective, click *HACK* to validate your work!
+Une fois que votre script fonctionne comme décrit dans l'objectif, cliquez sur *HACK* pour valider votre travail !
 
-## Helpful Resources
+## Ressources utiles
 
-* [MDN Intro to Conditionals](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-* [JavaScript.info - Else Statement](https://javascript.info/ifelse#the-else-clause)
-* [MDN - JavaScript data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+* [MDN Intro aux conditionnels](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
+* [JavaScript.info - Instruction Else](https://fr.javascript.info/ifelse)
+* [MDN - Types de données JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Data_structures)

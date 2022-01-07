@@ -1,20 +1,20 @@
-# Git Your Act Together
+# Utiliser Git
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Initialize a git repository in your code folder</li>
-  <li>Commit the current contents of your workspace</li>
+  <li>Initialiser un répertoire git dans votre dossier de code</li>.
+  <li>Commiter le contenu actuel de votre espace de travail</li>.
 </ul>
 </div>
 
-You use the **Flame of Open Source** to burn away some brush protecting this supply chest. It's currently locked, but it looks like you can open it again by demonstrating your knowledge of git.
+Vous utilisez la **Flamme de l'open source** pour brûler quelques broussailles protégeant ce coffre à provisions. Il est actuellement verrouillé, mais il semble que vous puissiez l'ouvrir à nouveau en démontrant votre connaissance de git.
 
-Navigate to your JavaScript code folder, where you have been writing all your code for this mission. It's located here: 
+Naviguez jusqu'à votre dossier de code JavaScript, où vous avez écrit tout votre code pour cette mission. Il est situé ici : 
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>` 
 
-Once there, initialize a new repository and commit the current contents:
+Une fois là, initialisez un nouveau dépôt et commiter le contenu actuel :
 
 ```bash
 git init
@@ -22,4 +22,4 @@ git add -A
 git commit -m "Initial Commit"
 ```
 
-This will initialize a git repository, add all of your example files, and commit them with a message. Click *HACK* after you've done this to validate your work!
+Ceci va initialiser un dépôt git, ajouter tous les fichiers de votre exemple, et les commiter avec un message. Cliquez sur *HACK* après avoir fait cela pour valider votre travail !

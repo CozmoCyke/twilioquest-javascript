@@ -18,9 +18,9 @@ module.exports = async helper => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "classes.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
+      Nous n'avons pas pu trouver votre script "classes.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/>
+      <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
     }
@@ -56,17 +56,16 @@ module.exports = async helper => {
       console.log(tq.error);
       if (tq.error.name === 'ReferenceError') {
         return helper.fail(`
-          It looks like a <span class="highlight">Materializer</span> 
-          class was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the class 
-          "<span class="highlight">Materializer</span>"? Maybe 
-          double-check your spelling?
+        Il semble qu'une classe <span class="highlight">Materializer</span> 
+        n'a pas été définie dans votre
+        code. Du moins, nous ne l'avons pas vue dans la portée globale de votre script. 
+        <br/><br/>
+        Avez-vous nommé la classe 
+        "<span class="highlight">Materializer</span>" ? Peut-être que vous pouvez vérifier son orthographe ?
         `);
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
+        Il y a eu un problème de validation de votre code. L'erreur que nous avons trouvé était :
           <br/><br/>
           ${tq.error}
         `);
@@ -76,10 +75,9 @@ module.exports = async helper => {
     // Check type of the function
     if (!isClassDeclaration(tq.Materializer)) {
       let message = `
-        We found a variable called 
-        <span class="highlight">Materializer</span>, but it's not a
-        class. Check the Help section for more guidance on creating
-        a JavaScript class.
+      Nous avons trouvé une variable appelée 
+      <span class="highlight">Materializer</span>, mais ce n'est pas une
+      classe. Consultez la section Aide pour obtenir plus de conseils sur la création d'une classe JavaScript.
       `;
 
       return helper.fail(message);
@@ -92,26 +90,26 @@ module.exports = async helper => {
 
       if (result1.target !== 'Gene') {
         return helper.fail(`
-          It looks like your Materializer is not correctly reading it's target from the constructor function.
+        Il semble que votre matérialiseur ne lise pas correctement sa cible dans la fonction constructeur.
         `);
       }
 
       if (result1.activated !== false) {
         return helper.fail(`
-          Your Materializer should start with a property of "activated" that is
-          set to false.
+        Votre Materializer doit commencer avec une propriété "activated" qui est
+        définie à false.
         `);
       }
 
       if (!isFunction(result1.activate)) {
         return helper.fail(`
-          Your Materializer should have an "activate" function.
+        Votre matérialiseur doit avoir une fonction "activate".
         `);
       }
 
       if (!isFunction(result1.materialize)) {
         return helper.fail(`
-          Your Materializer should have an "materialize" function.
+        Votre Materializer doit avoir une fonction "materialize".
         `);
       }
 
@@ -119,8 +117,8 @@ module.exports = async helper => {
 
       if (result1.activated !== true) {
         return helper.fail(`
-          Your Materializer "activate" function should set activated to
-          true when it's executed.
+        La fonction "activate" de votre Materializer doit définir l'activation à
+        true lorsqu'elle est exécutée.
         `);
       }
 
@@ -128,7 +126,7 @@ module.exports = async helper => {
 
       if (result1Target !== 'Gene') {
         return helper.fail(`
-          Your Materializer "materialize" function should return your target, "Gene" when it is activated.
+        La fonction "materialize" de votre matérialiseur doit renvoyer votre cible, "Gene", lorsqu'elle est activée.
         `);
       }
 
@@ -136,28 +134,27 @@ module.exports = async helper => {
 
       if (result2Target !== undefined) {
         return helper.fail(`
-          Your Materializer "materialize" function should return undefined when it is not activated.
+        La fonction "materialize" de votre Materializer doit vous renvoyer undefined lorsqu'elle n'est pas activée.
         `);
       }
     } catch (ee) {
       return helper.fail(`
-        There was an error executing your Materialize constructor or functions. Please ensure that you can exercise your function from the command line 
-        successfully and try again. Use the starter code in the Help section if
-        you are stuck. Here's the error we got from trying to call your 
-        function: <br/><br/>
+      Une erreur s'est produite lors de l'exécution de votre constructeur ou de vos fonctions Materialize. Veuillez vous assurer que vous pouvez exécuter votre fonction depuis la ligne de commande 
+      avec succès et réessayez. Utilisez le code de démarrage dans la section Aide si vous êtes bloqué. Voici l'erreur que nous avons obtenue en essayant d'appeler votre fonction 
+      fonction : <br/><br/>
         <span class="highlight">${ee}</span>
       `);
     }
 
     helper.success(`
-      That did it! The matter instantiator console comes back to life, restoring
-      partial functionality to the chamber in the center of the room.
+    Vous avez réussi ! La console de l'instanciateur de matière revient à la vie, rétablissant
+    une fonctionnalité partielle à la chambre au centre de la pièce.
     `);
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès à partir de la ligne de commande et réessayez. 
+    Voici l'erreur que nous avons trouvé : <br/><br/>
       <span class="highlight">${e}</span>
     `);
   }

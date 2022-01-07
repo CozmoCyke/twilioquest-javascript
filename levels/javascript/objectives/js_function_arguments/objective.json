@@ -1,11 +1,11 @@
 {
-  "title": "JavaScript Lab: Function Arguments",
-  "description": "Learn to create a function that accepts <strong>arguments</strong>, so your reusable bits of code can produce different results with different inputs.",
-  "validation_fields": [
+  "title" : "Labo JavaScript : Arguments de fonction",
+  "description" : "Apprenez à créer une fonction qui accepte des <strong>arguments</strong>, afin que vos bouts de code réutilisables puissent produire différents résultats avec différentes entrées.",
+  "validation_fields" : [
     {
-      "name": "prompt",
-      "type": "prompt",
-      "label": "Create a program as described in the objective, then click <span class='highlight'>HACK</span>."
+      "name" : "prompt",
+      "type" : "prompt",
+      "label" : "Créez un programme comme décrit dans l'objectif, puis cliquez sur <span class='highlight'>HACK</span>."
     }
   ],
   "rewards": {

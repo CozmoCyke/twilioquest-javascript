@@ -30,9 +30,9 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "fizzBuzz.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
+      Nous n'avons pas pu trouver votre script "fizzBuzz.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/>
+      <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
     }
@@ -63,20 +63,20 @@ module.exports = async (helper) => {
       let correct = correctDecrypt(testNumbers[i]);
       if (result !== correct) {
         return helper.fail(`
-          While testing your script, we passed in "${i}" but got "${result}" instead
-          of "${correct}". Please test your script again.
+        En testant votre script, nous avons passé "${i}" mais
+        avons trouvé  "${result}" au lieu de "${correct}". Veuillez tester à nouveau votre script.
         `);
       }
     }
 
     helper.success(`
-      You did it! No job interview nonsense can fool you.
+    Vous avez réussi ! Aucune absurdité d'entretien d'embauche ne peut vous tromper.
     `);
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it successfully and try again. Here's the error we got - sorry
-      if the formatting is ugly: <br/><br/>
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès et réessayez. Voici l'erreur que nous avons trouvé - désolé
+    si le formatage est horrible : <br/><br/>
       ${e}
     `);
   }

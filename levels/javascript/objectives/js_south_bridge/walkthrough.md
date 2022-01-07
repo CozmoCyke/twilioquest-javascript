@@ -1,60 +1,60 @@
-# More Complex Boolean Logic
+# Logique booléenne plus complexe
 
-Some boolean comparisons are more complex than others. You may have to evaluate multiple conditions to determine whether or how to branch your code. To do this, you'll need to use the boolean AND ( `&&` ) and OR ( `||` ) operators. These are sometimes called **logical operators**.
+Certaines comparaisons booléennes sont plus complexes que d'autres. Il se peut que vous deviez évaluer plusieurs conditions pour déterminer s'il faut brancher votre code ou comment le faire. Pour ce faire, vous devrez utiliser les agents booléens ET ( `&&` ) et OU ( `||` ). Ceux-ci sont parfois appelés **opérateurs logiques**.
 
-[Learn more about these operators on JavaScript.info](https://javascript.info/logical-operators).
+[Pour en savoir plus sur ces agents, consultez JavaScript.info](https://fr.javascript.info/logical-operators).
 
-Here's a quick example of an if statement with more complex comparisons.
+Voici un exemple rapide d'une instruction if avec des comparaisons plus complexes.
 
 ```js
-const name = 'Cedric';
-const isRobot = true;
-const awesomenessLevel = 1000;
+const nom = 'Cedric' ;
+const estUnRobot = true ;
+const niveauPerformance = 1000 ;
 
 if (
-  name === 'Cedric' &&
-  isRobot &&
-  awesomenessLevel > 10
+  nom === 'Cedric' &&
+  estUnRobot &&
+  niveauPerformance > 10
 ) {
-  console.log('Yup, that is our Cedric!');
+  console.log("Oui, c'est notre Cedric!") ;
 }
 ```
 
-## Sprinkles on top
+## Arrosage au sommet
 
-To fix the sprinkler system, create a file called `shouldWater.js` in your code folder. Your code folder is located here:
+Pour réparer le système d'arrosage, créez un fichier appelé `shouldWater.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-This time, you'll need to consider two arguments in your script - use the code below as a starting point:
+Cette fois, vous devrez prendre en compte deux arguments dans votre script - utilisez le code ci-dessous comme point de départ :
 
 ```js
-const lifeStatus = Number(process.argv[2]);
-const drynessLevel = Number(process.argv[3]);
+const statutVie = Number(process.argv[2]) ;
+const niveauSecheresse = Number(process.argv[3]) ;
 
-// Your if statement goes below...
+// Votre instruction if va ci-dessous...
 if (false) {
-  console.log('WATER');
+  console.log('EAU') ;
 }
 ```
 
-You can test the code above by running it like this:
+Vous pouvez tester le code ci-dessus en l'exécutant comme ceci :
 
 ```bash
 node shouldWater.js 1 20
 ```
 
-The above should print nothing - it's dryness level is above 10, but it's life status is 1 and not 0.
+La commande ci-dessus ne devrait rien afficher - son niveau de sécheresse est supérieur à 10, mais son état de vie est de 1 et non de 0.
 
-This should print `WATER`, since the first argument is `0` and the second argument is greater than `10`:
+Ceci devrait afficher `ARROSAGE`, puisque le premier argument est `0` et le second est supérieur à `10` :
 
 ```bash
 node shouldWater.js 0 11
 ```
 
-Once your script is working as described in the objective, click *HACK* to validate your work!
+Une fois que votre script fonctionne comme décrit dans l'objectif, cliquez sur *HACK* pour valider votre travail !
 
-## Helpful Resources
+## Ressources utiles
 
-* [MDN Intro to Conditionals](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-* [JavaScript.info - Logical Operators](https://javascript.info/logical-operators)
+* [MDN Intro to Conditionals](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
+* [JavaScript.info - Opérateurs logiques](https://fr.javascript.info/logical-operators)

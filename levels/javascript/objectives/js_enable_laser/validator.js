@@ -6,25 +6,25 @@ module.exports = async (helper) => {
     // The player needs to find the password first
     if (!TQ_JAVASCRIPT_WORLD_STATE.room1.passwordFound) {
       return helper.fail(`
-        You can't reboot the laser without the right password. Talk to the
-        lead scientist to get the password you need!
+      Vous ne pouvez pas redémarrer le laser sans le bon mot de passe. Parlez au
+      scientifique en chef pour réussir à obtenir le mot de passe dont vous avez besoin !
       `);
     }
 
     if (!laserPassword || laserPassword.trim() !== "PEW PEW PEW!") {
       return helper.fail(`
-        Password incorrect. When you found the password on the scientist's desk,
-        it was: <strong>PEW PEW PEW!</strong>
+      Mot de passe incorrect. Quand vous avez trouvé le mot de passe sur le bureau du scientifique,
+      c'était : <strong>PEW PEW PEW!</strong>
       `);
     }
 
     helper.success(`
-      Success! The stasis beam flashes to life, and the experiment begins! 
-      Wait... what's that rumbling noise?
+    Succès ! Le rayon de stase se met en marche, et l'expérience commence ! 
+    Attendez... c'est quoi ce grondement ?
     `);
   } catch (e) {
     helper.fail(`
-      There was an error processing the password.
+    Il y a eu une erreur dans le traitement du mot de passe.
     `);
   }
 };

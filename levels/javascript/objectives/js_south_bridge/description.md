@@ -1,31 +1,31 @@
-# Sprinkle, Sprinkle, Little Plant
+# Arroser, arroser, petite plante
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Create a file called <code>shouldWater.js</code></li>
-  <li>Get two numbers as command line arguments - the first is a tree's life status ID, and the second is its dryness level.</li>
-  <li>If the first argument is <code>0</code> AND the second argument is greater than <code>10</code>, print the text <code>WATER</code></li>
+  <li>Créer un fichier appelé <code>shouldWater.js</code></li>.
+  <li>Déclarez deux nombres comme arguments en ligne de commande - le premier est l'identifiant de l'état de vie d'un arbre, et le second est son niveau de sécheresse.</li>.
+  <li>Si le premier argument est <code>0</code> ET que le second est supérieur à <code>10</code>, affichez le texte <code>WATER</code></li>.
 </ul>
 </div>
 
-Tucked away in the southeast corner of the botany lab, you notice another system that was damaged during the ducktypium incident. It looks like the automated sprinkler system has gone offline, which has also somehow **disabled the south bridge**.
+Niché dans le coin sud-est du laboratoire de botanique, vous remarquez un autre système qui a été endommagé lors de l'incident du ducktypium. Il semble que le système d'arrosage automatique se soit éteint, ce qui a également **désactivé d'une manière ou d'une autre le pont sud**.
 
-In order to keep the plants hydrated - and to extend the south bridge - you'll need to fix the automated sprinkler system.
+Afin de garder les plantes hydratées - et de prolonger le pont sud - vous devrez réparer le système d'arrosage automatique.
 
-## Making it rain
+## Faire pleuvoir
 
-An inspection of the sprinkler system reveals another issue with its boolean logic. To fix it, create a file named `shouldWater.js` in your code folder. This script will take **two command line arguments** - both will be numbers.
+Une inspection du système d'arrosage révèle un autre problème avec sa logique booléenne. Pour le corriger, créez un fichier nommé `shouldWater.js` dans votre dossier de code. Ce script prendra **deux arguments en ligne de commande** - tous les deux seront des nombres.
 
-* The first argument is a plant's life status - `0` means the plant is alive
-* The second is the plant's dryness level - anything above `10` means the plant needs water
+* Le premier argument est le statut de vie de la plante - "0" signifie que la plante est vivante.
+* Le second est le niveau de sécheresse de la plante - tout ce qui est supérieur à 10 signifie que la plante a besoin d'eau.
 
-An example invocation of your script with a live plant (status `0` ) and dryness level `20` would look like this:
+Un exemple d'invocation de votre script avec une plante vivante (état `0`) et un niveau de sécheresse `20` ressemblerait à ceci :
 
 ```bash
 node shouldWater.js 0 20
 ```
 
-To make the sprinkler system function properly, this script should print the string `WATER` only if the first argument to the script is `0` and the second argument is a number greater than `10`. It should not print anything otherwise.
+Pour que le système d'arrosage fonctionne correctement, ce script ne doit afficher la chaîne `ARROSAGE` que si le premier argument du script est `0` et que le second argument est un nombre supérieur à `10`. Sinon, il ne doit rien afficher.
 
-Once your code behaves as described above, click the *HACK* button to fix the sprinkler!
+Une fois que votre code se comporte comme décrit ci-dessus, cliquez sur le bouton *HACK* pour réparer l'arroseur !

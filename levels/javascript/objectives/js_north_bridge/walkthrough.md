@@ -1,57 +1,57 @@
-# Learning the If Statement
+# Apprendre l'instruction If
 
-The goal of this objective is to learn how to conditionally execute code using an [if statement](https://javascript.info/ifelse#the-if-statement). In programming, you will often want to execute code only when certain conditions are met - like if a user is logged in, or if a given file exists.
+Le but de cet objectif est d'apprendre à exécuter du code de manière conditionnelle à l'aide d'une [instruction if](https://javascript.info/ifelse#the-if-statement). En programmation, vous voudrez souvent exécuter du code uniquement lorsque certaines conditions sont remplies, par exemple si un utilisateur est connecté ou si un fichier donné existe.
 
-[Learn more about how an if statement works on MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals).
+[Pour en savoir plus sur le fonctionnement d'une instruction if, consultez MDN](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/conditionals).
 
-Here's a quick example of an if statement that uses the [comparison operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) (the `===` operator) to see if two strings of text are the same, and to print some text if they are:
+Voici un exemple rapide d'instruction if qui utilise l'opérateur de comparaison [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators.](l'opérateur `===`) pour vérifier si deux chaînes de texte sont identiques et afficher du texte si c'est le cas :
 
 ```js
-const animal = 'Dog';
+const animal = 'Chien' ;
 
-if (animal === 'Dog') {
-  console.log('woof!');
+if (animal === 'Chien') {
+  console.log('wo!') ;
 }
 ```
 
-A comparison statement evaluates to a [boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) `true` or `false`. If the statement is true, the code inside the if statement (the parts inside the curly braces `{` `}`) is executed.
+Une instruction de comparaison donne une valeur [booléenne](https://developer.mozilla.org/fr/docs/Web/JavaScript/Data_structures) `vrai` ou `faux`. Si l'instruction est vraie, le code contenu dans l'instruction if (les parties entre accolades `{` `}`) est exécuté.
 
-## Building bridges
+## Construction de ponts
 
-To extend the bridge, you need to create a file called `northBridgeControl.js` in your code folder. Your code folder is located here:
+Pour étendre le pont, vous devez créer un fichier appelé `northBridgeControl.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-Just as you did when you retrieved the password from the lead scientist's office, you will need to work with [command line arguments](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/). Your code will print a specific message if and only if a certain argument is passed in.
+Tout comme vous l'avez fait lorsque vous avez récupéré le mot de passe dans le bureau du scientifique principal, vous devrez travailler avec des [arguments de ligne de commande](https://nodejs.org/fr/knowledge/command-line/how-to-parse-command-line-arguments/). Votre code affichera un message spécifique si et seulement si un certain argument est passé.
 
-Here is some code you can use as a starting point, which gets the value of the first argument passed in to your script. However, the if statement **will not work** as currently written. You'll need to change it to satisfy the objective.
+Voici un code que vous pouvez utiliser comme point de départ, qui réussit à obtenir la valeur du premier argument passé dans votre script. Cependant, l'instruction if **ne fonctionnera pas** telle qu'elle est écrite actuellement. Vous devrez la modifier pour satisfaire l'objectif.
 
 ```js
-const argumentValue = process.argv[2];
+const argumentValue = process.argv[2] ;
 
-// Modify the if statement below to execute if and only if "argumentValue" is
-// equal to the string "EXTEND"
+// Modifiez l'instruction if ci-dessous pour qu'elle s'exécute si et seulement si "argumentValue" est
+// égale à la chaîne "EXTEND".
 if (false) {
-  console.log('Extending bridge!');
+  console.log('Extending bridge!') ;
 }
 ```
 
-You can test the code above by running it like this - this should print the message:
+Vous pouvez tester le code ci-dessus en l'exécutant comme ceci - cela devrait afficher le message :
 
 ```bash
 node northBridgeControl.js EXTEND
 ```
 
-This should not print anything:
+Ceci ne devrait rien afficher :
 
 ```bash
 node northBridgeControl.js GO
 ```
 
-Once your script is working as described in the objective, click *HACK* to validate your work!
+Une fois que votre script fonctionne comme décrit dans l'objectif, cliquez sur *HACK* pour valider votre travail !
 
-## Helpful Resources
+## Ressources utiles
 
-* [MDN Intro to Conditionals](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-* [JavaScript.info - If Statement](https://javascript.info/ifelse#the-if-statement)
-* [MDN - JavaScript data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+* [MDN Intro to Conditionals](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
+* [JavaScript.info - If Statement](https://fr.javascript.info/ifelse#l-instruction-if)
+* [MDN - Types de données JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Data_structures)

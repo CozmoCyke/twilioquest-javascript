@@ -13,10 +13,10 @@ module.exports = async helper => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "chestConfiguration.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
-      `);
+      Nous n'avons pas pu trouver votre script "chestConfiguration.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/><br/>
+      <span style="word-wrap:break-word">${programPath}</span>
+    `);
       return;
     }
 
@@ -58,17 +58,17 @@ module.exports = async helper => {
         }
 
         return helper.fail(`
-          It looks like a <span class="highlight">${missingVariable}</span> 
-          variable was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the variable 
-          "<span class="highlight">${missingVariable}</span>"? Maybe 
-          double-check your spelling?
-        `);
+        Il semble qu'une variable <span class="highlight">${missingVariable}</span> 
+        n'a pas été définie dans votre
+        code. Du moins, nous ne l'avons pas vue dans la portée globale de votre script.
+        <br/><br/>
+        Avez-vous nommé la variable 
+        "<span class="highlight">${missingVariable}</span>" ?
+        Vous pourriez peut-être vérifier votre orthographe ?
+      `);
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
+        Il y a eu un problème de validation de votre code. L'erreur trouvée est la suivante :
           <br/><br/>
           ${tq.error}
         `);
@@ -78,88 +78,89 @@ module.exports = async helper => {
     // Check variable types, and provide appropriate feedback
     if (typeof tq.accessLevel !== 'number') {
       let message = `
-        We found your <span class="highlight">accessLevel</span> variable, but
-        it wasn't a Number object as we expected. It looks like it's actually a
-        <span class="highlight">${typeof tq.accessLevel}</span> object.
-      `;
+      Nous avons trouvé votre variable <span class="highlight">accessLevel</span>, mais
+      ce n'était pas un objet Nombre comme nous le pensions. Il semble qu'il s'agisse en fait d'un objet
+      <span class="highlight">${typeof tq.accessLevel}</span>.
+    ` ;
 
-      if (typeof tq.accessLevel === 'string') {
-        message += `<br/><br/>
-          It seems like you accidentally made this variable a string - values
-          like numbers and booleans don't have quotes around them in your code.
-          Check the Help section for an example of declaring number variables.
-        `;
-      }
-
-      return helper.fail(message);
+    if (typeof tq.accessLevel === 'string') {
+      message += `<br/><br/>.
+        Il semble que vous ayez créé accidentellement une chaîne de caractères pour cette variable.
+        comme les nombres et les booléens ne sont pas entourés de guillemets dans votre code.
+        Consultez la section Aide pour un exemple de déclaration de variables numériques.
+      ` ;
     }
 
-    if (typeof tq.verifiedUser !== 'boolean') {
-      let message = `
-        We found your <span class="highlight">verifiedUser</span> variable, but
-        it wasn't a Boolean object as we expected. It looks like it's actually a
-        <span class="highlight">${typeof tq.verifiedUser}</span> object.
-      `;
+    return helper.fail(message) ;
+  }
 
-      if (typeof tq.verifiedUser === 'string') {
-        message += `<br/><br/>
-          It seems like you accidentally made this variable a string - values
-          like numbers and booleans don't have quotes around them in your code.
-          Check the Help section for an example of declaring boolean variables.
-        `;
-      }
+  if (typeof tq.verifiedUser !== 'boolean') {
+    let message = `
+      Nous avons trouvé votre <span class="highlight">verifiedUser</span> variable, mais
+      ce n'était pas un objet booléen comme nous le pensions. Il semble qu'il s'agisse en fait d'un objet
+      <span class="highlight">${typeof tq.verifiedUser}</span>.
+    ` ;
 
-      return helper.fail(message);
+    if (typeof tq.verifiedUser === 'string') {
+      message += `<br/><br/>.
+        Il semble que vous ayez créé accidentellement une chaîne de caractères pour cette variable.
+        comme les nombres et les booléens ne sont pas entourés de guillemets dans votre code.
+        Consultez la section Aide pour obtenir un exemple de déclaration de variables booléennes.
+      ` ;
     }
 
-    if (typeof tq.favoriteRobot !== 'string') {
-      let message = `
-        We found your <span class="highlight">favoriteRobot</span> variable, but
-        it wasn't a String object as we expected. It looks like it's actually a
-        <span class="highlight">${typeof tq.favoriteRobot}</span> object.
-      `;
+    return helper.fail(message) ;
+  }
 
-      return helper.fail(message);
-    }
+  if (typeof tq.favoriteRobot !== 'string') {
+    let message = `
+      Nous avons trouvé la variable <span class="highlight">favoriteRobot</span>, 
+      mais il ne s'agit pas d'un objet String comme prévu.
+      Il semble qu'il s'agisse en fait d'un objet
+      <span class="highlight">${typeof tq.favoriteRobot}</span>.
+    ` ;
+
+    return helper.fail(message) ;
+  }
 
     // Check variable values, now that we know they exist
     if (tq.accessLevel !== 7) {
       return helper.fail(`
-        We found your <span class="highlight">accessLevel</span> variable, but
-        it wasn't set to the number <span class="highlight">7</span> as we
-        expected. It looks like it was set to 
-        <span class="highlight">${tq.accessLevel}</span>.
-      `);
-    }
-
-    if (tq.favoriteRobot !== 'Cedric') {
-      return helper.fail(`
-        We found your <span class="highlight">favoriteRobot</span> variable, but
-        it wasn't set to the string <span class="highlight">"Cedric"</span> as we
-        expected. It looks like it was set to 
-        <span class="highlight">"${tq.favoriteRobot}"</span>.
-      `);
-    }
-
-    if (tq.verifiedUser !== true) {
-      return helper.fail(`
-        We found your <span class="highlight">verifiedUser</span> variable, but
-        it wasn't set to the boolean <span class="highlight">true</span> as we
-        expected. It looks like it was set to 
-        <span class="highlight">${tq.verifiedUser}</span>.
-      `);
-    }
-
-    helper.success(`
-      Nice! Your configuration override worked, and you now have access to the
-      supplies in the chest.
-    `);
-  } catch (e) {
-    helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
-      <span class="highlight">${e}</span>
-    `);
+      Nous avons trouvé votre variable <span class="highlight">accessLevel</span>, mais
+      elle n'était pas définie sur le nombre <span class="highlight">7</span> comme nous le pensions.
+      Il semble qu'elle ait été définie à 
+      <span class="highlight">${tq.accessLevel}</span>.
+    `) ;
   }
-};
+
+  if (tq.favoriteRobot !== 'Cedric') {
+    return helper.fail(`
+      Nous avons trouvé votre variable <span class="highlight">favoriteRobot</span>, mais
+      elle n'était pas définie à la chaîne <span class="highlight">"Cedric"</span> comme nous l'attendions.
+      Il semble qu'elle ait été définie à 
+      <span class="highlight">"${tq.favoriteRobot}"</span>.
+    `) ;
+  }
+
+  if (tq.verifiedUser !== true) {
+    return helper.fail(`
+      Nous avons trouvé votre <span class="highlight">verifiedUser</span> variable, mais
+      elle n'était pas définie à la valeur booléenne <span class="highlight">true</span>
+      comme prévu. Il semble qu'elle ait été définie à 
+      <span class="highlight">${tq.verifiedUser}</span>.
+    `) ;
+  }
+
+  helper.success(`)
+    Bien joué ! Votre surcharge de configuration a fonctionné, et vous avez maintenant accès aux
+    fournitures dans le coffre.
+  `) ;
+} catch (e) {
+  helper.fail(`
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès à partir de la ligne de commande et réessayez. Voici l'erreur 
+    erreur que nous avons trouvé: <br/><br/>
+    <span class="highlight">${e}</span>
+  `) ;
+}
+} ;

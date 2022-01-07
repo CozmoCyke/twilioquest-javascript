@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: Script Arguments",
-  "description": "Write code that uses data passed in via <strong>command line arguments</strong>.",
+  "title": "Labo JavaScript : Arguments du script",
+  "description": "Écrire du code qui utilise les données passées via <strong>les arguments en ligne de commande</strong>.",
   "validation_fields": [
     {
       "name": "one",
       "type": "prompt",
       "placeholder": "",
-      "label": "Create a program as described in the objective, then click <span class='highlight'>HACK</span>."
+      "label": "Créez un programme comme décrit dans l'objectif, puis cliquez sur <span class='highlight'>HACK</span>."
     }
   ],
   "rewards": {

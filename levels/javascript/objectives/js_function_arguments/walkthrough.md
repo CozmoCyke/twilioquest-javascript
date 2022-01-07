@@ -1,33 +1,33 @@
-# Learn to write a JavaScript Function
+# Apprendre à écrire une fonction JavaScript
 
-The goal of this exercise to learn how to [create a Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions) that takes **arguments** (also called "parameters"). An **argument** is a piece of input data your functions can use to produce different outputs.
+Le but de cet exercice est d'apprendre à [créer une fonction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions) qui prend des **arguments** (également appelés "paramètres"). Un **argument** est un élément de données d'entrée que vos fonctions peuvent utiliser pour produire différentes sorties.
 
-Create a file called `politeLasers.js` in your code folder. Your code folder is located here:
+Créez un fichier appelé `politeLasers.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-In this file, you must create a function called `getLaserSetting`. Here is some code you can use as a starting point - it already has the function defined, but doesn't yet work as described in the objective:
+Dans ce fichier, vous devez créer une fonction appelée `getLaserSetting`. Voici un code que vous pouvez utiliser comme point de départ - il a déjà la fonction définie, mais ne fonctionne pas encore comme décrit dans l'objectif :
 
 ```js
 function getLaserSetting(magicWord) {
-  if (magicWord === 'the magic word here') {
-    return 'what should this be?';
+  if (magicWord === 'le mot magique ici') {
+    return 'qu'est-ce que cela devrait être ?' ;
   } else {
-    return 'ON';
+    return 'ON' ;
   }
 }
 
-const currentSetting = getLaserSetting('right now!');
-console.log('The current laser setting is: ' + currentSetting);
+const currentSetting = getLaserSetting('right now!') ;
+console.log('Le réglage actuel du laser est : ' + currentSetting) ;
 ```
 
-In the objective, it says that your function should retun the string `OFF` when the first argument to the function (`magicWord` in the example above) is the string `please`. It should return `ON` with any other input.
+Dans l'objectif, il est dit que votre fonction doit retourner la chaîne `OFF` lorsque le premier argument de la fonction (`magicWord` dans l'exemple ci-dessus) est la chaîne `please`. Elle doit renvoyer `ON` avec toute autre entrée.
 
-When your function works as directed in the objective, click the *HACK* button to validate your work.
+Lorsque votre fonction fonctionne comme indiqué dans l'objectif, cliquez sur le bouton *HACK* pour valider votre travail.
 
-## Useful links
+## Liens utiles
 
-* [JavaScript.info Function Guide](https://javascript.info/function-basics)
-* [Function declaration](https://javascript.info/function-basics#function-declaration)
-* [Returning values from functions](https://javascript.info/function-basics#returning-a-value)
-* [MDN Function Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+* [JavaScript.info Guide des fonctions](https://fr.javascript.info/function-basics)
+* [Déclaration de fonction](https://fr.javascript.info/function-basics#declaration-de-fonction)
+* [Renvoyer des valeurs à partir de fonctions](https://fr.javascript.info/function-basics#renvoyer-une-valeur)
+* [Guide des fonctions MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Functions)

@@ -15,8 +15,8 @@ module.exports = async (helper) => {
   // The player needs to enable the other beams first
   if (!isObjectiveReady) {
     return helper.fail(`
-      You can't restart this laser until you receive the electrical engineer's 
-      access code. See the objective tab for more information.
+    Vous ne pouvez pas redémarrer ce laser avant d'avoir reçu le code d'accès 
+    de l'ingénieur électricien. Voir l'onglet de l'objectif pour plus d'informations.
     `);
   }
 
@@ -30,8 +30,8 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "laserPower.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
+      Nous n'avons pas pu trouver votre script "laserPower.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/><br/>
         <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
@@ -68,18 +68,18 @@ module.exports = async (helper) => {
       console.log(tq.error);
       if (tq.error.name === "ReferenceError") {
         return helper.fail(`
-          It looks like a <span class="highlight">calculatePower</span> 
-          function was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the function 
-          "<span class="highlight">calculatePower</span>"? Maybe 
-          double-check your spelling?
-        `);
-      } else {
-        return helper.fail(`
-          There was a problem validating your code. The error we got was:
-          <br/><br/>
+        Il semble qu'une fonction <span class="highlight">calculatePower</span> 
+        n'a pas été définie dans votre
+        code. Du moins, nous ne l'avons pas vue dans la portée globale de votre script.
+        <br/><br/>
+        Avez-vous nommé la fonction 
+        "<span class="highlight">calculatePower</span>" ? Peut-être que vous pouvez  
+        revérifier votre orthographe ?
+      `) ;
+    } else {
+      return helper.fail(`)
+        Il y a eu un problème de validation de votre code. L'erreur trouvée est la suivante :
+        <br/><br/>
           ${tq.error}
         `);
       }
@@ -88,11 +88,11 @@ module.exports = async (helper) => {
     // Check type of the function
     if (!isFunction(tq.calculatePower)) {
       let message = `
-        We found a variable called 
-        <span class="highlight">calculatePower</span>, but it's not a
-        callable function. Check the Help section for more guidance on creating
-        a JavaScript function.
-      `;
+      Nous avons trouvé une variable appelée 
+      <span class="highlight">calculatePower</span>, mais ce n'est pas une
+      fonction appelable. Consultez la section Aide pour obtenir plus de conseils sur la création
+      d'une fonction JavaScript.
+    `;
 
       return helper.fail(message);
     }
@@ -104,19 +104,17 @@ module.exports = async (helper) => {
 
       if (result === undefined || result === null) {
         return helper.fail(`
-          It looks like your function is not yet returning a value. The final
-          line of code in your function before the "}" should use the
-          <span class="highlight">return</span> keyword to pass back a value of
-          some kind as a result of executing the function. See the example code
-          in the Help section.
-        `);
+        Il semble que votre fonction ne renvoie pas encore de valeur. La dernière
+        ligne de code de votre fonction avant le "}" doit utiliser le mot-clé
+        <span class="highlight">return</span> pour renvoyer une valeur de une valeur quelconque à la suite de l'exécution de la fonction. Voir l'exemple de code
+        dans la section Aide.
+      `);
       }
 
       if (isNaN(result)) {
         return helper.fail(`
-          It looks like your function is not returning a number. Your
-          function must return a number, which is the total length of all
-          strings in the input array.
+        Il semble que votre fonction ne renvoie pas un nombre. Votre fonction fonction doit renvoyer un nombre, qui correspond à la longueur totale de toutes les
+        chaînes de caractères dans le tableau d\'entrée.
         `);
       }
 

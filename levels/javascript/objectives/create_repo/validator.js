@@ -12,7 +12,7 @@ module.exports = async helper => {
       await commandExists('git');
     } catch (err) {
       helper.fail(`
-        We tried to find a local "git" installation on your computer, but we could not!
+      Nous avons essayé de trouver une installation locale de "git" sur votre ordinateur, mais nous n'avons pas pu !
 
         ${err}
       `);
@@ -24,7 +24,7 @@ module.exports = async helper => {
 
     if (gitRepoExists !== 'dir') {
       helper.fail(
-        `We didn't find a .git directory in your JavaScript workspace directory! -> ${gitDirPath}`
+        `Nous n'avons pas trouvé de répertoire .git dans le répertoire de votre espace de travail JavaScript! -> ${gitDirPath}`
       );
       return;
     }
@@ -37,17 +37,17 @@ module.exports = async helper => {
 
     if (status.includes('No commits yet')) {
       helper.fail(`
-        It looks like your git repository doesn't have an initial commit yet. Add all the files in your repository with "git add -A" and then commit them with "git commit".
+      Il semble que votre dépôt git n'a pas encore de commit initial. Ajoutez tous les fichiers dans votre répertoire avec "git add -A" et ensuite commitez-les avec "git commit".
       `);
       return;
     }
 
     helper.success(`
-      You've succesfully created and enabled a git repository for your JavaScript workspace. Be sure to keep commiting your work as you go so you can look back on it!
+    Vous avez réussi à créer et à activer un dépôt git pour votre espace de travail JavaScript. Assurez-vous de continuer à commiter votre travail au fur et à mesure afin de pouvoir le consulter !
     `);
   } catch (e) {
     helper.fail(`
-      Something went wrong when we tried to validate your git repository exists!
+    Quelque chose n'a pas fonctionné lorsque nous avons essayé de valider l'existence de votre dépôt git !
 
       ${e}
     `);

@@ -50,10 +50,10 @@ module.exports = async helper => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "construction.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
-      `);
+      Nous n'avons pas pu trouver votre script "construction.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/>
+      <span style="word-wrap:break-word">${programPath}</span>
+    `);
       return;
     }
 
@@ -88,18 +88,17 @@ module.exports = async helper => {
       console.log(tq.error);
       if (tq.error.name === 'ReferenceError') {
         return helper.fail(`
-          It looks like a <span class="highlight">construct</span> 
-          function was not defined in your
-          code. At least, we didn't see it in the global scope of your script.
-          <br/><br/>
-          Did you name the function 
-          "<span class="highlight">construct</span>"? Maybe 
-          double-check your spelling?
-        `);
+        Il semble qu'une fonction <span class="highlight">construct</span> 
+        n'a pas été définie dans votre
+        code. Du moins, nous ne l'avons pas vue dans la portée globale de votre script.
+        <br/><br/>
+        Avez-vous nommé la fonction 
+        "<span class="highlight">construct</span>" ? Peut-être que vous pouvez revérifier votre orthographe ?
+      `);
       } else {
         return helper.fail(`
-          There was a problem validating your code. The error we got was:
-          <br/><br/>
+        Il y a eu un problème de validation de votre code. L'erreur trouvée est la suivante :
+        <br/><br/>
           ${tq.error}
         `);
       }
@@ -108,10 +107,10 @@ module.exports = async helper => {
     // Check type of the function
     if (!isFunction(tq.construct)) {
       let message = `
-        We found a variable called 
-        <span class="highlight">construct</span>, but it's not a
-        callable function. Check the Help section for more guidance on creating
-        a JavaScript function.
+      Nous avons trouvé une variable appelée 
+      <span class="highlight">construct</span>, mais ce n'est pas une
+      fonction appelable. Consultez la section *Aide* pour obtenir plus de conseils sur la création
+      d'une fonction JavaScript.
       `;
 
       return helper.fail(message);
@@ -124,18 +123,17 @@ module.exports = async helper => {
 
       if (result1 === undefined || result1 === null) {
         return helper.fail(`
-          It looks like your function is not yet returning a value. The final
-          line of code in your function before the "}" should use the
-          <span class="highlight">return</span> keyword to pass back a value of
-          some kind as a result of executing the function. See the example code
-          in the Help section.
+        Il semble que votre fonction ne retourne pas encore de valeur. La dernière
+        ligne de code de votre fonction avant le "}" doit utiliser le mot-clé
+        <span class="highlight">return</span> pour vous renvoyer une valeur de type quelconque
+        à la suite de l'exécution de la fonction. Voir l'exemple de code
+        dans la section *Aide*.
         `);
       }
 
       if (typeof result1 !== 'object') {
         return helper.fail(`
-          It looks like your function is not returning an object. Your
-          function must return an object literal.
+        Il semble que votre fonction ne renvoie pas un objet. Votre fonction doit renvoyer un objet littéral.
         `);
       }
 
@@ -149,10 +147,10 @@ module.exports = async helper => {
       const result1MissingKeys = getMissingKeys(expected1, result1);
       if (result1MissingKeys.length > 0) {
         return helper.fail(`
-          It looks like your returned object is missing some keys.
+        Il semble que certaines clés manquent à l'objet retourné.
           
-          The keys ${result1MissingKeys} were missing!
-        `);
+        Les clés ${result1MissingKeys} étaient manquantes !
+      `);
       }
 
       const result1MismatchedKeys = getObjectKeysWithMismatchedValues(
@@ -161,9 +159,9 @@ module.exports = async helper => {
       );
       if (result1MismatchedKeys.length > 0) {
         return helper.fail(`
-          Not all of the keys for your returned object match correctly.
-          <br/><br/>
-          ${result1MismatchedKeys
+        Toutes les clés de votre objet renvoyé ne correspondent pas correctement.
+        <br/><br/>
+        ${result1MismatchedKeys
             .map(key => `"${key}" should have been ${expected1[key]}.`)
             .join('<br/>')}
         `);
@@ -182,8 +180,8 @@ module.exports = async helper => {
       );
       if (result2MismatchedKeys.length > 0) {
         return helper.fail(`
-          Not all of the keys for your returned object match correctly.
-          <br/><br/>
+        Toutes les clés de votre objet renvoyé ne correspondent pas exactement.
+        <br/><br/>
           ${result2MismatchedKeys
             .map(key => `"${key}" should have been ${expected2[key]}.`)
             .join('<br/>')}
@@ -191,24 +189,24 @@ module.exports = async helper => {
       }
     } catch (ee) {
       return helper.fail(`
-        There was an error executing your construct function. Please 
-        ensure that you can exercise your function from the command line 
-        successfully and try again. Use the starter code in the Help section if
-        you are stuck. Here's the error we got from trying to call your 
-        function: <br/><br/>
+      Une erreur s'est produite lors de l'exécution de votre fonction de construction. 
+      Assurez-vous de pouvoir exécuter votre fonction depuis la ligne de commande 
+      avec succès et réessayez. Utilisez le code de démarrage dans la section d'aide si
+      vous êtes bloqué. Voici l'erreur que nous avons trouvée en essayant d'appeler votre 
+      fonction : <br/><br/>
         <span class="highlight">${ee}</span>
       `);
     }
 
     helper.success(`
-      That did the trick! The matter instantiator function for this console is
-      repaired.
+    Cela a fait l'affaire ! La fonction d'instanciateur de matière pour cette console est
+    réparée.
     `);
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it from the command line successfully and try again. Here's the 
-      error we got: <br/><br/>
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès à partir de la ligne de commande et réessayez.
+    Voici l'erreur que nous avons trouvé : <br/><br/>
       <span class="highlight">${e}</span>
     `);
   }

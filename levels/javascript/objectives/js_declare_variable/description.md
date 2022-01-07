@@ -1,16 +1,16 @@
-# Override Security Settings
+# Remplacer les paramètres de sécurité
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Create a file called <code>laserConfiguration.js</code></li>
-  <li>Declare a variable named <code>laserStatus</code> set to the string "OFF"</li>
-  <li><em>HACK</em> when finished</li>
+  <li>Créer un fichier appelé <code>laserConfiguration.js</code></li>.
+  <li>Déclarez une variable nommée <code>laserStatus</code> initialisée à la valeur de la chaîne de caractères "OFF"</li>.
+  <li><em>HACK</em> lorsque vous avez terminé</li>.
 </ul>
 </div>
 
-You encounter another barrier blocking access to the lead scientist's office. After some investigation, you find out that it is configured with JavaScript code that locks the laser fence in the "ON" position. To drop the barrier, you'll need to **override this configuration with your own JavaScript code**.
+Vous rencontrez une autre barrière bloquant l'accès au bureau du scientifique principal. Après quelques investigations, vous découvrez qu'elle est configurée avec un code JavaScript qui verrouille la barrière laser en position "ON". Pour faire tomber la barrière, vous devez **surcharger cette configuration avec votre propre code JavaScript**.
 
-Create a file called `laserConfiguration.js` in your code folder. Inside this file, declare a [variable](https://en.wikipedia.org/wiki/Variable_(computer_science)) with the name `laserStatus` and set it to the [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) value `OFF`.
+Créez un fichier appelé `laserConfiguration.js` dans votre dossier de code. Dans ce fichier, déclarez une [variable](https://fr.wikipedia.org/wiki/Variable_(informatique)) avec le nom `laserStatus` et donnez-lui la [string](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String) valeur `OFF`.
 
-Once you have done this, click the *HACK* button to check your work and override the laser setting for this security barrier.
+Une fois que vous avez fait cela, cliquez sur le bouton *HACK* pour vérifier votre travail et remplacer le réglage du laser pour cette barrière de sécurité.

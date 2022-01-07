@@ -1,36 +1,36 @@
-# Fancier Objects
+# Des Objets plus complexes
 
-The goal of this exercise is to familiarize yourself with JavaScript [object literal notation](https://javascript.info/object#literals-and-properties).
+L'objectif de cet exercice est de vous familiariser avec la [notation littérale des objets](https://fr.javascript.info/object#litteraux-et-proprietes) JavaScript.
 
-Most of your work in the JavaScript lab has used built-in objects and "primitive" data types like Numbers, Strings, and Booleans. Sometimes, your code needs to be able to represent more complex data concepts specific to your code, like Users, Blog Posts, Likes, or Subscriptions for example.
+La plupart de vos travaux dans le labo JavaScript ont utilisé des objets prédéfinis et des types de données "primitifs" comme les nombres, les chaînes de caractères et les booléens. Parfois, votre code doit pouvoir représenter des concepts de données plus complexes spécifiques à votre code, comme les utilisateurs, les articles de blog, les préférences ou les abonnements, par exemple.
 
-In this exercise, you'll learn one tool at your disposal to create more complex data - an [object literal](https://javascript.info/object#literals-and-properties). An object you create in this way can have its own properties, and can be assigned to a single variable.
+Dans cet exercice, vous découvrirez un outil à votre disposition pour créer des données plus complexes : un [objet littéral](https://fr.javascript.info/object#litteraux-et-proprietes). Un objet que vous créez de cette manière peut avoir ses propres propriétés et peut être affecté à une seule variable.
 
-Create a file called `construction.js` in your code folder. Your code folder is located here:
+Créez un fichier appelé `construction.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-In this file, you must create a function called `construct`. Here is some code you can use as a starting point - it already has the function defined, but doesn't yet work as described in the objective:
+Dans ce fichier, vous devez créer une fonction appelée `construct`. Voici un code que vous pouvez utiliser comme point de départ - il a déjà la fonction définie, mais ne fonctionne pas encore comme décrit dans l'objectif :
 
 ```js
 function construct(name) {
-  let person = {};
+  let person = {} ;
 
-  return person;
+  return person ;
 }
 
-// The following lines of code are not required for the solution, but can be
-// used by you to test your solution.
-const somePerson = construct('Kevin');
-console.log('name is: ' + somePerson.name); // should be "Kevin"
-console.log('duration is: ' + somePerson.duration); // should be 1000
+// Les lignes de code suivantes ne sont pas nécessaires à la solution, mais vous pouvez les utiliser pour tester votre solution.
+// être utilisées par vous pour tester votre solution.
+const somePerson = construct('Kevin') ;
+console.log('name is : ' + somePerson.name) ; // ça devrait donner "Kevin".
+console.log('la durée est : ' + somePerson.duration) ; // ça devrait donner 1000
 ```
 
-When your function works as directed in the objective, click the *HACK* button to validate your work.
+Lorsque votre fonction fonctionne comme indiqué dans l'objectif, cliquez sur le bouton *HACK* pour valider votre travail.
 
-## Useful links
+## Liens utiles
 
-* [JavaScript.info - Object literal notation](https://javascript.info/object#literals-and-properties)
-* [MDN - Object Initialization](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
-* [JavaScript.info - Returning values from functions](https://javascript.info/function-basics#returning-a-value)
-* [MDN - Function Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+* [JavaScript.info - notation littérale des objets](https://fr.javascript.info/object#litteraux-et-proprietes)
+* [MDN - Initialisation d'objet](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+* [JavaScript.info - Retourner les valeurs des fonctions]https://fr.javascript.info/function-basics#renvoyer-une-valeur)
+* [MDN - Guide des fonctions](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Functions)

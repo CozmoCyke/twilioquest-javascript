@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: Enable Beam 4",
-  "description": "Use the <strong>theoretical physicist's activation code</strong> and your knowledge of <strong>objects and data types</strong> to enable this stasis beam.",
+  "title": "Labo JavaScript: Activation du rayon 4",
+  "description": "Utilisez le <strong>code d'activation du physicien théorique</strong> et vos connaissances des <strong>objets et types de données</strong> pour activer ce rayon de stase.",
   "validation_fields": [
     {
       "name": "prompt",
       "type": "prompt",
       "placeholder": "",
-      "label": "Click <em>HACK</em> when you have completed the objective as described on the left."
+      "label": "Cliquez sur <em>HACK</em> lorsque vous avez rempli l'objectif comme décrit à gauche."
     }
   ],
   "rewards": {

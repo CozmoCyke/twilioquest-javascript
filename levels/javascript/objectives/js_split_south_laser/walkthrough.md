@@ -4,60 +4,61 @@ const isObjectiveReady = worldState.southWing &&
 worldState.southWing.hadSavedConversation;
 %>
 
-# Restarting The Laser
+# Redémarrage du laser
 
 <% if (isObjectiveReady) { %>
 
-After learning about conditional logic in the south wing, you're ready to take on this challenge! Create a file named `sortOrder.js` in your code folder, located here:
+AAprès avoir appris la logique conditionnelle dans l'aile sud, vous êtes prêt à relever ce défi ! Créez un fichier nommé `sortOrder.js` dans votre dossier de code, situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-Use the following code as a starting point:
+Utilisez le code suivant comme point de départ :
 
 ```js
 const firstValue = process.argv[2];
 const secondValue = process.argv[3];
 
-// Your comparison code (if statements) go here
+// Votre code de comparaison (si déclarations) va ici
 ```
 
-Your code will need to print out one of three numbers, based on whether the first value is before, the same as, or after the second value alphabetically. If your script were executed like this:
+Votre code devra afficher l'un des trois nombres suivants, selon que la première valeur est antérieure, identique ou postérieure à la seconde dans l'ordre alphabétique. Si votre script était exécuté comme ceci :
 
 ```bash
 node sortOrder.js cats dogs
 ```
 
-It should print `-1`, since `cats` comes before `dogs` alphabetically. If it were executed like this:
+Elle devrait afficher `-1`, puisque `cats` vient avant `dogs` par ordre alphabétique. Si elle était exécutée comme ceci :
 
 ```bash
 node sortOrder.js cats CATS
 ```
 
-It should print `0`, since the strings `cats` and `CATS` are alphabetically equivalent. Finally, if it were executed like this:
+Elle devrait afficher `0`, puisque les chaînes `cats` et `CATS` sont alphabétiquement équivalentes. Enfin, si elle était exécutée comme ceci :
 
 ```bash
 node sortOrder.js dogs cats
 ```
 
-It should print `1`, since `dogs` comes after `cats` alphabetically.
+Il devrait afficher `1`, puisque `dogs` vient après `cats` par ordre alphabétique.
 
-Your code will need to [compare strings with alphabeitcally, as demonstrated here](https://javascript.info/comparison#string-comparison). Also, you may need to convert the strings to the same case before comparison using [toLowerCase](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase).
+Votre code devra [comparer les chaînes de caractères par ordre alphabétique, comme illustré ici](https://fr.javascript.info/comparison#comparaison-de-chaines-de-caracteres). De plus, vous devrez peut-être convertir les chaînes de caractères à la même casse avant la comparaison en utilisant [toLowerCase](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase).
 
-This should be very similar to the tasks you needed to complete in the south wing of the lab - go back and reference that code if you need to.
+Cette tâche devrait être très similaire à celle que vous avez dû accomplir dans l'aile sud du labo - retournez-y et faites référence à ce code si nécessaire.
 
-Click _HACK_ when your script behaves as described in the Objective. You can do this!
+Cliquez sur _HACK_ lorsque votre script se comporte comme décrit dans l'objectif. Vous pouvez le faire !
 
-## Useful Resources
+## Ressources utiles
 
-- [MDN conditionals reference](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [JavaScript.info - string comparison](https://javascript.info/comparison#string-comparison)
+- [MDN référence aux conditionnels](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [JavaScript.info - comparaison de chaînes](https://fr.javascript.info/comparison#comparaison-de-chaines-de-caracteres)
+
 
 <% } else { %>
 
-You examine the controls of this stasis beam, but they're currently locked down. You'll need **the botanist's access code** in order to enable this laser.
+Vous examinez les contrôles de ce rayon de stase, mais ils sont actuellement verrouillés. Vous aurez besoin du **code d'accès du botaniste** afin d'activer ce laser.
 
-The botanist is most likely in the lab's **south wing**, where they had previously been studying the effect of ducktypium on plant life.
+Le botaniste est probablement dans l'**aile sud** du labo, où il a étudié l'effet du ducktypium sur la vie végétale.
 
-**Speak to the botanist** to receive the access code for this beam.
+**Parlez au botaniste** pour obtenir le code d'accès à ce rayon.
 
 <% } %>

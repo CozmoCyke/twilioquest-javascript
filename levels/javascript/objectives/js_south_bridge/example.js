@@ -1,31 +1,31 @@
-// This is what your variable declaration should look like in your
-// separate shouldWater.js file!
+// Voici à quoi devrait ressembler votre déclaration de variable dans votre fichier
+// fichier séparé shouldWater.js !
 
-const MILLISECONDS_IN_A_SECOND = 1000;
-const SECONDS_IN_A_MINUTE = 60;
-const MINUTES_IN_AN_HOUR = 60;
-const MILLISECONDS_IN_AN_HOUR =
-  MILLISECONDS_IN_A_SECOND * SECONDS_IN_A_MINUTE * MINUTES_IN_AN_HOUR;
+const MILLISECONDES_DANS_UNE_SECONDE = 1000;
+const SECONDES_DANS_UNE_MINUTE = 60;
+const MINUTES_DANS_UNE_HEURE = 60;
+const MILLISECONDES_DANS_UNE_HEURE =
+  MILLISECONDES_DANS_UNE_SECONDE * SECONDES_DANS_UNE_MINUTE * MINUTES_DANS_UNE_HEURE;
 
 function shouldWater(treeType, lastWatered) {
   const currentTime = Date.now();
 
-  // alive tree, water every 8 hours
+  // arbre vivant, arroser toutes les 8 heures
 
-  // dead tree, never water
+  // arbre mort, ne jamais arroser
 
-  // fruit tree, water every 8 hours
+  // arbre fruitier, arroser toutes les 8 heures
 
-  // autumn tree, water every 8 hours
+  // arbre d'automne, arroser toutes les 8 heures
 
   return false;
 }
 
-// These are your test cases! You don't need to mess with them!
+// Ce sont vos cas de test ! Vous n'avez pas besoin de les modifier !
 //
-// They call your function with various inputs and print them
-// out to your console when you run this file with Node.js
+// Ils appellent votre fonction avec différentes entrées et les affichent
+// dans votre console lorsque vous exécutez ce fichier avec Node.js.
 console.log(shouldWater(0, Date.now()));
-console.log(shouldWater(0, Date.now() - 8 * MILLISECONDS_IN_AN_HOUR - 1));
-console.log(shouldWater(0, Date.now() - 8 * MILLISECONDS_IN_AN_HOUR));
-console.log(shouldWater(1, Date.now() - 24 * MILLISECONDS_IN_AN_HOUR));
+console.log(shouldWater(0, Date.now() - 8 * MILLISECONDES_DANS_UNE_HEURE - 1));
+console.log(shouldWater(0, Date.now() - 8 * MILLISECONDES_DANS_UNE_HEURE));
+console.log(shouldWater(1, Date.now() - 24 * MILLISECONDES_DANS_UNE_HEURE));

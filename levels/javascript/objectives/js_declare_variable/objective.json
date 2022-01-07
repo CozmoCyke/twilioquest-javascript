@@ -1,14 +1,14 @@
 {
-  "title": "JavaScript Lab: Variable Results",
-  "description": "Learn to <strong>declare variables</strong> in JavaScript as you bypass the next barrier.",
-  "validation_fields": [
+  "title" : "Labo JavaScript : Résultats variables",
+  "description" : "Apprenez à <strong>déclarer des variables</strong> en JavaScript en franchissant la barrière suivante.",
+  "validation_fields" : [
     {
-      "name": "prompt",
-      "type": "prompt",
-      "label": "Create a program as described in the objective, then click <span class='highlight'>HACK</span>."
+      "name" : "prompt",
+      "type" : "prompt",
+      "label" : "Créez un programme comme décrit dans l'objectif, puis cliquez sur <span class='highlight'>HACK</span>."
     }
   ],
-  "rewards": {
-    "xp": 100
+  "rewards" : {
+  "xp" : 100
   }
 }

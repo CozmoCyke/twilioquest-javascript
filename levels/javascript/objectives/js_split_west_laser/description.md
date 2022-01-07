@@ -5,7 +5,7 @@ worldState.beamThreeOnline &&
 worldState.beamFourOnline;
 %>
 
-# Enable the Final Beam
+# Activation du rayon final
 
 <style>
 table.lasers {
@@ -27,10 +27,10 @@ table.lasers td span.off {
 
 <table class="lasers">
   <tr>
-    <th>BEAM 1</th>
-    <th>BEAM 2</th>
-    <th>BEAM 3</th>
-    <th>BEAM 4</th>
+    <th>RAYON 1</th>
+    <th>RAYON 2</th>
+    <th>RAYON 3</th>
+    <th>RAYON 4</th>
   </tr>
   <tr>
     <td>
@@ -70,15 +70,15 @@ table.lasers td span.off {
 if (isObjectiveReady) {
 %>
 <ul>
-  <li>Create a file called <code>ducktypium.js</code></li>
-  <li>Create a <code>Ducktypium</code> class as described in the objective, using all the skills you have learned.</li>
-  <li>Click <em>HACK</em> once you have finished to reverse the experiment!</li>
+  <li>Créer un fichier appelé <code>ducktypium.js</code></li>.
+  <li>Créer une classe <code>Ducktypium</code> telle que décrite dans l'objectif, en utilisant toutes les compétences que vous avez apprises.</li>
+  <li>Cliquez sur <em>HACK</em> une fois que vous avez terminé pour inverser l'expérience !</li>.
 </ul>
 <% } else { %>
 <ul>
-  <li>Find the three lost scientists in the lab and get their activation codes</li>
-  <li>Use the activation codes to enable beams 2, 3, and 4</li>
-  <li>Return here to enable the final beam</li>
+  <li>Trouver les trois scientifiques perdus dans le labo et obtenez leurs codes d'activation</li>.
+  <li>Utiliser les codes d'activation pour activer les rayons 2, 3 et 4</li>.
+  <li>Revenez ici pour activer le dernier rayon</li>.
 </ul>
 <% } %>
 </div>
@@ -87,78 +87,78 @@ if (isObjectiveReady) {
 if (isObjectiveReady) {
 %>
 
-With the other three beams online, you now have the opportunity to **reverse the failed experiment** and save reality as we know it!
+Avec les trois autres rayons en ligne, vous avez maintenant la possibilité de **inverser l'expérience ratée** et de sauver la réalité telle que nous la connaissons !
 
-You busily scan the controls of the primary beam to analyze the problem in the previous experiment. It looks like the lead scientist's calculations were indeed correct, and it should have worked as planned. The explosion was actually caused by another error, which **appears to be deliberate sabotage!** You vow to uncover the culprit behind this sabotage, but for now, you return your attention to the task at hand.
+Vous parcourez les commandes du rayon primaire pour analyser le problème de l'expérience précédente. Il semble que les calculs du scientifique principal étaient en effet corrects, et que tout aurait dû fonctionner comme prévu. L'explosion a en fait été causée par une autre erreur, qui **semble être un sabotage délibéré** Vous vous promettez de découvrir le coupable derrière ce sabotage, mais pour l'instant, vous ramenez votre attention à la tâche en cours.
 
-The sabotaged JavaScript file was deleted with no backup that you can find. You'll need to create a replacement for this important utility. The file in question describes the properties of ducktypium, and performs a number of tasks related to the crystal stabilization process.
+Le fichier JavaScript saboté a été supprimé sans aucune sauvegarde que vous puissiez trouver. Vous devrez créer un remplacement pour cet utilitaire important. Le fichier en question décrit les propriétés du ducktypium et exécute un certain nombre de tâches liées au processus de stabilisation des cristaux.
 
-## The Ducktypium Class
+## La classe Ducktypium
 
-In your code folder, create a file named `ducktypium.js`. Inside of it, create a class called `Ducktypium`. The constructor should take a single string argument, a crystal color, and store that data in an instance variable named `color`. The **color can only be `red`, `blue`, or `yellow`**. The constructor should [throw an error](https://javascript.info/try-catch#throwing-our-own-errors) if the argument is any other string.
+Dans votre dossier de code, créez un fichier nommé `ducktypium.js`. A l'intérieur de ce fichier, créez une classe appelée `Ducktypium`. Le constructeur doit prendre une seule chaîne en argument, une couleur de cristal, et stocker ces données dans une variable d'instance nommée `color`. La **couleur ne peut être que `red`, `blue`, ou `yellow`**. Le constructeur doit [lancer une erreur] (https://javascript.info/try-catch#throwing-our-own-errors) si l'argument est une autre chaîne de caractères.
 
-When the class is created, it should **also define a property** called `calibrationSequence` that is initally set to be an **empty array**.
+Lorsque la classe est créée, elle doit **également définir une propriété** appelée `calibrationSequence` qui est initialement définie comme étant un **tableau vide**.
 
-The Ducktypium class must implement two instance methods: `refract` and `calibrate`. Each of these functions will be described below.
+La classe Ducktypium doit implémenter deux méthodes d'instance : `refract` et `calibrate`. Chacune de ces fonctions sera décrite ci-dessous.
 
-## The `refract` method
+## La méthode `refract'.
 
-One of the required methods describes the refractive properties of ducktypium when it is exposed to colored light.
+Une des méthodes requises décrit les propriétés de réfraction du ducktypium lorsqu'il est exposé à une lumière colorée.
 
-The `refract` method must take a single string argument, which must be one of `red`, `blue`, or `yellow`. The method should [throw an error](https://javascript.info/try-catch#throwing-our-own-errors) if the argument is any other string, just like the constructor. This function should **return a single string**, which is the color produced by the combination of the instance's `color` property and the color passed in to the `refract` function.
+La méthode `refract` doit prendre un seul argument de type chaîne de caractères, qui doit être soit `rouge`, soit `blue`, soit `yellow`. La méthode doit [lancer une erreur](https://fr.javascript.info/try-catch#lever-nos-propres-exceptions) si l'argument est une autre chaîne, tout comme le constructeur. Cette fonction doit **renvoyer une seule chaîne**, qui est la couleur produite par la combinaison de la propriété `color` de l'instance et de la couleur passée à la fonction `refract`.
 
-- If the instance's `color` property is the same as the argument passed in, return that value
-- If the combination of colors is different, it should return a string which is the combination of those two [primary colors](https://en.wikipedia.org/wiki/Primary_color).
+- Si la propriété `color` de l'instance est la même que l'argument passé, renvoyez cette valeur.
+- Si la combinaison des couleurs est différente, il doit renvoyer une chaîne de caractères qui est la combinaison de ces deux [couleurs primaires](https://fr.wikipedia.org/wiki/Couleur_primaire).
 
-For reference, primary colors combine in the following ways:
+Pour référence, les couleurs primaires se combinent de la manière suivante :
 
-- <span style="color:red">red</span> + <span style="color:blue">blue</span> = <span style="color:purple">purple</span>
+- <span style="color:red">red</span> + <span style="color:blue">blue</span> = <span style="color:purple">purple</span>.
 - <span style="color:red">red</span> + <span style="color:#ad9400">yellow</span> = <span style="color:orange">orange</span>
 - <span style="color:#ad9400">yellow</span> + <span style="color:blue">blue</span> = <span style="color:green">green</span>
 
-## The `calibrate` method
+## La méthode `calibrate`.
 
-The other required method creates a calibration sequence required to stabilize a ducktypium crystal.
+L'autre méthode requise crée une séquence de calibration nécessaire à la stabilisation d'un cristal de ducktypium.
 
-The `calibrate` method takes a single argument, an array of numbers. With this input array, you must do the following:
+La méthode `calibrate` prend un seul argument, un tableau de nombres. Avec ce tableau d'entrée, vous devez effectuer les opérations suivantes :
 
-- Sort the numbers from smallest to largest
-- Multiply each number in the array by `3`
-- Assign the resulting array to the `Ducktypium` instance's `calibrationSequence` variable.
+- Trier les nombres du plus petit au plus grand
+- Multipliez chaque nombre du tableau par 3.
+- Affectez le tableau résultant à la variable `calibrationSequence` de l'instance `Ducktypium`.
 
-## Example usage
+## Exemple d'utilisation
 
-When completed, your Ducktypium class should behave as in the following example.
+Une fois terminée, votre classe Ducktypium devrait se comporter comme dans l'exemple suivant.
 
 ```js
-// The following would produce an error
+// L'exemple suivant produirait une erreur
 try {
   const badColor = new Ducktypium("pink");
 } catch (e) {
   console.log("Color must be red, yellow, or blue!");
 }
 
-// Create a new instance of the class
+// Créer une nouvelle instance de la classe
 const dt = new Ducktypium("red");
 
-console.log(dt.color); // prints 'red'
+console.log(dt.color); // affiche 'red'
 
-console.log(dt.refract("blue")); // prints 'purple'
-console.log(dt.refract("red")); // prints 'red'
+console.log(dt.refract("blue")); // affiche 'purple'
+console.log(dt.refract("red")); // affiche 'red'
 
 dt.calibrate([3, 5, 1]);
 
-console.log(dt.calibrationSequence); // prints [3, 9, 15]
+console.log(dt.calibrationSequence); // affiche [3, 9, 15]
 ```
 
-Example code you may use as a starting point may be found on the Help tab. This will take all your JavaScript skills, but you can do it! The fate of The Cloud hangs in the balance.
+Des exemples de code que vous pouvez utiliser comme point de départ se trouvent dans l'onglet Aide. Cela nécessitera toutes vos compétences en JavaScript, mais vous pouvez y arriver ! Le destin du Cloud est entre vos mains.
 
-When your `ducktypium.js` script is ready, click the _HACK_ button to reverse the experiment!
+Lorsque votre script `ducktypium.js` est prêt, cliquez sur le bouton _HACK_ pour inverser l'expérience !
 
 <% } else { %>
-To reverse the failed ducktypium experiment, you must **bring all four stasis beams back online**, including this one (Beam 1). Beams 2, 3, and 4 must go back online first before this beam can be enabled.
+Pour inverser l'expérience ratée ducktypium, vous devez **remettre en ligne les quatre rayons de stase**, y compris celui-ci (rayon 1). Les faisceaux 2, 3 et 4 doivent d'abord être remis en ligne avant que ce rayon puisse être activé.
 
-The lead scientist has told you that **her colleagues have the activation codes** required to restart the other three lasers. Search the rest of the lab for these three scientists, and **use their codes** to restart the other lasers in this room.
+La scientifique principale vous a dit que **ses collègues ont les codes d'activation** nécessaires pour redémarrer les trois autres lasers. Cherchez ces trois scientifiques dans le reste du labo et **utiliser leurs codes** pour redémarrer les autres lasers dans cette pièce.
 
-Once the other three beams are back online, **return here to enable the final beam**.
+Une fois que les trois autres rayons sont de nouveau en ligne, **Revenez ici pour activer le dernier rayon**.
 <% } %>

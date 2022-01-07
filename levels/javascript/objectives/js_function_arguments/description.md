@@ -1,27 +1,27 @@
-# Winning at Arguments
+c# Gagner des arguments
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Create a file called <code>politeLasers.js</code></li>
-  <li>Create a function called <code>getLaserSetting</code> that takes a single string argument.</li>
-  <li>If the argument is "please", return the string "OFF". Otherwise, return the string "ON".</li>
-  <li>Click <em>HACK</em> when finished</li>
+  <li>Créer un fichier appelé <code>politeLasers.js</code></li>.
+  <li>Créer une fonction appelée <code>getLaserSetting</code> qui prend un seul argument de type chaîne de caractères.</li>
+  <li>Si l'argument est "please", renvoyez la chaîne de caractères "OFF". Sinon, renvoyer la chaîne "ON".</li>
+  <li>Cliquez sur <em>HACK</em> lorsque vous avez terminé</li>.
 </ul>
 </div>
 
-This security barrier is also malfunctioning, and before long, you can see why. Your old pal Glen in IT had configured this security barrier to only shut down if asked nicely.
+Cette barrière de sécurité fonctionne également mal, et très vite, vous pouvez comprendre pourquoi. Votre vieux pote Glen de l'informatique avait configuré cette barrière de sécurité pour qu'elle ne se ferme que si on lui demande gentiment.
 
-To clear this barrier, you will need to write a function that takes [arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions) (also called "parameters"), and execute some basic [boolean logic](https://javascript.info/ifelse).
+Pour supprimer cette barrière, vous devez écrire une fonction qui prend des [arguments](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Functions) (également appelés "paramètres") et exécute une [logique booléenne de base](https://fr.javascript.info/ifelse).
 
-Read the "Help" section for more information on function arguments. If you need help on using Boolean logic, you may want to conquer the challenges of the lab's **south wing** first.
+Lisez la section "Aide" pour plus d'informations sur les arguments des fonctions. Si vous avez besoin d'aide pour utiliser la logique booléenne, vous pouvez d'abord relever les défis de l'aile sud du labo.
 
-## Bringing down the barrier
+## Faire tomber la barrière
 
-Similar to the previous barrier, this one is powered by a **JavaScript function** that determines if the barrier's lasers are `"ON"` or `"OFF"`. You'll need to **override this function** to disable the laser barrier.
+Comme la barrière précédente, celle-ci est alimentée par une **fonction JavaScript** qui détermine si les lasers de la barrière sont "ON" ou "OFF". Vous devrez **surcharger cette fonction** pour désactiver la barrière laser.
 
-Create a file called `politeLasers.js` in your code folder. Inside this file, [create a JavaScript function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions) called `getLaserSetting`, just as you did in the last challenge.
+Créez un fichier appelé `politeLasers.js` dans votre dossier de code. Dans ce fichier, [créez une fonction JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Functions) appelée `getLaserSetting`, comme vous l'avez fait dans le dernier défi.
 
-This time, your function must return a different value based on the **first argument** to the `getLaserSetting` function. If the first argument is the string `please`, return `OFF`. If the first argument is anything else, return `ON`.
+Cette fois, votre fonction doit renvoyer une valeur différente en fonction du **premier argument** de la fonction `getLaserSetting`. Si le premier argument est la chaîne "please", renvoyez "OFF". Si le premier argument est autre chose, renvoyez `ON`.
 
-Once your code is ready, click the *HACK* button to override the laser command function.
+Une fois que votre code est prêt, cliquez sur le bouton *HACK* pour surcharger la fonction de commande du laser.

@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: Your First Conditional",
-  "description": "Learn about an essential programming building block, the <strong>if statement</strong>!",
+  "title": "Labo JavaScript : Votre premier test conditionnel",
+  "description": "Apprenez à connaître un élément essentiel de la programmation, l'instruction <strong>if</strong> !",
   "validation_fields": [
     {
       "name": "prompt",
       "type": "prompt",
       "placeholder": "",
-      "label": "Write a program as directed in the Objective tab, then click <span class='highlight'>HACK</span>."
+      "label": "Ecrivez un programme comme indiqué dans l'onglet Objectif, puis cliquez sur <span class='highlight'>HACK</span>."
     }
   ],
   "show_ide": false,

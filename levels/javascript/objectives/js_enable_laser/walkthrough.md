@@ -4,14 +4,14 @@ const worldState = levelState.TQ_JAVASCRIPT_WORLD_STATE;
 
 <% if (worldState.room1.passwordFound) { %>
 
-# Password, Please
+# Mot de passe, SVP
 
-After a series of trials, you discovered that the laser password is `PEW PEW PEW!` - enter the password in the text field on the right and click _HACK_. For science!
+Après une série d'essais, vous avez découvert que le mot de passe du laser est `PEW PEW PEW!` - entrez le mot de passe dans le champ de texte à droite et cliquez sur _HACK_. Pour la science !
 
 <% } else { %>
 
-# Get the password first!
+# Obtenez d'abord le mot de passe !
 
-You won't be able to reboot the laser without a **special password**. To get the password, **talk to the lead scientist** (you passed by her as you entered the room). She will point you in the right direction!
+Vous ne pourrez pas redémarrer le laser sans un **mot de passe spécial**. Pour obtenir le mot de passe, **parlez à la scientifique principale** (vous êtes passé devant elle en entrant dans la pièce). Elle vous indiquera la bonne direction !
 
 <% } %>

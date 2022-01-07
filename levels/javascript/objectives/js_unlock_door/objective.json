@@ -1,11 +1,11 @@
 {
-  "title": "JavaScript Lab: You Didn't Say Please",
-  "description": "Placate a low-level bureaucrat and <strong>execute your first JavaScript program</strong> to bypass this barrier.",
-  "validation_fields": [
+  "title" : "JavaScript Lab : Vous n'avez pas dit s'il vous plaît",
+  "description" : "Apaisez un bureaucrate de bas niveau et <strong>exécutez votre premier programme JavaScript</strong> pour contourner cette barrière.",
+  "validation_fields" : [
     {
-      "name": "prompt",
-      "type": "prompt",
-      "label": "Create a program as described in the objective, then click <span class='highlight'>HACK</span>."
+      "name" : "prompt",
+      "type" : "prompt",
+      "label" : "Créez un programme comme décrit dans l'objectif, puis cliquez sur <span class='highlight'>HACK</span>."
     }
   ],
   "rewards": {

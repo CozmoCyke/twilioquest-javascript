@@ -1,26 +1,26 @@
-# Learn to execute JavaScript code
+# Apprendre à exécuter du code JavaScript
 
-The goal of this exercise is to familiarize you with creating and executing JavaScript programs on your computer. For this exercise, we will provide you with all the code you need to complete the challenge. In future exercises though, you'll need to write more of the code yourself!
+L'objectif de cet exercice est de vous familiariser avec la création et l'exécution de programmes JavaScript sur votre ordinateur. Pour cet exercice, nous vous fournirons tout le code dont vous avez besoin pour relever le défi. Dans les prochains exercices cependant, vous devrez écrire une plus grande partie du code vous-même !
 
 <details>
-<summary>Step 1: Create a JavaScript code file</summary>
+<summary>Etape 1 : créer un fichier de code JavaScript</summary>.
 
-You will first need to create a new file on your computer called `sayPlease.js` inside the folder your created as your TwilioQuest workspace. As a reminder, that folder is located here:
+Vous devrez d'abord créer un nouveau fichier sur votre ordinateur appelé `sayPlease.js` à l'intérieur du dossier que vous avez créé comme espace de travail TwilioQuest. Pour rappel, ce dossier est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-The **file extension** (the `.js` part) indicates what kind of file you are creating. Sound files might have a `.mp3` extension. A Microsoft Word document might have a `.docx` extension. JavaScript files (usually) have a `.js` extension.
+L'extension **fichier** (la partie `.js`) indique le type de fichier que vous créez. Les fichiers sonores peuvent avoir une extension `.mp3`. Un document Microsoft Word peut avoir une extension `.docx`. Les fichiers JavaScript ont (généralement) une extension `.js`.
 
-It will probably be convenient to create these files using the terminal interface, since you will need to use it later anyway to execute your JavaScript code.
+Il sera probablement plus pratique de créer ces fichiers à l'aide de l'interface du terminal, puisque vous devrez de toute façon l'utiliser plus tard pour exécuter votre code JavaScript.
 
-To create the file on Mac or Linux, use the following commands in the terminal app:
+Pour créer le fichier sur Mac ou Linux, utilisez les commandes suivantes dans l'application terminal :
 
 ```bash
-cd "<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>"
+cd "<<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>"
 touch sayPlease.js
 ```
 
-In PowerShell on Windows, use the following commands:
+Dans PowerShell sous Windows, utilisez les commandes suivantes :
 
 ```bash
 cd "<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>"
@@ -31,45 +31,45 @@ New-Item sayPlease.js
 
 
 <details>
-<summary>Step 2: Open the file and write code for the solution</summary>
+<summary>Étape 2 : ouvrir le fichier et écrire le code de la solution</summary>.
 
-After creating your JavaScript file, now you need to put some code in it! Much like you might use Photoshop to open and edit an image file, you will want a program installed on your computer to edit code files. In programming, these tools are called **Integrated Development Environments (IDEs)** or **text editors**.
+Après avoir créé votre fichier JavaScript, vous devez maintenant y mettre du code ! Tout comme vous pourriez utiliser Photoshop pour ouvrir et modifier un fichier image, vous aurez besoin d'un programme installé sur votre ordinateur pour modifier les fichiers de code. En programmation, ces outils sont appelés **Environnements de développement intégré (IDE)** ou **éditeurs de texte**.
 
-If you don't have one of these programs installed, we recommend trying [Visual Studio Code](https://code.visualstudio.com/). VS Code is a programming text editor that is relatively light weight, but comes with many helpful out-of-the-box features and is capable of doing very complex and powerful things once you get the hang of it.
+Si vous n'avez pas installé l'un de ces programmes, nous vous recommandons d'essayer [Visual Studio Code] (https://code.visualstudio.com/). VS Code est un éditeur de texte de programmation relativement léger, mais doté de nombreuses fonctionnalités prêtes à l'emploi et capable de faire des choses très complexes et puissantes une fois que vous l'avez pris en main.
 
-Using VS Code or the text editor of your choice, open the `sayPlease.js` file. Initially, the file probably will not have anything inside it.
+En utilisant VS Code ou l'éditeur de texte de votre choix, ouvrez le fichier `sayPlease.js`. Initialement, le fichier ne contiendra probablement rien.
 
-For this challenge, we'll actually provide you all the code you need - take the code below, and copy it into the file. Don't worry if you don't understand what it does just yet, but as you will see in a moment, it uses a built-in JavaScript function called `console.log` to print a line of text to the terminal window:
+Pour ce défi, nous allons vous fournir tout le code dont vous avez besoin - prenez le code ci-dessous, et copiez-le dans le fichier. Ne vous inquiétez pas si vous ne comprenez pas encore ce qu'il fait, mais comme vous allez le voir dans un instant, il utilise une fonction JavaScript intégrée appelée `console.log` pour imprimer une ligne de texte dans la fenêtre du terminal :
 
 ```js
-console.log('Glen, will you please open the barrier?');
+console.log('Glen, will you please open the barrier?') ;
 ```
 
-Once you add this code to the file, make sure you **save the changes you made!** Now, you're ready to execute the code and see what it does.
+Une fois que vous avez ajouté ce code au fichier, assurez-vous de **sauvegarder les modifications apportées !** Maintenant, vous êtes prêt à exécuter le code et à voir ce qu'il fait.
 
 </details>
 
 <details>
-<summary>Step 3: Execute the code and ensure that it works</summary>
+<summary>Étape 3 : Exécuter le code et s'assurer qu'il fonctionne</summary>.
 
-Now, we will use the Node.js runtime you installed to actually execute the code inside `sayPlease.js`. Usually, you will do this using the command prompt application on your computer - Terminal.app on a Mac, or PowerShell on Windows.
+Maintenant, nous allons utiliser le runtime Node.js que vous avez installé pour exécuter réellement le code à l'intérieur de `sayPlease.js`. Habituellement, vous ferez cela en utilisant l'application d'invite de commande sur votre ordinateur - Terminal.app sur un Mac, ou PowerShell sur Windows.
 
-Open your terminal application and enter the following command to ensure your "current working directory" is the folder where you created `sayPlease.js`.
+Ouvrez votre application Terminal et entrez la commande suivante pour vous assurer que votre "répertoire de travail actuel" est le dossier dans lequel vous avez créé `sayPlease.js`.
 
 ```bash
 cd "<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>"
 ```
 
-Next, use the `node` command to execute your JavaScript code:
+Ensuite, utilisez la commande `node` pour exécuter votre code JavaScript :
 
 ```bash
 node sayPlease.js
 ```
 
-After you run the command above, you should see your polite request to Glen printed out to the console.
+Après avoir exécuté la commande ci-dessus, vous devriez voir votre demande polie à Glen s'imprimer dans la console.
 
 </details>
 
-Throughout TwilioQuest, you will be asked to create, edit, and execute code files just as described above.
+Tout au long de TwilioQuest, il vous sera demandé de créer, modifier et exécuter des fichiers de code comme décrit ci-dessus.
 
-When your `sayPlease.js` file can run and print out the necessary message, click the *HACK* button to submit your request to IT.
+Lorsque votre fichier `sayPlease.js` peut s'exécuter et imprimer le message nécessaire, cliquez sur le bouton *HACK* pour soumettre votre demande au service informatique.

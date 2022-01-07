@@ -2,7 +2,7 @@
 // separate isTreeAlive.js file!
 
 function isTreeAlive(treeType) {
-  if () {
+  if (treeType) {
     
   } else {
     

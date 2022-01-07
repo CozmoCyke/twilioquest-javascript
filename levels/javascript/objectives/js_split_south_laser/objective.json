@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: Enable Beam 2",
-  "description": "Use the <strong>botanist's activation code</strong> and your knowledge of <strong>boolean logic</strong> to enable this stasis beam.",
-  "validation_fields": [
+  "title" : "Labo JavaScript : Activation du rayon 2",
+  "description" : "Utilisez le <strong>code d'activation du botaniste</strong> et vos connaissances en <strong>logique booléenne</strong> pour activer ce rayon de stase.",
+  "validation_fields" : [
     {
-      "name": "prompt",
-      "type": "prompt",
-      "placeholder": "",
-      "label": "Click <em>HACK</em> when you have completed the objective as described on the left."
+      "name" : "prompt",
+      "type" : "prompt",
+      "placeholder" : "",
+      "label" : "Cliquez sur <em>HACK</em> lorsque vous avez terminé l'objectif tel que décrit à gauche."
     }
   ],
   "rewards": {

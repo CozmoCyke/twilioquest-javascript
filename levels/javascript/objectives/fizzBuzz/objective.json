@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: Dusty Old Chest",
-  "description": "This chest is locked with some kind of bizarre mechanism... I wonder how it opens?",
+  "title": "Labo JavaScript : Un vieux coffre poussiéreux",
+  "description": "Ce coffre est fermé avec une sorte de mécanisme bizarre... Je me demande comment il s'ouvre ?",
   "validation_fields": [
     {
       "name": "prompt",
       "type": "prompt",
       "placeholder": "",
-      "label": "Write a program as directed in the Objective tab, then click <span class='highlight'>HACK</span>."
+      "label": "Ecrivez un programme comme indiqué dans l'onglet Objectif, puis cliquez sur <span class='highlight'>HACK</span>."
     }
   ],
   "rewards": {

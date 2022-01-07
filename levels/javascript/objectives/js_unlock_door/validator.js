@@ -12,9 +12,9 @@ module.exports = async (helper) => {
     const exists = await jetpack.existsAsync(programPath);
     if (!exists) {
       helper.fail(`
-        We couldn't find your "sayPlease.js" script in your 
-        JavaScript code folder. Does the file below exist? <br/><br/>
-        <span style="word-wrap:break-word">${programPath}</span>
+      Nous n'avons pas pu trouver votre script "sayPlease.js" dans votre 
+      dossier de code JavaScript. Le fichier ci-dessous existe-t-il ? <br/><br/>
+      <span style="word-wrap:break-word">${programPath}</span>
       `);
       return;
     }
@@ -25,26 +25,26 @@ module.exports = async (helper) => {
 
     if (!stdout.includes("please")) {
       helper.fail(`
-        When we executed your script, it didn't print out the "magic word". 
-        <br/><br/>
-        
-        Double check that when you run your script, it executes successfully
-        and outputs a message that contains the word "please".
-      `);
+      Lorsque nous avons exécuté votre script, il n'a pas imprimé le "mot magique". 
+      <br/><br/>
+      
+      Vérifiez deux fois que lorsque vous exécutez votre script, il s'exécute avec succès
+      et sort un message qui contient le mot "s'il vous plaît".
+    `);
       return;
     }
 
     helper.success(`
-      You submit your polite request to Glen in IT, and within a few moments,
-      the laser barrier fades away.
-      <br/><br/>
-      You can now proceed further toward the office.
+    Vous soumettez votre requête polie à Glen en informatique, et en quelques instants,
+    la barrière laser s'estompe.
+    <br/><br/>
+    Vous pouvez maintenant poursuivre votre route vers le bureau.
     `);
   } catch (e) {
     helper.fail(`
-      There was an error executing your JavaScript code. Please ensure that you
-      can run it successfully and try again. Here's the error we got - sorry
-      if the formatting is ugly: <br/><br/>
+    Une erreur s'est produite lors de l'exécution de votre code JavaScript. Veuillez vous assurer que vous
+    pouvez l'exécuter avec succès et réessayez. Voici l'erreur que nous avons reçue - désolé
+    si le formatage est horrible : <br/><br/>
       ${e}
     `);
   }

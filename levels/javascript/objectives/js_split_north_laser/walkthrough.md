@@ -4,43 +4,43 @@ const isObjectiveReady = worldState.northWing &&
 worldState.northWing.hadSavedConversation;
 %>
 
-# Objective Help
+# Aide pour les objectifs
 
 <% if (isObjectiveReady) { %>
 
-In this objective, you will need to combine what you learned about objects and classes in the north wing of the lab to create a solution.
+Dans cet objectif, vous devrez combiner ce que vous avez appris sur les objets et les classes dans l'aile nord du laboratoire pour créer une solution.
 
-In this exercise, you need to [create a class](https://javascript.info/class) based on the specification in the objective.
+Dans cet exercice, vous devez [créer une classe](https://javascript.info/class) sur la base de la spécification de l'objectif.
 
-Create a file called `targetingSolution.js` in your code folder. Your code folder is located here:
+Créez un fichier appelé `targetingSolution.js` dans votre dossier de code. Votre dossier de code est situé ici :
 
 `<%= env.TQ_JAVASCRIPT_WORKSPACE_PATH.value %>`
 
-In this file, you must create a class called `TargetingSolution`. Here is some code you can use as a starting point - it already has the class defined, but doesn't yet work as described in the objective:
+Dans ce fichier, vous devez créer une classe appelée `TargetingSolution`. Voici un code que vous pouvez utiliser comme point de départ - il a déjà la classe définie, mais ne fonctionne pas encore comme décrit dans l'objectif :
 
 ```js
 class TargetingSolution {
   constructor(config) {
-    // your code here
+    // votre code est ici
   }
 
-  // your code here
+  // votre code est ici
 }
 
-// The following lines of code are not required for the solution, but can be
-// used by you to test your solution.
+// Les lignes de code suivantes ne sont pas nécessaires pour la solution, mais peuvent être
+// utilisées par vous pour tester votre solution.
 const m = new TargetingSolution({
   x: 10,
   y: 15,
   z: 900,
 });
 
-console.log(m.target()); // would print "(10, 15, 900)"
+console.log(m.target()); // afficherait "(10, 15, 900)"
 ```
 
-When your function works as directed in the objective, click the _HACK_ button to validate your work. You can do this!
+Worsque votre fonction fonctionne comme indiqué dans l'objectif, cliquez sur le bouton _HACK_ pour valider votre travail. Vous pouvez le réussir !
 
-## Useful links
+## Liens utiles
 
 - [JavaScript.info - Classes](https://javascript.info/class)
 - [MDN - Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
@@ -49,10 +49,14 @@ When your function works as directed in the objective, click the _HACK_ button t
 
 <% } else { %>
 
-You examine the controls of this stasis beam, but they're currently locked down. You'll need **the theoretical physicist's access code** in order to enable this laser.
+YVous examinez les contrôles de ce rayon de stase, mais ils sont actuellement verrouillés. Vous aurez besoin du **code d'accès du physicien théoricien** afin d'activer ce laser.
 
-The theoretical physicist is most likely in the lab's **north wing**, where they had been studying the ability of ducktypium to bend spacetime and manipulate matter.
+Le physicien théoricien se trouve probablement dans l'aile nord du laboratoire, où il a étudié la capacité du ducktypium à courber l'espace-temps et à manipuler la matière.
 
-**Speak to the theoretical physicist** to receive the access code for this beam.
+**Parlez au physicien théoricien pour recevoir le code d'accès pour ce rayon.Vous examinez les contrôles de ce rayon de stase, mais ils sont actuellement verrouillés. Vous aurez besoin du **code d'accès du physicien théoricien** afin d'activer ce laser.
+
+Le physicien théoricien se trouve probablement dans l'aile nord du laboratoire, où il a étudié la capacité du ducktypium à courber l'espace-temps et à manipuler la matière.
+
+**Parlez au physicien théoricien** pour recevoir le code d'accès pour ce rayon.
 
 <% } %>

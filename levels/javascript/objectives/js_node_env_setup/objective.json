@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: Set Up Your Node.js Environment",
-  "description": "The JavaScript Test Lab requires all personnel to have a <strong>Node.js JavaScript runtime</strong> installed before proceeding into the lab. Install Node.js in this challenge.",
+  "title": "Labo JavaScript : Définir votre environnement Node.js",
+  "description": "Le JavaScript Test Lab exige que tout le personnel ait un <strong>Moteur JavaScript NodeJs </strong> installé avant d'entrer dans le laboratoire. Installez Node.js pour ce défi.",
   "validation_fields": [
     {
       "name": "nodePath",
       "type": "text",
       "placeholder": "/usr/local/bin/node",
-      "label": "Paste in the path to your Node.js executable as described in the objective."
+      "label": "Collez le chemin vers votre exécutable Node.js comme décrit dans l'objectif."
     }
   ],
   "rewards": {

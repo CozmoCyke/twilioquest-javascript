@@ -7,23 +7,23 @@ module.exports = async (helper) => {
 
     if (!workspacePath) {
       throw new NiceError(`
-        Please provide a path to your Node.js workspace directory!
+      Veuillez fournir un chemin vers le répertoire de votre espace de travail Node.js !
       `);
     }
 
     const exists = await jetpack.existsAsync(workspacePath);
     if (!exists) {
       throw new NiceError(`
-        We couldn't find a directory at the path you provided. 
-        Please double check that the directory path you pasted in 
-        the text field is correct.
+      Nous n'avons pas pu trouver de répertoire au chemin que vous avez fourni. 
+      Veuillez vérifier que le chemin d'accès au répertoire que vous avez collé 
+      dans le champ de texte est correct.
       `);
     }
 
     helper.success(
       `
-      JavaScript workspace confirmed. Lab access granted - please proceed
-      through the security gate.
+      Espace de travail JavaScript confirmé. Accès au laboratoire accordé - veuillez passer
+      par la porte de sécurité.
     `,
       [
         {
@@ -38,7 +38,7 @@ module.exports = async (helper) => {
       helper.fail(e.message);
     } else {
       helper.fail(`
-        Sorry! We couldn't successfully find your Node.js workspace path.
+      Désolé ! Nous n'avons pas réussi à trouver le chemin de votre espace de travail Node.js.
       `);
     }
   }

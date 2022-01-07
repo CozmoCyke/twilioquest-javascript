@@ -1,12 +1,12 @@
 {
-  "title": "JavaScript Lab: Enable Beam 3",
-  "description": "Use the <strong>electrical engineer's activation code</strong> and your knowledge of <strong>loops and iteration</strong> to enable this stasis beam.",
-  "validation_fields": [
+  "title" : "Labo JavaScript : Activation du rayon 3",
+  "description" : "Utilisez le <strong>code d'activation de l'ingénieur électricien</strong> et vos connaissances des <strong>boucles et de l'itération</strong> pour activer ce rayon de stase.",
+  "validation_fields" : [
     {
-      "name": "prompt",
-      "type": "prompt",
-      "placeholder": "",
-      "label": "Click <em>HACK</em> when you have completed the objective as described on the left."
+      "name" : "prompt",
+      "type" : "prompt",
+      "placeholder" : "",
+      "label" : "Cliquez sur <em>HACK</em> lorsque vous avez terminé l'objectif tel que décrit à gauche."
     }
   ],
   "rewards": {

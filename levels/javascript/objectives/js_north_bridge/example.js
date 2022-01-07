@@ -1,16 +1,16 @@
-// This is what your variable declaration should look like in your
-// separate onOneCondition.js file!
+// Voici à quoi devrait ressembler votre déclaration de variable dans votre fichier
+// fichier séparé onOneCondition.js !
 
 function sayHi(argument) {
   if (argument === true) {
-    return 'Bye!';
+    return 'Au revoir !';
   }
 }
 
-// These are your test cases! You don't need to mess with them!
+// Ce sont vos cas de test ! Vous n'avez pas besoin de les modifier !
 //
-// They call your function with various inputs and print them
-// out to your console when you run this file with Node.js
+// Ils appellent votre fonction avec différentes entrées et les affichent
+// dans votre console lorsque vous exécutez ce fichier avec Node.js.
 console.log(sayHi(true));
 console.log(sayHi(false));
-console.log(sayHi('a string'));
+console.log(sayHi('une chaîne de caractères'));

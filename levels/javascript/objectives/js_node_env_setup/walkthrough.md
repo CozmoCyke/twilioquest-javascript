@@ -1,19 +1,19 @@
-# Objective Help
+# Aide sur l'objectif
 
-To complete this challenge, you will first need to [install Node.js on your computer](https://www.nodejs.org). We will use this tool to execute JavaScript code that you will learn to write.
+Pour relever ce défi, vous devez d'abord [installer Node.js sur votre ordinateur] (https://www.nodejs.org). Nous utiliserons cet outil pour exécuter le code JavaScript que vous apprendrez à écrire.
 
-## Getting the full path to the Node.js runtime
+## Réussir à obtenir le chemin d'accès complet au moteur Node.js
 
-After you install Node, the command line interface you use on your computer should have the `node` and `npm` commands available. From the command line on Mac and Linux, you should be able to use this command to get the full path to the Node runtime:
+Après avoir installé Node, l'interface de ligne de commande que vous utilisez sur votre ordinateur devrait avoir les commandes `node` et `npm` disponibles. À partir de la ligne de commande sur Mac et Linux, vous devriez pouvoir utiliser cette commande pour réussir à obtenir le chemin complet vers le moteur Node :
 
-```bash
+``bash
 which node
 ```
 
-On Windows in PowerShell, you could use this command:
+Sous Windows, dans PowerShell, vous pouvez utiliser cette commande :
 
-```bash
-Get-Command node.exe | Select-Object -ExpandProperty Definition
+``bash
+Get-Command node.exe | Select-Object -ExpandProperty Définition
 ```
 
-Once you have the full path, paste it into the text field on the right and click *HACK*.
+Une fois que vous avez le chemin complet, collez-le dans le champ de texte à droite et cliquez sur *HACK*.

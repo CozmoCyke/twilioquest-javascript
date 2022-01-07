@@ -1,8 +1,8 @@
 module.exports = function() {
-  // TwilioQuest can only see your code inside of this function!
-  // --- Your code STARTS here ---
+  // TwilioQuest ne peut voir que votre code à l'intérieur de cette fonction !
+  // --- Votre code COMMENCE ici ---
   const favoriteFoods = [];
 
   return favoriteFoods;
-  // --- Your code ENDS here ---
+  // --- Votre code FINIT ici ---
 };
